@@ -1,0 +1,126 @@
+# ============================================================
+# anIdeaTech Backend — .gitignore
+# ============================================================
+
+# ---------------------------
+# Dependencies
+# ---------------------------
+node_modules/
+.pnp
+.pnp.js
+
+# ---------------------------
+# Environment & Secrets
+# ---------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+
+# ---------------------------
+# Logs
+# ---------------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ---------------------------
+# Runtime & Process Files
+# ---------------------------
+pids/
+*.pid
+*.seed
+*.pid.lock
+.npm
+.node_repl_history
+
+# ---------------------------
+# Build Output
+# ---------------------------
+dist/
+build/
+out/
+
+# ---------------------------
+# Coverage & Testing
+# ---------------------------
+coverage/
+*.lcov
+.nyc_output
+.jest-cache/
+
+# ---------------------------
+# OS Generated Files
+# ---------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.stackdump
+
+# Linux
+*~
+
+# ---------------------------
+# IDE & Editor Files
+# ---------------------------
+# VS Code
+.vscode/
+!.vscode/extensions.json
+
+# JetBrains (WebStorm, IntelliJ)
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Vim / Emacs
+*.swp
+*.swo
+*~
+\#*\#
+.#*
+
+# ---------------------------
+# Uploads & User-generated Content
+# ---------------------------
+uploads/
+public/uploads/
+temp/
+tmp/
+
+# ---------------------------
+# Database Files (local)
+# ---------------------------
+*.sqlite
+*.sqlite3
+*.db
+
+# ---------------------------
+# Package Manager Lock Files (optional)
+# Uncomment below if you want to ignore lock files
+# ---------------------------
+# package-lock.json
+# yarn.lock
+
+# ---------------------------
+# Miscellaneous
+# ---------------------------
+*.tgz
+*.tar.gz
+.cache/

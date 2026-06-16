@@ -1,0 +1,260 @@
+# =============================================================
+# robots.txt for An Idea Tech (anideatech.in)
+# Last updated: May 2026
+# Contact: support@anideatech.com for any crawl-related issues
+# =============================================================
+
+# -------------------------------------------------------------
+# DEFAULT — All standard crawlers
+# -------------------------------------------------------------
+User-agent: *
+Allow: /
+
+# Pages not yet ready for public indexing
+Disallow: /work/
+Disallow: /work/suprabha
+Disallow: /work/coretech
+Disallow: /work/puttur
+
+# Draft Insights articles (live once published)
+Disallow: /insights/drafts/
+
+# Internal / admin / system paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /tmp/
+Disallow: /backup/
+Disallow: /test/
+Disallow: /staging/
+Disallow: /dev/
+
+# Customer support portal (separate authenticated system)
+Disallow: /support/
+
+# WordPress-style hidden paths (in case CMS structure has them)
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/cache/
+Disallow: /xmlrpc.php
+Disallow: /wp-login.php
+Disallow: /wp-config.php
+Disallow: /readme.html
+Disallow: /license.txt
+
+# Common scraping and content-extraction patterns
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*?print=
+Disallow: /*?share=
+Disallow: /*?utm_
+Disallow: /search?
+Disallow: /*?s=
+
+# Allow CSS, JS, and image assets so search engines can render pages properly
+Allow: /assets/
+Allow: /static/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.svg$
+Allow: /*.webp$
+Allow: /*.woff$
+Allow: /*.woff2$
+
+# -------------------------------------------------------------
+# GOOGLE — Standard crawl, full access to public pages
+# -------------------------------------------------------------
+User-agent: Googlebot
+Allow: /
+Disallow: /work/
+Disallow: /insights/drafts/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /support/
+
+User-agent: Googlebot-Image
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+
+User-agent: Googlebot-News
+Disallow: /
+
+# -------------------------------------------------------------
+# BING — Standard crawl, slower rate
+# -------------------------------------------------------------
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+Disallow: /work/
+Disallow: /insights/drafts/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /support/
+
+# -------------------------------------------------------------
+# AI CRAWLERS — Allow for live search/discovery,
+# block from training-data scraping
+# -------------------------------------------------------------
+
+# OpenAI — used for GPT model training
+User-agent: GPTBot
+Disallow: /
+
+# OpenAI — used for ChatGPT browsing (live web access during conversations)
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic Claude — used for live web access during conversations
+User-agent: ClaudeBot
+Allow: /
+
+# Anthropic — used for training
+User-agent: anthropic-ai
+Disallow: /
+
+# Google Bard / Gemini extensions (training)
+User-agent: Google-Extended
+Disallow: /
+
+# Common Crawl — used by many AI training pipelines
+User-agent: CCBot
+Disallow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Apple AI / Applebot Extended (training)
+User-agent: Applebot-Extended
+Disallow: /
+
+# Apple search
+User-agent: Applebot
+Allow: /
+
+# Meta / Facebook AI
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+# Bytedance / TikTok
+User-agent: Bytespider
+Disallow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Disallow: /
+
+# Diffbot
+User-agent: Diffbot
+Disallow: /
+
+# Omgili (data aggregator)
+User-agent: omgili
+Disallow: /
+
+# -------------------------------------------------------------
+# SEO TOOLS — Allow with crawl-delay (legitimate research,
+# but rate-limit to protect server)
+# -------------------------------------------------------------
+User-agent: AhrefsBot
+Crawl-delay: 10
+Allow: /
+
+User-agent: SemrushBot
+Crawl-delay: 10
+Allow: /
+
+User-agent: MJ12bot
+Crawl-delay: 10
+Disallow: /
+
+User-agent: DotBot
+Crawl-delay: 10
+Disallow: /
+
+User-agent: rogerbot
+Crawl-delay: 10
+Allow: /
+
+# -------------------------------------------------------------
+# SOCIAL MEDIA PREVIEW BOTS — Always allow
+# (these fetch metadata for link previews on social platforms)
+# -------------------------------------------------------------
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+User-agent: Slackbot
+Allow: /
+
+User-agent: Discordbot
+Allow: /
+
+# -------------------------------------------------------------
+# KNOWN BAD BOTS / AGGRESSIVE SCRAPERS — Block entirely
+# -------------------------------------------------------------
+User-agent: SiteSnagger
+Disallow: /
+
+User-agent: WebStripper
+Disallow: /
+
+User-agent: WebCopier
+Disallow: /
+
+User-agent: Fetch
+Disallow: /
+
+User-agent: Offline Explorer
+Disallow: /
+
+User-agent: HTTrack
+Disallow: /
+
+User-agent: Microsoft.URL.Control
+Disallow: /
+
+User-agent: psbot
+Disallow: /
+
+User-agent: NPBot
+Disallow: /
+
+User-agent: WWW-Collector-E
+Disallow: /
+
+User-agent: SiteAuditBot
+Disallow: /
+
+# -------------------------------------------------------------
+# SITEMAPS
+# -------------------------------------------------------------
+Sitemap: https://anideatech.in/sitemap.xml
+Sitemap: https://anideatech.in/sitemap-services.xml
+Sitemap: https://anideatech.in/sitemap-insights.xml
+
+# -------------------------------------------------------------
+# HOST DIRECTIVE (for crawlers that respect it)
+# -------------------------------------------------------------
+Host: anideatech.in
