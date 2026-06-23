@@ -1,2 +1,24 @@
 @import "tailwindcss";
+@config "../../tailwind.config.js";
 
+.light {
+  --bg: white;
+  --text: black;
+}
+
+.dark {
+  --bg: black;
+  --text: white;
+}
+
+@layer base{
+
+}
+
+@layer components{
+
+}
+
+@layer utilities{
+
+}
