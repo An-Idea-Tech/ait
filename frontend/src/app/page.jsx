@@ -1,16 +1,10 @@
-"use client"
+// import ThemeToggle from '@/components/ui/ThemeToggle'
+import React from 'react'
 
-import { themeContext } from "@/context/themeContext";
-import { useContext } from "react"
-
-export default function Home() {
-
-  const { theme, setTheme } = useContext(themeContext)
-  
+export default function page() {
   return (
     <>
-      <button onClick={()=> setTheme(theme==='light'? 'dark':'light')}>Change theme</button>
-      <h1 className="text-5xl text-black">hello this is a {theme} theme</h1>
+     <button className='bg-brand'>Click Here</button>
     </>
-  );
+  )
 }

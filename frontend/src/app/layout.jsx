@@ -1,6 +1,7 @@
-  
-import ThemeContext from "@/context/themeContext";
+import { ThemeProvider } from "@/context/ThemeProvider";
 import "./globals.css";
+import Navbar from "@/components/shared/Navbar";
+import Footer from "@/components/shared/Footer";
 
 export const metadata = {
   title: "An Idea Tech | Growth-Driven Tech & Branding Solutions",
@@ -13,10 +14,12 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`h-full antialiased`}
     >
-      <body className={`min-h-full flex flex-col bg-white dark:bg-slate-900`}>
-        <ThemeContext>
+      <body>
+        <ThemeProvider>
+          <Navbar />
           {children}
-        </ThemeContext>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
