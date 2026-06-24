@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @config "../../tailwind.config.js";
+@custom-variant dark (&:where(.dark, .dark *));
+
 
 @font-face {
   font-family: "Manrope-light";
@@ -16,6 +18,10 @@
 
 @theme {
   --color-brand: #ec840c;
+  --color-bg-primary: var(--bg);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-border-line: var(--line);
 
   --font-manrope-light: "Manrope-light", sans-serif;
   --font-manrope-medium: "Manrope-medium", sans-serif;
@@ -39,6 +45,6 @@
 
 body {
   background-color: var(--bg);
-  color: var(--text);
+  color: var(--text-primary);
   font-family: var(--font-manrope-medium);
 }
