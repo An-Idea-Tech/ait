@@ -1,24 +1,44 @@
 @import "tailwindcss";
 @config "../../tailwind.config.js";
 
-.light {
-  --bg: white;
-  --text: black;
+@font-face {
+  font-family: "Manrope-light";
+  src: url("/fonts/Manrope-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Manrope-medium";
+  src: url("/fonts/Manrope-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Manrope-bold";
+  src: url("/fonts/Manrope-Bold.ttf") format("truetype");
+}
+
+@theme {
+  --color-brand: #ec840c;
+
+  --font-manrope-light: "Manrope-light", sans-serif;
+  --font-manrope-medium: "Manrope-medium", sans-serif;
+  --font-manrope-bold: "Manrope-bold", sans-serif;
+}
+
+:root {
+  --bg: #ffffff;
+  --text-primary: #000000;
+  --text-secondary:#626262;
+  --line: #161515;
+  
 }
 
 .dark {
-  --bg: black;
-  --text: white;
+  --bg: #000000;
+  --text-primary: #ffffff;
+  --text-secondary:#626262;
+  --line:#383838;
 }
 
-@layer base{
-
-}
-
-@layer components{
-
-}
-
-@layer utilities{
-
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-manrope-medium);
 }
