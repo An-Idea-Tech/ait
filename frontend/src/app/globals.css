@@ -21,7 +21,7 @@
   --color-bg-primary: var(--bg);
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
-  --color-border-line: var(--line);
+  --color-border-primary: var(--line);
 
   --font-manrope-light: "Manrope-light", sans-serif;
   --font-manrope-medium: "Manrope-medium", sans-serif;

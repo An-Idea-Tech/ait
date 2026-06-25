@@ -7,8 +7,8 @@ import Logo from "./Logo";
 export default function Navbar() {
 
   return (
-    <nav className="w-full bg-[var(--bg)] px-6 pt-4 pb-4 text-[var(--text-primary)] md:px-12 ">
-      <div className="mx-auto flex w-full max-w-[1920px] items-center justify-between border-b border-[var(--line)] pb-2">
+    <nav className="w-full bg-bg-primary px-6 pt-4 pb-4 text-text-primary md:px-12 ">
+      <div className="mx-auto flex w-full max-w-[1920px] items-center justify-between border-b border-border-primary pb-2">
         
         {/* Logo Section */}
         <div className="flex flex-shrink-0 items-center">
@@ -41,8 +41,8 @@ export default function Navbar() {
           <div className="group flex cursor-pointer items-center gap-3 md:gap-4">
             {/* Hamburger Icon */}
             <div className="flex w-10 flex-col gap-1.5">
-              <span className="group-hover:bg-brand h-[1px] w-full bg-[var(--text-primary)] "></span>
-              <span className="group-hover:bg-brand h-[1px] w-full bg-[var(--text-primary)] "></span>
+              <span className="group-hover:bg-brand h-[1px] w-full bg-text-primary "></span>
+              <span className="group-hover:bg-brand h-[1px] w-full bg-text-primary "></span>
             </div>
           </div>
         </div>

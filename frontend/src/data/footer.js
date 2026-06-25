@@ -15,7 +15,7 @@ export const footerLinks = [
       { name: "Services", url: "/services" },
       { name: "Work", url: "/work" },
       { name: "Method", url: "/method" },
-      { name: "Insight", url: "/insight" },
+      { name: "Insight", url: "/insights" },
     ],
   },
   {
