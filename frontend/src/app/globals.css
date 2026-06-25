@@ -48,3 +48,115 @@ body {
   color: var(--text-primary);
   font-family: var(--font-manrope-medium);
 }
+
+/* added by pratheek */
+.heading-hero {
+  font-family: var(--font-manrope-light);
+  font-size: clamp(2.5rem, 6vw, 6rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+}
+
+.heading-section {
+  font-family: var(--font-manrope-medium);
+  font-size: clamp(1.75rem, 4vw, 3.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.heading-subsection {
+  font-family: var(--font-manrope-bold);
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  line-height: 1.25;
+  color: var(--text-primary);
+}
+
+.body-large {
+  font-family: var(--font-manrope-light);
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.body-regular {
+  font-family: var(--font-manrope-medium);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.brand-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  border: 1px solid var(--line);
+  background-color: var(--bg);
+  padding: 0.625rem 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+}
+
+.brand-outline-text {
+  font-family: var(--font-manrope-bold);
+  font-size: clamp(3rem, 11vw, 12rem);
+  font-weight: 900;
+  line-height: 0.8;
+  letter-spacing: -0.03em;
+  text-transform: lowercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--line);
+}
+
+.brand-outline-text span {
+  color: var(--color-brand);
+  -webkit-text-stroke: 0;
+}
+
+.brand-border {
+  border-color: var(--line);
+}
+
+.img-hero-container {
+  overflow: hidden;
+  border-radius: 0.75rem;
+  border: 1px solid var(--line);
+  background-color: var(--bg);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.img-hero {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  opacity: 0.9;
+  transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.img-hero:hover {
+  transform: scale(1.03);
+}
+
+.brand-input {
+  width: 100%;
+  background-color: transparent;
+  border-bottom: 1px solid var(--line);
+  padding: 0.75rem 0.5rem;
+  font-family: var(--font-manrope-light);
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.brand-input:focus {
+  border-color: var(--color-brand);
+}
+
+.brand-accordion-item {
+  border-bottom: 1px solid var(--line);
+  transition: all 0.3s ease;
+}

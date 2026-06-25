@@ -1,13 +1,20 @@
+"use client";
+
 import React from "react";
-import InsightHero from "@/components/insights/InsightsHero";
-import Button from "@/components/ui/Button";
+import InsightsHero from "@/components/insights/InsightsHero";
+import InsightsCalendar from "@/components/insights/InsightsCalendar";
+import InsightsSubscribe from "@/components/insights/InsightsSubscribe";
+import InsightsAuthor from "@/components/insights/InsightsAuthor";
+import InsightsContact from "@/components/insights/InsightsContact";
+
 export default function InsightsPage() {
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-50 flex flex-col">
-
-      <Button variant="light" text="Contact Us" link="/contact" />
-      <Button variant="dark" text="Contact Us" link="/contact" />
-      <InsightHero />
+    <div className="bg-bg-primary text-text-primary flex flex-col transition-colors duration-500 selection:bg-brand selection:text-white">
+      <InsightsHero />
+      <InsightsCalendar />
+      <InsightsSubscribe />
+      <InsightsAuthor />
+      <InsightsContact />
     </div>
   );
 }
