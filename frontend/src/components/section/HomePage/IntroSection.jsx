@@ -2,10 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { introSection } from "@/data/intro";
-import { FaArrowTrendUp } from "react-icons/fa6";
-import { FaStar, FaArrowRight } from "react-icons/fa";
+import { introSection } from "@/data/home";
 
 export default function IntroSection() {
   return (
