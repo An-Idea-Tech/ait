@@ -1,11 +1,13 @@
 export const heroSection = {
   subtitle: "Most Indian SMEs don't need a website.",
-  headline: [
-    { text: "They need ", highlight: false },
-    { text: "3 Landing pages", highlight: true },
-    { text: "\and a ", highlight: false },
-    { text: "Whatsapp flow.", highlight: true },
-  ],
+  headline: "They need 3 Landing pages and a Whatsapp flow.",
+  
+  // [
+  //   { text: "They need ", highlight: false },
+  //   { text: "3 Landing pages", highlight: true },
+  //   { text: "\and a ", highlight: false },
+  //   { text: "Whatsapp flow.", highlight: true },
+  // ],
   image: {
     src: "https://www.wrkwrk.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Faboutbg.13257621.jpg&w=3840&q=75&dpl=dpl_fMXfyCZironyhf3shuRWLAMQUZsS",
     alt: "An Idea Tech Mangaluru Studio Team",

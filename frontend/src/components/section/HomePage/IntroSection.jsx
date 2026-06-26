@@ -9,7 +9,9 @@ import {  FaStar, FaArrowRight } from "react-icons/fa";
 
 export default function IntroSection() {
   return (
-    <section className="bg-bg-primary w-full py-16 md:py-24">
+    //  <section className="flex-col-center min-h-screen w-full">
+    //   <div className="section-padding-x flex-col-center w-full"></div>
+    <section className="flex-col-center min-h-screen w-full">
       <div className="mx-auto w-full max-w-[1920px] px-6 md:px-12">
         {/* Top Heading */}
         <div className="mb-12 text-center sm:mb-16">

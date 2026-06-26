@@ -2,7 +2,6 @@
 @config "../../tailwind.config.js";
 @custom-variant dark (&:where(.dark, .dark *));
 
-
 @font-face {
   font-family: "Manrope-light";
   src: url("/fonts/Manrope-Light.ttf") format("truetype");
@@ -33,36 +32,54 @@
 :root {
   --bg: #ffffff;
   --text-primary: #000000;
-  --text-secondary:#626262;
+  --text-secondary: #626262;
   --line: #161515;
-  
 }
 
 .dark {
   --bg: #000000;
   --text-primary: #ffffff;
-  --text-secondary:#626262;
-  --line:#383838;
+  --text-secondary: #626262;
+  --line: #383838;
 }
 
-
-@layer base{
-  html, body {
-    background-color: var(--bg);
-    color: var(--text-primary);
-    font-family: var(--font-manrope-medium);
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@layer base {
+  html,
+  body {
+    @apply bg-bg-primary text-text-primary font-manrope-medium m-0 box-border p-0;
   }
 }
 
-@layer utilities{
-  .flex-row-center{
+@layer utilities {
+  .hero-title-second {
+    @apply text-text-secondary font-manrope-bold text-base tracking-wide sm:text-xl md:text-2xl;
+  }
+
+  .hero-title-main {
+    @apply font-manrope-bold text-text-primary text-4xl leading-[1.1] tracking-tight sm:text-6xl md:text-7xl lg:text-[5vw];
+  }
+
+  .title {
+    @apply font-manrope-bold text-text-primary text-4xl tracking-tight sm:text-5xl md:text-6xl;
+  }
+
+  .subtitle {
+    @apply font-manrope-medium text-text-secondary text-base leading-relaxed sm:text-lg md:text-xl;
+  }
+
+  .section-padding-y {
+    @apply pt-8 pb-16 md:pt-12 md:pb-24;
+  }
+
+  .section-padding-x {
+    @apply mx-auto max-w-[1920px] px-6 md:px-12;
+  }
+
+  .flex-row-center {
     @apply flex flex-row items-center justify-center;
   }
 
-  .flex-col-center{
+  .flex-col-center {
     @apply flex flex-col items-center justify-center;
   }
 }
