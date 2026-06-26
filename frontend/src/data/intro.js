@@ -1,3 +1,5 @@
+import { FaArrowTrendUp } from "react-icons/fa6";
+
 export const introSection = {
   heading: {
     title: "Think Bigger",
@@ -6,14 +8,14 @@ export const introSection = {
   },
   statsRow: [
     {
-      icon: "project",
+      icon: FaArrowTrendUp,
       count: "30+",
       label: "Projects Completed",
       description: "Make your project grow bigger.",
     },
     {
       icon: "star",
-      count: "01 Million",
+      count: "100+",
       label: "Career-Driven Learners",
       description: "Join a large and growing community of coders.",
     },

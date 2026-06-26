@@ -27,6 +27,8 @@ export default function HeroSection() {
             {heroSection.description}
           </p>
 
+          
+
           {/* Pill CTA Button */}
           <div className="pt-2">
             <Button text={heroSection.cta.text} link={heroSection.cta.url} />
