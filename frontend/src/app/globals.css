@@ -18,6 +18,8 @@
 
 @theme {
   --color-brand: #ec840c;
+  /* --color-shadow:#C5C5C5; */
+  --color-gray-100: #252323;
   --color-bg-primary: var(--bg);
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
@@ -43,8 +45,24 @@
   --line:#383838;
 }
 
-body {
-  background-color: var(--bg);
-  color: var(--text-primary);
-  font-family: var(--font-manrope-medium);
+
+@layer base{
+  html, body {
+    background-color: var(--bg);
+    color: var(--text-primary);
+    font-family: var(--font-manrope-medium);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+}
+
+@layer utilities{
+  .flex-row-center{
+    @apply flex flex-row items-center justify-center;
+  }
+
+  .flex-col-center{
+    @apply flex flex-col items-center justify-center;
+  }
 }
