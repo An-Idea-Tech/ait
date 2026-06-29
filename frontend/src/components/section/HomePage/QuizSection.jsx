@@ -29,12 +29,12 @@ export default function QuizSection() {
     
       {/* Huge Background Display Typography (Desktop) */}
       <div className="absolute inset-0 hidden md:flex flex-col items-center justify-center pointer-events-none select-none z-0 overflow-hidden text-center leading-[0.82] font-medium tracking-tighter text-red/500">
-        <div className="text-[13vw] whitespace-nowrap">DOES YOUR</div>
+        <div className="text-[13vw] whitespace-nowrap text-red/40">DOES YOUR</div>
         <div className="text-[14vw] whitespace-nowrap  font-normal text-red">
           BUSINESS
         </div>
-        <div className="text-[13vw] whitespace-nowrap">NEED A</div>
-        <div className="text-[13vw] whitespace-nowrap">WEBSITE?</div>
+        <div className="text-[13vw] whitespace-nowrap text-red/40">NEED A</div>
+        <div className="text-[13vw] whitespace-nowrap text-red/40">WEBSITE?</div>
       </div>
 
       {/* Huge Display Typography (Mobile - stacked above card) */}

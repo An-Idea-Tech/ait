@@ -67,11 +67,11 @@
   }
 
   .title {
-    @apply font-manrope-bold text-text-primary text-4xl tracking-tight sm:text-5xl md:text-6xl;
+    @apply font-manrope-bold text-center text-text-primary text-4xl tracking-tight sm:text-5xl md:text-6xl;
   }
 
   .subtitle {
-    @apply font-manrope-medium text-text-primary text-base leading-relaxed sm:text-lg md:text-xl;
+    @apply font-manrope-medium text-center text-text-secondary text-base leading-relaxed sm:text-lg md:text-xl;
   }
 
   .description{
@@ -97,5 +97,10 @@
 
   .card-rounded {
     @apply rounded-3xl;
+  }
+
+
+  .trust-description {
+    @apply font-manrope-light text-text-secondary text-center  mt-5  text-lg  sm:text-lg md:text-xl;
   }
 }
