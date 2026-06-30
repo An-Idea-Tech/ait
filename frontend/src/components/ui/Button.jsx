@@ -20,6 +20,8 @@ export default function Button({
     variant,
     link,
     icon,
+    type = "button",
+    ...props
 }) {
     // Default Adaptive Behavior (behaves like "light" variant):
     // - Light mode (white theme): Black button
@@ -43,13 +45,14 @@ export default function Button({
 
     const buttonContent = (
         <motion.button
-            type="button"
+            type={type}
             initial="rest"
             whileHover="hover"
             whileTap="tap"
             variants={{
                 tap: { scale: 0.95 }
             }}
+            {...props}
             className={`group flex w-max items-center justify-between rounded-full border-2 py-1.5 pl-6 pr-2 cursor-pointer transition-colors duration-300 ${btnClasses}`}
         >
             <span className="mr-4 font-semibold text-sm tracking-wide select-none">{text}</span>
