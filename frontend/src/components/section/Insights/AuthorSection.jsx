@@ -3,9 +3,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function InsightsAuthor() {
+export default function AuthorSection() {
   return (
-    <section className="bg-bg-primary px-6 py-24 lg:px-16 border-b border-border-primary flex flex-col items-center justify-center">
+    <section className="bg-bg-primary section-padding-y section-padding-x flex flex-col items-center border-b border-border-primary">
       <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
         
         {/* Left Sneaker Display */}
@@ -25,8 +25,8 @@ export default function InsightsAuthor() {
 
         {/* Center Biography Area */}
         <div className="col-span-12 md:col-span-6 text-center space-y-6 px-4">
-          <h2 className="heading-section">Who writes these.</h2>
-          <p className="body-large">
+          <h2 className="title">Who writes these.</h2>
+          <p className="subtitle font-manrope-light text-text-secondary">
             These essays are written by the team at An Idea Tech. We run a product studio building software for companies across India. We also publish books, tools, and open source libraries.
           </p>
         </div>

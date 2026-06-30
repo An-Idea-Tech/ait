@@ -11,7 +11,7 @@ import Link from "next/link";
  *
  * @param {Object} props
  * @param {string} [props.text="Connect with us"] - Button text.
- * @param {"light" | "dark"} [props.variant] - Force 'light' or 'dark' style.
+ * @param {"light" | "dark"} [props.variant] - Force 'light' or 'dark' style behaviors.
  * @param {string} [props.link] - Optional link URL for navigation.
  * @param {React.ReactNode} [props.icon] - Optional custom icon to replace the default arrow.
  */
@@ -21,20 +21,25 @@ export default function Button({
     link,
     icon,
 }) {
-    // Base classes default to brand colors
-    let btnClasses = "bg-white border-transparent text-black shadow-md hover:shadow-lg hover:bg-slate-50 dark:bg-zinc-900 dark:text-white dark:hover:bg-zinc-800";
-    let circleClasses = "bg-brand text-white"; // Enforcing the brand color only for the circle
+    // Default Adaptive Behavior (behaves like "light" variant):
+    // - Light mode (white theme): Black button
+    // - Dark mode (black theme): White button
+    let btnClasses = "bg-black text-white border-transparent hover:bg-zinc-900 dark:bg-white dark:text-black dark:hover:bg-slate-100";
+    let circleClasses = "bg-brand text-white";
 
-    // Static variant overrides if explicitly requested
     if (variant === "dark") {
-        btnClasses = "bg-black border-white/90 text-white hover:bg-zinc-950";
-        circleClasses = "bg-transparent text-white";
+        // - Light mode (white theme): White button
+        // - Dark mode (black theme): Black button
+        btnClasses = "bg-white text-black border-transparent shadow-md hover:bg-slate-50 dark:bg-black dark:text-white dark:border-white/20 dark:hover:bg-zinc-950";
+        circleClasses = "bg-brand text-white";
     } else if (variant === "light") {
-        btnClasses = "bg-white border-transparent text-black shadow-md hover:shadow-lg hover:bg-slate-50";
+        // - Light mode (white theme): Black button
+        // - Dark mode (black theme): White button
+        btnClasses = "bg-black text-white border-transparent hover:bg-zinc-900 dark:bg-white dark:text-black dark:hover:bg-slate-100";
         circleClasses = "bg-brand text-white";
     }
 
-    const currentIcon = icon || <FiArrowRight className={`w-5 h-5 ${variant === "dark" ? "text-white" : "text-black"}`} />;
+    const currentIcon = icon || <FiArrowRight className="w-5 h-5 text-black" />;
 
     const buttonContent = (
         <motion.button

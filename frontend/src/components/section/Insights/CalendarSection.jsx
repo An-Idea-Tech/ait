@@ -22,7 +22,7 @@ const calendarData = [
   { year: "2021", months: [] },
 ];
 
-export default function InsightsCalendar() {
+export default function CalendarSection() {
   const [openYear, setOpenYear] = useState("2026");
 
   const toggleYear = (year) => {
@@ -30,10 +30,10 @@ export default function InsightsCalendar() {
   };
 
   return (
-    <section className="bg-bg-primary px-6 py-20 lg:px-16 border-b border-border-primary flex flex-col items-center">
+    <section className="bg-bg-primary section-padding-y section-padding-x flex flex-col items-center border-b border-border-primary">
       <div className="w-full max-w-4xl text-center space-y-6 mb-16">
-        <h2 className="heading-section">The 2026 essay calendar.</h2>
-        <p className="body-large max-w-2xl mx-auto">
+        <h2 className="title">The 2026 essay calendar.</h2>
+        <p className="subtitle max-w-2xl mx-auto font-manrope-light text-text-secondary">
           A release schedule built for focus. We release 12 essay units every calendar year. Each covers a single theme in-depth, offering a comprehensive view. Subscribe below to get notified of new units.
         </p>
       </div>
@@ -42,7 +42,7 @@ export default function InsightsCalendar() {
         {calendarData.map((item) => {
           const isOpen = openYear === item.year;
           return (
-            <div key={item.year} className="brand-accordion-item">
+            <div key={item.year} className="border-b border-border-primary transition-all duration-300">
               <button
                 onClick={() => toggleYear(item.year)}
                 className={`w-full flex items-center justify-between py-6 px-6 text-left transition-all duration-300 font-manrope-medium ${

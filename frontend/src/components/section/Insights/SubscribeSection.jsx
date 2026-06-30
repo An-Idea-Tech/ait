@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Button from "@/components/ui/Button";
 
-export default function InsightsSubscribe() {
+export default function SubscribeSection() {
   const [email, setEmail] = useState("");
 
   const handleSubmit = (e) => {
@@ -14,7 +14,7 @@ export default function InsightsSubscribe() {
   };
 
   return (
-    <section className="bg-bg-primary px-6 py-24 lg:px-16 border-b border-border-primary flex flex-col items-center relative overflow-hidden">
+    <section className="bg-bg-primary section-padding-y section-padding-x flex flex-col items-center border-b border-border-primary relative overflow-hidden">
       
       {/* Decorative Airplane Path Animation */}
       <div className="absolute top-8 left-1/2 -translate-x-1/2 w-80 h-32 pointer-events-none opacity-40">
@@ -56,7 +56,7 @@ export default function InsightsSubscribe() {
       </div>
 
       <div className="w-full max-w-2xl text-center space-y-8 mt-10">
-        <h2 className="heading-section">Get new essays when they ship.</h2>
+        <h2 className="title">Get new essays when they ship.</h2>
         
         <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-end gap-4 w-full">
           <input
@@ -65,14 +65,14 @@ export default function InsightsSubscribe() {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Email address"
             required
-            className="brand-input text-lg placeholder-text-secondary/50 flex-1 py-3"
+            className="w-full bg-transparent border-b border-border-primary py-3 text-lg placeholder-text-secondary/50 flex-1 outline-none transition-colors focus:border-brand font-manrope-light text-text-primary"
           />
           <div className="w-full sm:w-auto flex justify-end">
             <Button text="Subscribe" variant="dark" />
           </div>
         </form>
 
-        <p className="body-regular text-xs text-text-secondary/70">
+        <p className="description text-xs text-text-secondary/70">
           You'll receive maximum one email per month. Unsubscribe anytime.
         </p>
       </div>
