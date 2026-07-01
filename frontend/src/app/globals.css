@@ -107,3 +107,37 @@
 .trust-description {
     @apply font-manrope-light text-text-secondary text-center mt-5 text-lg sm:text-lg md:text-xl;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.blog-card-hover {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.blog-card-hover:hover {
+    transform: translateY(-4px);
+}
