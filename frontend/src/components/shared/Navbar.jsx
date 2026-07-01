@@ -7,8 +7,8 @@ import Logo from "./Logo";
 export default function Navbar() {
 
   return (
-    <nav className="w-full bg-bg-primary fixed z-100 px-6 pt-4 pb-4 text-text-primary md:px-12 ">
-      <div className="mx-auto flex w-full max-w-[1920px] items-center justify-between border-b border-border-primary pb-2">
+    <nav className="w-full bg-bg-primary fixed z-100 px-6 text-text-primary md:px-12 ">
+      <div className="mx-auto flex w-full max-w-[1920px] items-center justify-between ">
         
         {/* Logo Section */}
         <div className="flex flex-shrink-0 items-center">

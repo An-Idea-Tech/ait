@@ -3,100 +3,107 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @font-face {
-  font-family: "Manrope-light";
-  src: url("/fonts/Manrope-Light.ttf") format("truetype");
+    font-family: "Manrope-light";
+    src: url("/fonts/Manrope-Light.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Manrope-medium";
-  src: url("/fonts/Manrope-Medium.ttf") format("truetype");
+    font-family: "Manrope-medium";
+    src: url("/fonts/Manrope-Medium.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Manrope-bold";
-  src: url("/fonts/Manrope-Bold.ttf") format("truetype");
+    font-family: "Manrope-bold";
+    src: url("/fonts/Manrope-Bold.ttf") format("truetype");
 }
 
 @theme {
-  --color-brand: #ef870d;
-  --color-brown: #a35a3a;
-  --color-cream: #faf7ef;
-  --color-blue: #1a2332;
-  --color-gray: #18181a;
+    --color-brand: #ef870d;
+    --color-brown: #a35a3a;
+    --color-cream: #faf7ef;
+    --color-blue: #1a2332;
+    --color-gray: #18181a;
 
-  /* --color-shadow:#C5C5C5; */
-  --color-gray-100: #252323;
-  --color-bg-primary: var(--bg);
-  --color-text-primary: var(--text-primary);
-  --color-text-secondary: var(--text-secondary);
-  --color-border-primary: var(--line);
+    --color-red: #8f1d1d;
 
-  --font-manrope-light: "Manrope-light", sans-serif;
-  --font-manrope-medium: "Manrope-medium", sans-serif;
-  --font-manrope-bold: "Manrope-bold", sans-serif;
+    /* --color-shadow:#C5C5C5; */
+    --color-gray-100: #252323;
+    --color-bg-primary: var(--bg);
+    --color-text-primary: var(--text-primary);
+    --color-text-secondary: var(--text-secondary);
+    --color-border-primary: var(--line);
+
+    --font-manrope-light: "Manrope-light", sans-serif;
+    --font-manrope-medium: "Manrope-medium", sans-serif;
+    --font-manrope-bold: "Manrope-bold", sans-serif;
 }
 
 :root {
-  --bg: #ffffff;
-  --text-primary: #000000;
-  --text-secondary: #626262;
-  --line: #161515;
+    --bg: #ffffff;
+    --text-primary: #000000;
+    --text-secondary: #626262;
+    --line: #161515;
 }
 
 .dark {
-  --bg: #000000;
-  --text-primary: #ffffff;
-  --text-secondary: #626262;
-  --line: #383838;
+    --bg: #000000;
+    --text-primary: #ffffff;
+    --text-secondary: #626262;
+    --line: #383838;
 }
 
 @layer base {
 
-  html,
-  body {
-    @apply bg-bg-primary text-text-primary font-manrope-medium m-0 box-border p-0;
-  }
+    html,
+    body {
+        @apply bg-bg-primary text-text-primary font-manrope-medium m-0 box-border p-0;
+    }
 }
 
 @layer utilities {
-  .hero-title-second {
-    @apply text-text-secondary font-manrope-bold text-base tracking-wide sm:text-xl md:text-2xl;
-  }
+    .hero-title-second {
+        @apply text-text-secondary font-manrope-bold text-base tracking-wide sm:text-xl md:text-2xl;
+    }
 
-  .hero-title-main {
-    @apply font-manrope-bold text-text-primary text-4xl leading-[1.1] tracking-tight sm:text-6xl md:text-7xl lg:text-[5vw];
-  }
+    .hero-title-main {
+        @apply font-manrope-bold text-text-primary text-4xl leading-[1.1] tracking-tight sm:text-6xl md:text-7xl lg:text-[5vw];
+    }
 
-  .title {
-    @apply font-manrope-bold text-text-primary text-4xl tracking-tight sm:text-5xl md:text-6xl;
-  }
+    .title {
+        @apply font-manrope-bold text-center text-text-primary text-4xl tracking-tight sm:text-5xl md:text-6xl;
+    }
 
-  .subtitle {
-    @apply font-manrope-medium text-text-primary text-base leading-relaxed sm:text-lg md:text-xl;
-  }
+    .subtitle {
+        @apply font-manrope-medium text-center text-text-secondary text-base leading-relaxed sm:text-lg md:text-xl;
+    }
 
-  .description {
-    @apply font-manrope-light text-text-secondary text-xs leading-relaxed sm:text-[15px];
-  }
+    .description {
+        @apply font-manrope-light text-text-secondary text-xs leading-relaxed sm:text-[15px];
+    }
 
 
-  .section-padding-y {
-    @apply pt-8 pb-16 md:pt-12 md:pb-24;
-  }
+    .section-padding-y {
+        @apply pt-8 pb-16 md:pt-12 md:pb-24;
+    }
 
-  .section-padding-x {
-    @apply mx-auto max-w-[1920px] px-6 md:px-12;
-  }
+    .section-padding-x {
+        @apply mx-auto max-w-[1920px] px-6 md:px-12;
+    }
 
-  .flex-row-center {
-    @apply flex flex-row items-center justify-center;
-  }
+    .flex-row-center {
+        @apply flex flex-row items-center justify-center;
+    }
 
-  .flex-col-center {
-    @apply flex flex-col items-center justify-center;
-  }
+    .flex-col-center {
+        @apply flex flex-col items-center justify-center;
+    }
 
-  .card-rounded {
-    @apply rounded-3xl;
-  }
+    .card-rounded {
+        @apply rounded-3xl;
+    }
+}
+
+
+.trust-description {
+    @apply font-manrope-light text-text-secondary text-center mt-5 text-lg sm:text-lg md:text-xl;
 }
