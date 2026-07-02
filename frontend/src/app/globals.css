@@ -2,69 +2,70 @@
 @config "../../tailwind.config.js";
 @custom-variant dark (&:where(.dark, .dark *));
 
-@font-face {
-    font-family: "Manrope-light";
-    src: url("/fonts/Manrope-Light.ttf") format("truetype");
+#section-nav::-webkit-scrollbar:horizontal {
+  display: none;
 }
 
 @font-face {
-    font-family: "Manrope-medium";
-    src: url("/fonts/Manrope-Medium.ttf") format("truetype");
+  font-family: "Manrope-light";
+  src: url("/fonts/Manrope-Light.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "Manrope-bold";
-    src: url("/fonts/Manrope-Bold.ttf") format("truetype");
+  font-family: "Manrope-medium";
+  src: url("/fonts/Manrope-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Manrope-bold";
+  src: url("/fonts/Manrope-Bold.ttf") format("truetype");
 }
 
 @theme {
-    --color-brand: #ef870d;
-    --color-brown: #a35a3a;
-    --color-cream: #faf7ef;
-    --color-blue: #1a2332;
-    --color-gray: #18181a;
+  --color-brand: #ef870d;
+  --color-brown: #a35a3a;
+  --color-cream: #faf7ef;
+  --color-blue: #1a2332;
+  --color-gray: #18181a;
 
-    --color-red: #8f1d1d;
+  --color-red: #8f1d1d;
 
-    /* --color-shadow:#C5C5C5; */
-    --color-gray-100: #252323;
-    --color-bg-primary: var(--bg);
-    --color-text-primary: var(--text-primary);
-    --color-text-secondary: var(--text-secondary);
-    --color-border-primary: var(--line);
+  /* --color-shadow:#C5C5C5; */
+  --color-gray-100: #252323;
+  --color-bg-primary: var(--bg);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-border-primary: var(--line);
 
-    --font-manrope-light: "Manrope-light", sans-serif;
-    --font-manrope-medium: "Manrope-medium", sans-serif;
-    --font-manrope-bold: "Manrope-bold", sans-serif;
+  --font-manrope-light: "Manrope-light", sans-serif;
+  --font-manrope-medium: "Manrope-medium", sans-serif;
+  --font-manrope-bold: "Manrope-bold", sans-serif;
 }
 
 :root {
-    --bg: #ffffff;
-    --text-primary: #000000;
-    --text-secondary: #626262;
-    --line: #161515;
+  --bg: #ffffff;
+  --text-primary: #000000;
+  --text-secondary: #626262;
+  --line: #161515;
 }
 
 .dark {
-    --bg: #000000;
-    --text-primary: #ffffff;
-    --text-secondary: #626262;
-    --line: #383838;
+  --bg: #000000;
+  --text-primary: #ffffff;
+  --text-secondary: #626262;
+  --line: #383838;
 }
 
 @layer base {
-
-    html,
-    body {
-        @apply bg-bg-primary text-text-primary font-manrope-medium m-0 box-border p-0;
-    }
+  html,
+  body {
+    @apply bg-bg-primary text-text-primary font-manrope-medium m-0 box-border p-0;
+  }
 }
 
 @layer components {
-
-
   .glass-pill {
-    @apply relative inline-flex w-fit items-center justify-center overflow-hidden rounded-full border border-solid border-[rgba(255,255,255,0.15)] px-6 py-2.5 shadow-[0_8px_32px_rgba(0,0,0,0.25),inset_0_1px_0_rgba(255,255,255,0.4),inset_0_-1px_0_rgba(255,255,255,0.1)] backdrop-blur-[20px] transition-all duration-300 hover:border-[rgba(255,255,255,0.25)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.6)] before:absolute before:inset-x-0 before:top-0 before:h-px before:content-[''];
+    @apply relative inline-flex w-fit items-center justify-center overflow-hidden rounded-full border border-solid border-[rgba(255,255,255,0.15)] px-6 py-2.5 shadow-[0_8px_32px_rgba(0,0,0,0.25),inset_0_1px_0_rgba(255,255,255,0.4),inset_0_-1px_0_rgba(255,255,255,0.1)] backdrop-blur-[20px] transition-all duration-300 before:absolute before:inset-x-0 before:top-0 before:h-px before:content-[''] hover:border-[rgba(255,255,255,0.25)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.6)];
     background: linear-gradient(
       135deg,
       rgba(255, 255, 255, 0.08) 0%,
@@ -117,29 +118,33 @@
     @apply text-text-secondary font-manrope-bold text-base tracking-wide sm:text-xl md:text-2xl;
   }
 
-    .hero-title-main {
-        @apply font-manrope-bold text-text-primary text-4xl leading-[1.1] tracking-tight sm:text-6xl md:text-7xl lg:text-[5vw];
-    }
+  .hero-title-main {
+    @apply font-manrope-bold text-text-primary text-4xl leading-[1.1] tracking-tight sm:text-6xl md:text-7xl lg:text-[5vw];
+  }
 
   .title {
     @apply font-manrope-bold text-text-primary text-center text-4xl tracking-tight sm:text-5xl md:text-6xl;
   }
 
+  .title2 {
+    @apply font-manrope-bold text-text-primary text-center text-3xl tracking-tight sm:text-4xl md:text-5xl;
+  }
+
   .subtitle {
-    @apply font-manrope-medium text-text-secondary text-center text-base leading-relaxed sm:text-lg md:text-xl;
+    @apply font-manrope-bold text-text-secondary text-center text-base leading-relaxed sm:text-lg md:text-xl;
   }
 
   .description {
-    @apply font-manrope-light text-text-secondary text-xs leading-relaxed sm:text-[15px];
+    @apply font-manrope-light text-text-secondary text-sm leading-relaxed sm:text-[18px];
   }
 
   .flex-row-center {
     @apply flex flex-row items-center justify-center;
   }
 
-    .flex-col-center {
-        @apply flex flex-col items-center justify-center;
-    }
+  .flex-col-center {
+    @apply flex flex-col items-center justify-center;
+  }
 
   .card-rounded {
     @apply rounded-3xl;
@@ -150,41 +155,14 @@
   }
 }
 
-
 .trust-description {
-    @apply font-manrope-light text-text-secondary text-center mt-5 text-lg sm:text-lg md:text-xl;
+  @apply font-manrope-light text-text-secondary mt-5 text-center text-lg sm:text-lg md:text-xl;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .blog-card-hover {
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .blog-card-hover:hover {
-    transform: translateY(-4px);
+  transform: translateY(-4px);
 }

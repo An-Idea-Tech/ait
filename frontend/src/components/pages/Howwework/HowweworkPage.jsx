@@ -1,20 +1,18 @@
 import HeroSection from '@/components/section/HowweworkPage/HeroSection'
-import SectionNav from '@/components/shared/SectionNav'
-import { navigationSections, howWeWorkPhases } from '@/data/howwework'
-import PhaseCard from '../../howwework/PhaseCard'
 import React from 'react'
+import PhaseSection from '@/components/section/HowweworkPage/PhaseSection'
+import AfterlaunchSection from '@/components/section/HowweworkPage/AfterlaunchSection'
+import Confusion from '@/components/section/HowweworkPage/Confusion'
+import { confusionData } from "@/data/howwework";
 
 export default function HowweworkPage() {
   return (
     <div className="page flex flex-col gap-12 sm:gap-16">
       <HeroSection />
-      <SectionNav sections={navigationSections} />
-      
-      <div className="flex flex-col gap-12 sm:gap-16 w-full">
-        {howWeWorkPhases.map((phase) => (
-          <PhaseCard key={phase.id} data={phase} />
-        ))}
-      </div>
+      <PhaseSection/>
+      <AfterlaunchSection/>
+      <Confusion confusionData={confusionData}/>
     </div>
   )
 }
+

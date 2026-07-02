@@ -176,3 +176,89 @@ export const howWeWorkPhases = [
   },
 ];
 
+export const afterLaunchData = {
+  id: "after-launch",
+  title: "After launch",
+  subtitle:
+    "Every AIT project ends with a launch. None of our long-term clients end there.",
+  cards: [
+    {
+      id: "keep-doing",
+      title: "What we keep doing\nafter launch.",
+      intro:
+        "AMC is a monthly retainer that keeps your site or platform running. The day-to-day technical work happens whether you ask for it or not.\nThis is what's included every month:",
+      points: [
+        "Server uptime monitoring and response",
+        "Security patches and plugin updates",
+        "Backups — frequency and retention based on your hosting plan",
+        "Broken link checks and fixes",
+        "Performance monitoring (page speed, error rates)",
+        "Bug fixes for anything that breaks",
+        "A written monthly report showing what was done",
+      ],
+      outro:
+        "You don't need to log a ticket for routine maintenance. We do it on schedule and tell you about it in the report.",
+    },
+    {
+      id: "not-included",
+      title: "What's not included.",
+      intro:
+        "We're upfront about this because the wrong agency will quietly slot anything into AMC and surprise you with bills later.\nAMC does not cover:",
+      points: [
+        "New features or pages",
+        "Major redesigns",
+        "Custom integrations with new tools",
+        "Marketing changes (SEO campaigns, ad landing pages)",
+        "Anything that wasn't part of the original build",
+      ],
+      outro:
+        "If you want any of these, we'll quote them separately. You'll always know what's AMC and what's a new project before any work starts.",
+    },
+    {
+      id: "grow-beyond",
+      title: "When you want to grow\nbeyond maintenance.",
+      intro:
+        "Most of our long-term clients eventually want more than maintenance. A new feature. A second site. A platform that integrates with the one we built. When that happens, we don't treat it as a fresh project — we treat it as the next phase of the same relationship.",
+      outro:
+        "Growth work usually starts with a 30-minute call to scope what you want. From there it goes through the same four phases as a new project, but faster, because we already know your business, your tools, and your team.",
+    },
+  ],
+  actions: [
+    {
+      id: "discuss-growth",
+      label: "Already with us and want to discuss growth?",
+      buttonText: "Discuss growth",
+      link: "/contact",
+    },
+    {
+      id: "first-time",
+      label: "Considering AMC for the first time?",
+      buttonText: "Explore AMC",
+      link: "/contact",
+    },
+  ],
+};
+
+export const confusionData = {
+  id: "talk-to-us",
+  title: "Still Confused ?",
+  description:
+    "If you've made it this far, there's a good chance we'd be a useful conversation. The next step is a 30-minute call. We'll ask about your business, your goals, and what you're trying to build. By the end of the call, we'll tell you honestly whether we're the right fit — and if we're not, we'll usually be able to point you to someone who is.",
+  buttons: [
+    {
+      id: 1,
+      text: "Connect with us",
+      link: "/contact",
+      variant: "light",
+    },
+    {
+      id: 2,
+      text: "Connect with us",
+      link: "/contact",
+      variant: "outline",
+    },
+  ],
+  note: {
+    text: "Free 30-minute call. We'll tell you if we're the right fit.",
+  },
+};

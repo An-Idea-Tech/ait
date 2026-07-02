@@ -43,15 +43,15 @@ export default function SectionNav({ sections = [] }) {
   };
 
   return (
-    <div className="sticky top-16 md:top-20 z-40 w-full bg-bg-primary/95 backdrop-blur-md border-y border-border-primary py-3.5 px-6 shadow-sm">
-      <div className="mx-auto max-w-[1920px] overflow-x-auto flex items-center justify-start xl:justify-center gap-4 sm:gap-6 md:gap-8 no-scrollbar">
+    <div className="glass-pill sticky top-16 md:top-20 z-40 w-full ">
+      <div id="section-nav" className="mx-auto  max-w-[1920px] overflow-x-auto overflow-y-hidden flex items-center justify-start xl:justify-center gap-4 sm:gap-6 md:gap-8">
         {sections.map((sec) => {
           const isActive = activeId === sec.id;
           return (
             <button
               key={sec.id}
               onClick={() => scrollToSection(sec.id)}
-              className={`whitespace-nowrap text-xs sm:text-sm font-manrope-medium transition-all duration-300 py-1.5 px-4 rounded-full cursor-pointer ${
+              className={`whitespace-nowrap text-xs sm:text-sm font-manrope-medium transition-all duration-300 py-1.5 px-3 rounded-full cursor-pointer ${
                 isActive
                   ? "bg-brand text-white font-manrope-bold shadow-md scale-105"
                   : "text-text-secondary hover:text-text-primary hover:bg-zinc-100 dark:hover:bg-zinc-800/60"

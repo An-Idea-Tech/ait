@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { FiChevronDown } from "react-icons/fi";
+import Heighlight from "../shared/Heighlight";
 
 export default function PhaseCard({ data }) {
   if (!data) return null;
@@ -24,42 +25,41 @@ export default function PhaseCard({ data }) {
   };
 
   return (
-    <section
+    <div
       id={data.id}
-      className="w-full scroll-mt-32 md:scroll-mt-36 border-t border-b border-border-primary bg-bg-primary text-text-primary transition-all duration-300"
+      className="w-full mb-20 scroll-mt-32 md:scroll-mt-36 border-t border-b border-border-primary bg-bg-primary text-text-primary transition-all duration-300"
     >
+
       {/* Top Header Row */}
-      <div className="flex flex-col md:flex-row border-b border-border-primary">
+      <div className="flex flex-col lg:flex-row border-b border-border-primary ">
         {/* Phase Label Column */}
-        <div className="w-full md:w-44 lg:w-52 shrink-0 py-5 px-6 border-b md:border-b-0 md:border-r border-border-primary flex items-center">
-          <span className="font-manrope-medium text-text-secondary text-sm sm:text-base">
-            {data.phaseLabel}
-          </span>
+        <div className="w-full lg:w-44 lg:w-52  grow-0 py-5 px-6  lg:border-r border-border-primary flex-row-center">
+          <Heighlight text={data.phaseLabel} />
         </div>
 
         {/* Phase Title Column */}
-        <div className="w-full md:w-72 lg:w-80 shrink-0 py-5 px-6 border-b md:border-b-0 md:border-r border-border-primary flex items-center">
-          <h2 className="font-manrope-bold text-text-primary text-2xl sm:text-3xl tracking-tight">
+        <div className="w-full lg:w-72 lg:w-80  grow-1  py-5 px-6  lg:border-r border-border-primary flex-row-center">
+          <h2 className="title2">
             {data.title}
           </h2>
         </div>
 
         {/* Phase Subtitle Column */}
-        <div className="flex-1 py-5 px-6 flex items-center">
-          <p className="font-manrope-medium text-text-secondary text-sm sm:text-base md:text-lg leading-relaxed">
+        <div className="flex-1 py-5 px-6 flex-row-center grow-4 lg:grow-1">
+          <p className="subtitle">
             {data.subtitle}
           </p>
         </div>
       </div>
 
-      {/* Middle Accordions Section */}
+      {/* Middle Accordions div */}
       {data.accordions && data.accordions.length > 0 && (
         <div className="flex flex-col md:flex-row">
           {/* Empty spacer column to align accordions under the title */}
           <div className="hidden md:block md:w-44 lg:w-52 shrink-0" />
 
           {/* Accordion list */}
-          <div className="flex-1 px-6 divide-y divide-border-primary/40">
+          <div className="flex-1 px-6 ">
             {data.accordions.map((item) => {
               const isOpen = openIds.includes(item.id);
               return (
@@ -70,10 +70,10 @@ export default function PhaseCard({ data }) {
                     aria-expanded={isOpen}
                   >
                     <span
-                      className={`font-manrope-medium text-base sm:text-lg md:text-xl transition-colors duration-200 ${
+                      className={`subtitle ${
                         isOpen
-                          ? "text-brand font-manrope-bold"
-                          : "text-text-primary group-hover:text-brand"
+                          ? "text-text-primary "
+                          : "text-text-secondary group-hover:text-text-primary "
                       }`}
                     >
                       {item.title}
@@ -81,7 +81,7 @@ export default function PhaseCard({ data }) {
                     <span className="ml-4 shrink-0 text-text-secondary group-hover:text-text-primary transition-transform duration-300">
                       <FiChevronDown
                         className={`w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-300 ${
-                          isOpen ? "rotate-180 text-brand" : ""
+                          isOpen ? "rotate-180" : ""
                         }`}
                       />
                     </span>
@@ -96,7 +96,7 @@ export default function PhaseCard({ data }) {
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="overflow-hidden"
                       >
-                        <div className="pb-6 pt-1 text-text-secondary font-manrope-light text-sm sm:text-base leading-relaxed max-w-4xl pr-4">
+                        <div className="pb-6 pt-1 description text-justify tracking-tight max-w-4xl pr-4">
                           {item.content}
                         </div>
                       </motion.div>
@@ -110,25 +110,25 @@ export default function PhaseCard({ data }) {
       )}
 
       {/* Bottom Footer Row */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-t border-border-primary py-5 px-6 text-xs sm:text-sm md:text-base">
+      <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-3 border-t border-border-primary py-10 px-6 text-xs sm:text-sm md:text-base">
         <div>
-          <span className="text-text-secondary font-manrope-medium">
+          <span className="subtitle">
             {data.durationLabel || "Typical duration : "}
           </span>
-          <span className="font-manrope-bold text-text-primary ml-1">
+          <span className="description ml-1">
             {data.durationValue || data.typicalDuration}
           </span>
         </div>
 
         <div>
-          <span className="text-text-secondary font-manrope-medium">
+          <span className="subtitle">
             {data.deliverableLabel || "Deliverable : "}
           </span>
-          <span className="font-manrope-bold text-text-primary ml-1">
+          <span className="description ml-1">
             {data.deliverableValue || data.deliverable}
           </span>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

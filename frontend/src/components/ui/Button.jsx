@@ -39,9 +39,13 @@ export default function Button({
         // - Dark mode (black theme): White button
         btnClasses = "bg-black text-white border-transparent hover:bg-zinc-900 dark:bg-white dark:text-black dark:hover:bg-slate-100";
         circleClasses = "bg-brand text-white";
+    } else if (variant === "outline") {
+        btnClasses = "bg-transparent text-text-primary border-border-primary hover:bg-border-primary/10 dark:border-white/30 dark:hover:bg-white/10";
+        circleClasses = "bg-transparent text-text-primary";
     }
 
-    const currentIcon = icon || <FiArrowRight className="w-5 h-5 text-black" />;
+    const iconColorClass = variant === "outline" ? "text-text-primary" : "text-black";
+    const currentIcon = icon || <FiArrowRight className={`w-5 h-5 ${iconColorClass}`} />;
 
     const buttonContent = (
         <motion.button
