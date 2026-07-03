@@ -4,12 +4,14 @@ import React, { useState, useMemo } from "react";
 import { FiArrowLeft, FiArrowRight, FiSearch } from "react-icons/fi";
 import { AnimatePresence } from "framer-motion";
 import { posts, calendarStructure, categories } from "@/data/blog";
+import { blogHeaderContent } from "@/data/insightdata";
 import BlogSidebar from "./BlogSidebar";
 import BlogCard from "./BlogCard";
 import BlogDetail from "./BlogDetail";
 import BlogPagination from "./BlogPagination";
 
 export default function BlogSection() {
+  const { title, description } = blogHeaderContent;
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedYear, setSelectedYear] = useState("2026");
@@ -78,45 +80,46 @@ export default function BlogSection() {
   };
 
   return (
-    <section className="bg-bg-primary section-padding-y section-padding-x flex flex-col border-b border-border-primary">
+    <section className="bg-bg-primary flex flex-col">
       <div className="w-full max-w-[1400px] mx-auto space-y-12">
-        
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-          <div className="space-y-4">
-            <h2 className="title text-left">Essays & Insights</h2>
-            <p className="description max-w-xl">
-              Observations, lessons, and thoughts on how SME software gets built, digital branding, and running a design studio.
+
+        <div className="flex flex-col items-center text-center gap-4 w-full">
+          <div className="space-y-4 max-w-2xl">
+            <h2 className="title">{title}</h2>
+            <p className="description max-w-xl mx-auto">
+              {description}
             </p>
           </div>
-          {(selectedYear || selectedMonth || selectedCategory !== "All" || searchQuery) && (
-            <button
-              onClick={handleResetFilters}
-              className="text-xs uppercase tracking-widest text-brand font-manrope-bold hover:underline cursor-pointer text-left"
-            >
-              Clear all filters
-            </button>
-          )}
         </div>
 
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-border-primary pb-6">
-          <div className="flex flex-wrap gap-2">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => {
-                  setSelectedCategory(cat);
-                  setCurrentPage(1);
-                  setSelectedPost(null);
-                }}
-                className={`px-5 py-2 rounded-full text-xs uppercase tracking-wider font-manrope-bold border transition-all cursor-pointer ${
-                  selectedCategory === cat
+          <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap gap-2">
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => {
+                    setSelectedCategory(cat);
+                    setCurrentPage(1);
+                    setSelectedPost(null);
+                  }}
+                  className={`px-5 py-2 rounded-full text-xs uppercase tracking-wider font-manrope-bold border transition-all cursor-pointer ${selectedCategory === cat
                     ? "bg-brand border-brand text-black"
                     : "bg-transparent border-border-primary text-text-secondary hover:text-text-primary hover:border-text-primary"
-                }`}
+                    }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+            {(selectedYear || selectedMonth || selectedCategory !== "All" || searchQuery) && (
+              <button
+                onClick={handleResetFilters}
+                className="text-xs uppercase tracking-widest text-brand font-manrope-bold hover:underline cursor-pointer"
               >
-                {cat}
+                Clear all filters
               </button>
-            ))}
+            )}
           </div>
 
           <div className="relative w-full sm:w-72">
@@ -136,7 +139,7 @@ export default function BlogSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-          
+
           <BlogSidebar
             calendarStructure={calendarStructure}
             selectedYear={selectedYear}
