@@ -9,14 +9,12 @@ import ContactSection from "@/components/section/Insights/ContactSection";
 
 export default function InsightsPage() {
   return (
-    <>
-      <main>
-        <HeroSection />
-        <BlogSection />
-        <SubscribeSection />
-        <AuthorSection />
-        <ContactSection />
-      </main>
-    </>
+    <main className="page flex flex-col gap-16 md:gap-24">
+      <HeroSection />
+      <BlogSection />
+      <SubscribeSection />
+      <AuthorSection />
+      <ContactSection />
+    </main>
   );
 }
