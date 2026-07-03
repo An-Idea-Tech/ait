@@ -90,34 +90,36 @@ export default function BlogSection() {
               {description}
             </p>
           </div>
-          {(selectedYear || selectedMonth || selectedCategory !== "All" || searchQuery) && (
-            <button
-              onClick={handleResetFilters}
-              className="text-xs uppercase tracking-widest text-brand font-manrope-bold hover:underline cursor-pointer pt-2"
-            >
-              Clear all filters
-            </button>
-          )}
         </div>
 
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-border-primary pb-6">
-          <div className="flex flex-wrap gap-2">
-            {categories.map((cat) => (
+          <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap gap-2">
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => {
+                    setSelectedCategory(cat);
+                    setCurrentPage(1);
+                    setSelectedPost(null);
+                  }}
+                  className={`px-5 py-2 rounded-full text-xs uppercase tracking-wider font-manrope-bold border transition-all cursor-pointer ${selectedCategory === cat
+                    ? "bg-brand border-brand text-black"
+                    : "bg-transparent border-border-primary text-text-secondary hover:text-text-primary hover:border-text-primary"
+                    }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+            {(selectedYear || selectedMonth || selectedCategory !== "All" || searchQuery) && (
               <button
-                key={cat}
-                onClick={() => {
-                  setSelectedCategory(cat);
-                  setCurrentPage(1);
-                  setSelectedPost(null);
-                }}
-                className={`px-5 py-2 rounded-full text-xs uppercase tracking-wider font-manrope-bold border transition-all cursor-pointer ${selectedCategory === cat
-                  ? "bg-brand border-brand text-black"
-                  : "bg-transparent border-border-primary text-text-secondary hover:text-text-primary hover:border-text-primary"
-                  }`}
+                onClick={handleResetFilters}
+                className="text-xs uppercase tracking-widest text-brand font-manrope-bold hover:underline cursor-pointer"
               >
-                {cat}
+                Clear all filters
               </button>
-            ))}
+            )}
           </div>
 
           <div className="relative w-full sm:w-72">
