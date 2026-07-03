@@ -7,7 +7,7 @@ export default function Heighlight({
 }) {
   return (
     <div className={`glass-pill ${className}`.trim()}>
-      <p className="font-manrope-medium text-xs tracking-wide text-text-primary sm:text-sm md:text-base">
+      <p className="font-manrope-medium text-xs tracking-wide sm:text-sm md:text-base">
         {children || text}
       </p>
     </div>

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function TrustSection() {
   return (
-    <section className="section-padding-y relative min-h-screen w-full">
+    <section className="section">
       <div className="section-padding-x flex-col-center relative mx-auto max-w-5xl text-center">
         {/* Giant Quote Icon */}
         <div className="inline-block">

@@ -43,7 +43,7 @@ export default function SectionNav({ sections = [] }) {
   };
 
   return (
-    <div className="glass-pill sticky top-16 md:top-20 z-40 w-full ">
+    <div className="glass-pill sticky bottom-5 md:top-16 md:top-20 z-40 w-full ">
       <div id="section-nav" className="mx-auto  max-w-[1920px] overflow-x-auto overflow-y-hidden flex items-center justify-start xl:justify-center gap-4 sm:gap-6 md:gap-8">
         {sections.map((sec) => {
           const isActive = activeId === sec.id;

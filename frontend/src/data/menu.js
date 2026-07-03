@@ -1,7 +1,7 @@
 export const NavLinks = [
   {
     title: "How we work",
-    url: "#how-we-work",
+    url: "how-we-work",
   },
   {
     title: "Services",

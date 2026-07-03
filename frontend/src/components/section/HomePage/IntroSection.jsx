@@ -6,7 +6,7 @@ import { introSection } from "@/data/home";
 
 export default function IntroSection() {
   return (
-    <section className="flex-col-center min-h-screen w-full">
+    <section className="section">
       <div className="section-padding-x flex-col-center w-full">
         {/* Top Heading */}
         <div className="mb-12 text-center sm:mb-16">
