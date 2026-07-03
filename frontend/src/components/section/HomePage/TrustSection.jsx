@@ -19,13 +19,13 @@ export default function TrustSection() {
 
         {/* Big Quote Headline */}
         <div className="w-full">
-          <h2 className="title mx-auto max-w-7xl leading-[1.15] xl:!text-[5vw]">
+          <h2 className="title mx-auto max-w-7xl xl:!text-[5vw]">
             {trustsection.quote}
           </h2>
         </div>
 
         {/* Description Text */}
-        <div className="mx-auto py-10 md:max-w-3xl">
+        <div className="mx-auto py-10 md:max-w-4xl">
           {trustsection.description.split("\n").map((paragraph, index) => (
             <p key={index} className="trust-description text-center">
               {paragraph.trim()}

@@ -135,11 +135,11 @@
   }
 
   .section {
-    @apply flex flex-col justify-center items-center  min-h-screen w-full py-16 sm:px-6 md:py-28;
+    @apply flex flex-col items-center  min-h-screen w-full py-10 sm:px-6 md:py-28;
   }
 
   .hero-title-second {
-    @apply text-text-secondary font-manrope-bold text-base tracking-wide sm:text-xl md:text-2xl;
+    @apply text-text-primary font-manrope-bold text-base tracking-wide sm:text-xl md:text-2xl;
   }
 
   .hero-title-main {
@@ -171,7 +171,7 @@
   }
 
   .trust-description {
-    @apply font-manrope-light text-text-secondary mt-5 text-center text-lg sm:text-lg md:text-xl;
+    @apply font-manrope-light text-text-secondary mt-5 text-justify text-lg sm:text-lg md:text-3xl tracking-tight;
   }
 }
 
