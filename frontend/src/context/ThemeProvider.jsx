@@ -5,7 +5,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
     const cookie = document.cookie
@@ -15,7 +15,7 @@ export function ThemeProvider({ children }) {
     if (cookie) {
       setTheme(cookie.split("=")[1]);
     } else {
-      document.cookie = "theme=light; path=/; max-age=31536000";
+      document.cookie = "theme=dark; path=/; max-age=31536000";
     }
   }, []);
 

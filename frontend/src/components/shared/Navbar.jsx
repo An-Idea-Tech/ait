@@ -18,7 +18,7 @@ export default function Navbar() {
         </div>
 
         {/* Navigation Links - Center-Right aligned */}
-        <div className="hidden items-center gap-8 text-sm tracking-wide md:flex md:text-base lg:gap-14">
+        <div className="hidden items-center gap-8 text-sm tracking-wide lg:flex lg:text-base lg:gap-14">
           {NavLinks.map((menu, index) => {
             if (index < 5) {
               return (

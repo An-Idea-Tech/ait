@@ -7,11 +7,11 @@ import { introSection } from "@/data/home";
 export default function IntroSection() {
   return (
     <section className="section">
-      <div className="flex-col-center w-full">
+      <div className="flex-col-center w-full gap-10">
         {/* Top Heading */}
-        <div className="mb-12 text-center sm:mb-16">
+        <div>
           <h2 className="!text-brand title">{introSection.heading.title}</h2>
-          <h2 className="title mt-1 sm:mt-2">
+          <h2 className="title">
             <span>
               {introSection.heading.subtitlePrefix +
                 " " +
@@ -88,13 +88,13 @@ export default function IntroSection() {
 
 function StatCard({ icon, count, label, description }) {
   return (
-    <div className="md:border-border-primary bg-bg-primary card-rounded p-6 md:shadow-inner transition-transform duration-300 select-none hover:scale-[1.01] sm:p-8 md:border">
+    <div className="text-center sm:text-left md:border-border-primary bg-bg-primary card-rounded p-6 md:shadow-inner transition-transform duration-300 select-none hover:scale-[1.01] sm:p-8 md:border">
       <div>
-        <div className="mb-2">
+        <div className="mb-2 ">
           <span className="!text-brand title">{count}</span>
         </div>
-        <p className="subtitle">{label}</p>
-        <p className="description mt-2">{description}</p>
+        <p className="subtitle sm:!text-left">{label}</p>
+        <p className="description">{description}</p>
       </div>
     </div>
   );

@@ -16,27 +16,27 @@ export default function ServiceSection() {
   return (
     <section
       ref={container}
-      className="section-padding-y relative min-h-screen w-full"
-      style={{
-        height: `${(servicesData.length + 1) * 100}vh`,
-      }}
+      className="section pb-48 sm:pb-56 md:pb-48"
     >
-      <div className="section-padding-x">
-      <div className="flex-col-center gap-3">
-        <h2 className="title">What we actually build.</h2>
-        <p className="subtitle">Three engagement tiers, depending on where your business is. Real prices. Real timelines. Pick the one that fits.</p>
-      </div>
-      </div>
+      <div className="flex-col-center gap-5 w-full">
+        <h2 className="title">
+          What we <span className="text-brand"> actually build</span>.
+        </h2>
+        <p className="subtitle">
+          Three engagement tiers, depending on where your business is. Real
+          prices. Real timelines. Pick the one that fits.
+        </p>
 
-      {servicesData.map((service, index) => (
-        <StackCard
-          key={service.id}
-          service={service}
-          index={index}
-          total={servicesData.length}
-          progress={scrollYProgress}
-        />
-      ))}
+        {servicesData.map((service, index) => (
+          <StackCard
+            key={service.id}
+            service={service}
+            index={index}
+            total={servicesData.length}
+            progress={scrollYProgress}
+          />
+        ))}
+      </div>
     </section>
   );
 }

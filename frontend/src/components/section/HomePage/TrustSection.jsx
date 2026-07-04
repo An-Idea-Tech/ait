@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function TrustSection() {
   return (
     <section className="section">
-      <div className="section-padding-x flex-col-center relative mx-auto max-w-5xl text-center">
+      <div className="section-padding-x flex-col-center gap-10 relative mx-auto max-w-5xl text-center">
         {/* Giant Quote Icon */}
         <div className="inline-block">
           <Image
@@ -13,21 +13,21 @@ export default function TrustSection() {
             alt="quote"
             width={80}
             height={80}
-            className="mb-4 h-20 w-20 md:h-24 md:w-24 lg:h-30 lg:w-30"
+            className="h-20 w-20 md:h-24 md:w-24 lg:h-30 lg:w-30"
           />
         </div>
 
         {/* Big Quote Headline */}
         <div className="w-full">
-          <h2 className="title mx-auto max-w-7xl xl:!text-[5vw]">
+          <h2 className="title mx-auto max-w-7xl xl:!text-[4vw]">
             {trustsection.quote}
           </h2>
         </div>
 
         {/* Description Text */}
-        <div className="mx-auto py-10 md:max-w-4xl">
+        <div className="mx-auto md:max-w-4xl">
           {trustsection.description.split("\n").map((paragraph, index) => (
-            <p key={index} className="trust-description text-center">
+            <p key={index} className="trust-description">
               {paragraph.trim()}
             </p>
           ))}

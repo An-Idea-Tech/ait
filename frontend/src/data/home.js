@@ -190,8 +190,7 @@ export const servicesData = [
 
 export const projectSection = {
   header: {
-    tag: "IMPACT",
-    title: "How We Are Doing It Faster And Better Than Others!",
+    title: "Selected work.",
   },
   projects: [
     {
@@ -199,7 +198,7 @@ export const projectSection = {
       tag: "Workshops",
       title: "Tech & Career Bootcamp",
       description: "Empowering students and professionals with hands-on coding skills, modern frameworks, and real-world engineering practices.",
-      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800&auto=format&fit=crop",
+      image: "https://thewebshowcase.withgoogle.com/assets/images/card_titles/1_titlecard.png",
       url: "/contact",
       tagColor: "bg-[#FFD700] text-black",
     },
@@ -208,7 +207,7 @@ export const projectSection = {
       tag: "Meet-ups",
       title: "Meet And Greet",
       description: "Open Conversations About Careers, Coding, Bootcamps, Internships, Real-World Engineering, And The Journey.",
-      image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=800&auto=format&fit=crop",
+      image: "https://thewebshowcase.withgoogle.com/assets/images/card_titles/1_titlecard.png",
       url: "/contact",
       tagColor: "bg-[#FF6B00] text-white",
     },
@@ -217,18 +216,9 @@ export const projectSection = {
       tag: "Community",
       title: "Developer Ecosystem",
       description: "Building a tight-knit community of innovators, builders, and creators collaborating on next-generation tech products.",
-      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop",
+      image: "https://thewebshowcase.withgoogle.com/assets/images/card_titles/1_titlecard.png",
       url: "/contact",
       tagColor: "bg-[#007BFF] text-white",
-    },
-    {
-      id: 4,
-      tag: "Mentorship",
-      title: "1-on-1 Guidance",
-      description: "Direct mentorship from industry veterans helping founders make the right architectural decisions early on.",
-      image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop",
-      url: "/contact",
-      tagColor: "bg-[#9333EA] text-white",
     },
   ],
 };

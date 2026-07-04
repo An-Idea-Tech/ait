@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@/context/ThemeProvider";
 import "./globals.css";
 import Provider from "./provider";
+import LenisProvider from "./lenis-provider";
 
 export const metadata = {
   title: "An Idea Tech | Growth-Driven Tech & Branding Solutions",
@@ -14,7 +15,7 @@ export default function RootLayout({ children }) {
       <body>
         <ThemeProvider>
           <Provider>
-            {children}
+            <LenisProvider>{children}</LenisProvider>
           </Provider>
         </ThemeProvider>
       </body>

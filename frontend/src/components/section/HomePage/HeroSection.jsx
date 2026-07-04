@@ -6,10 +6,10 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="section">
+    <section className="section gap-10">
       <Heighlight
         text="A Mangaluru studio that says no a lot"
-        className="relative top-[-50] md:top-[-60]"
+        className="relative top-[-20] md:top-[-60]"
       />
       <div className="flex-col-center relative w-full gap-8">
         <div
@@ -42,16 +42,18 @@ export default function HeroSection() {
             <Button text={heroSection.cta.text} link={heroSection.cta.url} />
           </div>
 
-          <Image
-            src="/images/no-bg.png"
+         
+        </div>
+      </div>
+
+       <Image
+            src="https://blog.hack2skill.com/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1764742623982%2F9ced9cc5-2305-447b-a6a0-3c4a609facec.png&w=3840&q=75"
             width={100}
             height={100}
             alt="Hero graphic"
-            className="relative bottom-10 w-full md:h-150 md:w-auto"
+            className="relative w-full md:h-150 md:w-auto"
             unoptimized
           />
-        </div>
-      </div>
     </section>
   );
 }
