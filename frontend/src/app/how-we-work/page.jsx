@@ -1,4 +1,4 @@
-import HowweworkPage from "@/components/pages/Howwework/HowweworkPage";
+import HowweworkPage from "@/components/pages/howwework/HowweworkPage";
 import React from "react";
 
 export const metadata = {
