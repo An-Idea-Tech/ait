@@ -75,6 +75,7 @@ body {
   --bg: #ffffff;
   --text-primary: #000000;
   --text-secondary: #1a1514;
+  --text-third: #555555;
   --line: #1a1514;
 }
 
@@ -201,6 +202,10 @@ body {
 
   .huge-text {
     @apply font-manrope-bold relative w-full text-[13vw] leading-[0.88] tracking-tight md:text-[10vw];
+  }
+
+  .note{
+    @apply text-text-secondary text-xs sm:text-sm font-manrope-light;
   }
 
   .title {

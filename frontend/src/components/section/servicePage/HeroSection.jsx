@@ -34,8 +34,8 @@ export default function HeroSection() {
         </div>
 
         {/* Top Overlay Layer: Left-Aligned Typography in Liquid Glass Card */}
-        <div className="absolute top-10 sm:top-8 md:top-12 lg:top-16 left-4 sm:left-8 md:left-12 lg:left-16 z-20 flex flex-col items-start justify-start text-left select-none max-w-[95%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[65%]">
-          <div className="liquid-glass">
+        <div className="absolute top-10 sm:top-8 md:top-12 lg:top-16 left-4 sm:left-8 md:left-12 lg:left-16 z-20 flex flex-col items-start justify-start text-left select-none max-w-[95%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[65%] ">
+          <div className="liquid-glass card-rounded">
             <h1 className="hero-title-main relative z-10 flex flex-col items-start text-left">
               <span className="block">We don’t sell</span>
               <span className="my-0.5 block sm:my-1">

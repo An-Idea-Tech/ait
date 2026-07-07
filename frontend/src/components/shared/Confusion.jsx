@@ -9,7 +9,7 @@ export default function Confusion({ confusionData }) {
   return (
     <div
       id={confusionData.id}
-      className="w-full scroll-mt-32 md:scroll-mt-36 bg-bg-primary text-text-primary transition-colors duration-300 py-16 sm:py-20 md:py-28 flex flex-col items-center justify-center text-center border-t border-border-primary"
+      className="section !p-0 !min-h-[50vh] justify-center"
     >
       {/* Title */}
       <h2 className="title mb-6 sm:mb-8">
@@ -17,7 +17,7 @@ export default function Confusion({ confusionData }) {
       </h2>
 
       {/* Description */}
-      <p className="description max-w-3xl mx-auto px-4 mb-10 sm:mb-12 text-text-secondary leading-relaxed">
+      <p className="description max-w-3xl mx-auto text-justify px-4 mb-10 sm:mb-12">
         {confusionData.description}
       </p>
 
@@ -37,9 +37,9 @@ export default function Confusion({ confusionData }) {
 
       {/* Note / Callout */}
       {confusionData.note && (
-        <div className="flex items-center justify-center text-text-secondary text-xs sm:text-sm md:text-base font-manrope-light">
+        <div className="flex-row-center note">
           <span className="w-2 h-2 rounded-full bg-green-500 mr-2.5 shrink-0 animate-pulse" />
-          <span>{confusionData.note.text}</span>
+          <span className="text-center ">{confusionData.note.text}</span>
         </div>
       )}
     </div>

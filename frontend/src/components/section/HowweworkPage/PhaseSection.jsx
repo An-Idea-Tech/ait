@@ -7,7 +7,7 @@ export default function PhaseSection() {
   return (
     <div className="section">
       <div className="flex-col-center gap-12 sm:gap-16">
-        <SectionNav sections={navigationSections} />
+        {/* <SectionNav sections={navigationSections} /> */}
         {howWeWorkPhases.map((phase) => (
           <PhaseCard key={phase.id} data={phase} />
         ))}

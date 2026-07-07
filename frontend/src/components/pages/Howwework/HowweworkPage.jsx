@@ -1,18 +1,17 @@
-import HeroSection from '@/components/section/howweworkPage/HeroSection'
-import React from 'react'
-import PhaseSection from '@/components/section/howweworkPage/PhaseSection'
-import AfterlaunchSection from '@/components/section/howweworkPage/AfterlaunchSection'
-import Confusion from '@/components/section/howweworkPage/Confusion'
+import HeroSection from "@/components/section/howweworkPage/HeroSection";
+import React from "react";
+import PhaseSection from "@/components/section/howweworkPage/PhaseSection";
+import AfterlaunchSection from "@/components/section/howweworkPage/AfterlaunchSection";
+import Confusion from "@/components/shared/Confusion";
 import { confusionData } from "@/data/howwework";
 
 export default function HowweworkPage() {
   return (
     <div className="page flex flex-col gap-12 sm:gap-16">
       <HeroSection />
-      <PhaseSection/>
-      <AfterlaunchSection/>
-      <Confusion confusionData={confusionData}/>
+      <PhaseSection />
+      <AfterlaunchSection />
+      <Confusion confusionData={confusionData} />
     </div>
-  )
+  );
 }
-
