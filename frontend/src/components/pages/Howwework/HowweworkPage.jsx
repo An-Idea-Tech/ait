@@ -1,8 +1,8 @@
-import HeroSection from '@/components/section/HowweworkPage/HeroSection'
+import HeroSection from '@/components/section/howweworkPage/HeroSection'
 import React from 'react'
-import PhaseSection from '@/components/section/HowweworkPage/PhaseSection'
-import AfterlaunchSection from '@/components/section/HowweworkPage/AfterlaunchSection'
-import Confusion from '@/components/section/HowweworkPage/Confusion'
+import PhaseSection from '@/components/section/howweworkPage/PhaseSection'
+import AfterlaunchSection from '@/components/section/howweworkPage/AfterlaunchSection'
+import Confusion from '@/components/section/howweworkPage/Confusion'
 import { confusionData } from "@/data/howwework";
 
 export default function HowweworkPage() {
