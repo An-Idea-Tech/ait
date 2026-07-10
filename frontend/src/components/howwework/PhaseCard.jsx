@@ -4,10 +4,9 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { FiChevronDown } from "react-icons/fi";
 import Heighlight from "../shared/Heighlight";
+import Image from "next/image";
 
 export default function PhaseCard({ data }) {
-  if (!data) return null;
-
   const [openIds, setOpenIds] = useState(() => {
     if (data?.accordions) {
       const defaultOpened = data.accordions.filter((acc) => acc.defaultOpen).map((acc) => acc.id);
@@ -15,6 +14,8 @@ export default function PhaseCard({ data }) {
     }
     return [];
   });
+
+  if (!data) return null;
 
   const toggleAccordion = (itemId) => {
     setOpenIds((prev) =>
@@ -38,7 +39,8 @@ export default function PhaseCard({ data }) {
         </div>
 
         {/* Phase Title Column */}
-        <div className="w-full lg:w-72 lg:w-80  grow-1  py-5 px-6  lg:border-r border-border-primary flex-row-center">
+        <div className="w-full lg:w-72 lg:w-80 grow-1 py-5 px-6 lg:border-r border-border-primary flex-row-center gap-3 xl:gap-4">
+         
           <h2 className="title2">
             {data.title}
           </h2>

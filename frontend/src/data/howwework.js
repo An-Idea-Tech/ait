@@ -43,6 +43,8 @@ export const scopePrdData = {
   id: "scope-prd",
   phaseLabel: "Phase 1",
   title: "Scope & PRD",
+  image: "https://i.pinimg.com/1200x/39/fd/22/39fd22a10b1e5d0bb72dce985b0031fd.jpg",
+  phaseIcon: "/images/image.png",
   subtitle: "Before we build anything, we figure out what's actually worth building.",
   accordions: [
     {
@@ -79,6 +81,8 @@ export const howWeWorkPhases = [
     id: "build-beta",
     phaseLabel: "Phase 2",
     title: "Build & Beta",
+    image: "https://i.pinimg.com/736x/f0/81/a2/f081a2cef55349e1b57b1b312ec9fef2.jpg",
+    phaseIcon: "/images/liquid-bg.jpg",
     subtitle: "Rapid, iterative engineering where you see functional progress every week.",
     accordions: [
       {
@@ -112,6 +116,8 @@ export const howWeWorkPhases = [
     id: "stabilize-grow",
     phaseLabel: "Phase 3",
     title: "Stabilize & Grow",
+    image: "https://i.pinimg.com/1200x/af/3f/99/af3f99736a406d324274c0fceb9c6a2a.jpg",
+    phaseIcon: "/images/no-bg.png",
     subtitle: "Hardening the application for real-world traffic, performance, and scale.",
     accordions: [
       {
@@ -145,6 +151,8 @@ export const howWeWorkPhases = [
     id: "maintain-evolve",
     phaseLabel: "Phase 4",
     title: "Maintain & Evolve",
+    image: "https://i.pinimg.com/1200x/7f/f1/79/7ff1790a8ee1baa01f236eaf11ff7c56.jpg",
+    phaseIcon: "/images/ChatGPT Image Jul 3, 2026, 05_23_36 PM.png",
     subtitle: "Long-term partnership to iterate on user feedback and add powerful new features.",
     accordions: [
       {
@@ -185,6 +193,7 @@ export const afterLaunchData = {
     {
       id: "keep-doing",
       title: "What we keep doing\nafter launch.",
+      color: "#5B7553",
       intro:
         "AMC is a monthly retainer that keeps your site or platform running. The day-to-day technical work happens whether you ask for it or not.\nThis is what's included every month:",
       points: [
@@ -202,6 +211,7 @@ export const afterLaunchData = {
     {
       id: "not-included",
       title: "What's not included.",
+      color: "#5B7553",
       intro:
         "We're upfront about this because the wrong agency will quietly slot anything into AMC and surprise you with bills later.\nAMC does not cover:",
       points: [
@@ -217,6 +227,7 @@ export const afterLaunchData = {
     {
       id: "grow-beyond",
       title: "When you want to grow\nbeyond maintenance.",
+      color: "#5B7553",
       intro:
         "Most of our long-term clients eventually want more than maintenance. A new feature. A second site. A platform that integrates with the one we built. When that happens, we don't treat it as a fresh project — we treat it as the next phase of the same relationship.",
       outro:
