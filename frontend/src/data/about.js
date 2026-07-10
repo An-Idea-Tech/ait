@@ -62,3 +62,15 @@ export const whatWeNotData = {
   ],
 };
 
+export const howWeGotData = {
+  title: "How we got here.",
+  paragraphs: [
+    "AIT started in 2016 in Puttur, before moving to Mangaluru a few years in. The early years looked like most small studios — saying yes to most projects, learning what we were good at, learning what we weren't.",
+    "The shift happened around 2020–2021. We realized two things: first, that a meaningful number of clients were coming back to us *after* leaving another agency that had built something and disappeared. They didn't need us to build something new — they needed someone who'd actually maintain what existed. Second, we realized our best work always started with us pushing back on the brief — telling founders \"don't build that yet, build this first instead.\"",
+    "Both of those observations became operating principles. We stopped chasing project volume. We started building **AMC and ongoing relationships** as the core of how we work. We got better at saying no — to wrong-fit projects, to bloated scope, to \"build us X by next week\" requests.",
+    "By 2023, the shape we have today was clear: a small core team, a deliberate range of services, long-term clients who stay 3–5+ years, and a pace that doesn't burn anyone out.",
+    "We're trying to keep that shape, not outgrow it.",
+  ],
+};
+
+
