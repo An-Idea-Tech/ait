@@ -12,7 +12,7 @@ export default function ServiceSection() {
       <div className="mb-4 w-full sm:mb-8">
         <h2 className="huge-text !text-center">
           The work, organized by where your{" "}
-          <span className="text-[#D54C45]">business</span> is.
+          <span className="text-service">business</span> is.
         </h2>
       </div>
 

@@ -20,7 +20,7 @@ export default function ServiceCard({
 
   return (
     <Link href={targetLink} className="flex flex-col w-full h-full">
-      <div className="group relative overflow-hidden card-rounded bg-text-primary hover:bg-[#D54C45] p-8 sm:p-10 md:p-12 transition-all duration-500 ease-out  hover:shadow-2xl hover:-translate-y-1.5 cursor-pointer flex flex-col justify-between h-full w-full min-h-[380px] sm:min-h-[440px] md:min-h-[480px]">
+      <div className="group relative overflow-hidden card-rounded bg-text-primary hover:bg-service p-8 sm:p-10 md:p-12 transition-all duration-500 ease-out  hover:shadow-2xl hover:-translate-y-1.5 cursor-pointer flex flex-col justify-between h-full w-full min-h-[380px] sm:min-h-[440px] md:min-h-[480px]">
         {/* Background Hand-drawn Image */}
         {targetImage && (
           <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none overflow-hidden">
