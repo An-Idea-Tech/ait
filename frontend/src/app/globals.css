@@ -49,6 +49,9 @@ body {
 }
 
 @theme {
+
+  --color-hww:#335B39;
+
   --color-brand: #ef870d;
   --color-brown: #a35a3a;
   --color-cream: #faf7ef;
@@ -189,7 +192,7 @@ body {
   }
 
   .section {
-    @apply flex min-h-screen w-full flex-col items-center py-10 sm:px-6 md:py-28;
+    @apply flex min-h-screen w-full flex-col items-center py-5 lg:py-10 sm:px-6 ;
   }
 
   .hero-title-second {

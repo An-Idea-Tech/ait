@@ -9,7 +9,7 @@ export default function HeroSection() {
     <section className="section gap-10">
       <Heighlight
         text="A Mangaluru studio that says no a lot"
-        className="relative top-[-20] md:top-[-60]"
+        className="mb-5"
       />
       <div className="flex-col-center relative w-full gap-8">
         <div

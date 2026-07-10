@@ -5,19 +5,26 @@ import { heroSectionData } from "@/data/howwework";
 
 export default function HeroSection() {
   return (
-    <section className="md:card-rounded flex w-full flex-col items-center justify-center  bg-[#3700B3] pt-8 pb-12 sm:pt-12 sm:pb-16 md:pt-16 md:pb-20">
+    <section className="section ">
+
+    
       {/* Top Highlight Badge */}
-      <div className="mb-8 flex justify-center sm:mb-10 md:mb-12 ">
+      <div className="mb-5">
         <Heighlight text={heroSectionData.badgeText} />
       </div>
 
+    <div>
+
+      
+    </div>
       {/* Main Heading */}
-      <div className="mb-6 max-w-5xl px-2 text-center sm:mb-8 sm:px-4">
-        <h1 className="hero-title-main !text-black">
+      <div className="max-w-5xl px-2 text-center sm:mb-8 sm:px-4">
+        
+        <h1 className="hero-title-main !text-text-primary">
           <span className="mb-2 block sm:mb-3">
             {heroSectionData.headingLine1}
           </span>
-          <span className="huge-text !text-white">
+          <span className="huge-text !text-hww">
             {heroSectionData.headingLine2Highlight}
           </span>
           <span>{heroSectionData.headingLine2Suffix}</span>
@@ -35,6 +42,8 @@ export default function HeroSection() {
           {heroSectionData.subCaption}
         </p>
       </div>
+
+
     </section>
   );
 }

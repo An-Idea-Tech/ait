@@ -32,7 +32,7 @@ export default function PhaseCard({ data }) {
     >
 
       {/* Top Header Row */}
-      <div className="flex flex-col lg:flex-row border-b border-border-primary ">
+      <div className="flex flex-col lg:flex-row border-b border-border-primary bg-hww ">
         {/* Phase Label Column */}
         <div className="w-full lg:w-44 lg:w-52  grow-0 py-5 px-6  lg:border-r border-border-primary flex-row-center">
           <Heighlight text={data.phaseLabel} />
