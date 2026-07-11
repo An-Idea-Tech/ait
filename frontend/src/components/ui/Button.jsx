@@ -57,9 +57,9 @@ export default function Button({
                 tap: { scale: 0.95 }
             }}
             {...props}
-            className={`group flex w-max items-center justify-between rounded-full border-2 py-1.5 pl-6 pr-2 cursor-pointer transition-colors duration-300 ${btnClasses}`}
+            className={`group flex w-max items-center justify-between rounded-full border border-border-primary py-1.5 pl-4 pr-2 cursor-pointer transition-colors duration-300 ${btnClasses}`}
         >
-            <span className="mr-4 font-semibold text-sm tracking-wide select-none">{text}</span>
+            <span className="mr-4 font-manrope-medium text-sm md:text-base tracking-wide select-none">{text}</span>
 
             {/* Overflow hidden ensures the arrows disappear outside the circle */}
             <span

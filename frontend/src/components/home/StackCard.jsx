@@ -3,6 +3,7 @@
 import { motion, useTransform } from "framer-motion";
 import Link from "next/link";
 import Button from "../ui/Button";
+import Heighlight from "../shared/Heighlight";
 
 export default function StackCard({ service, index, progress, total }) {
   const targetScale = 1 - (total - index - 1) * 0.05;
@@ -20,10 +21,12 @@ export default function StackCard({ service, index, progress, total }) {
         className={`top-[var(--top-mobile)] md:top-[var(--top-desktop)] flex-col-center card-rounded relative min-h-[380px] md:min-h-[450px] w-full max-w-[2000px] origin-top shadow-2xl shadow-black/30 border-border-primary p-4 sm:p-6 md:p-8 ${service.bgColor}`}
       >
         {/* Main Content Area */}
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-2">
           <h2 className="title2 !text-left ">
             {service.title}
           </h2>
+
+          <Heighlight text={service.heighlight}/>
 
           <div className="flex flex-1 flex-col items-center justify-between gap-4 md:my-6 md:flex-row md:gap-12">
             {/* Left: Image */}
@@ -38,16 +41,16 @@ export default function StackCard({ service, index, progress, total }) {
             {/* Right: Text Content */}
             <div className="flex w-full flex-col gap-4 md:w-1/2 md:gap-6 md:pr-4">
               <div>
-                <h3 className="subtitle mb-1 !text-left !text-black md:mb-2">
+                <h3 className="subtitle mb-1 !text-left md:mb-2">
                   Who it's for
                 </h3>
-                <p className="description !text-black">{service.whoItsFor}</p>
+                <p className="description !text-text-primary">{service.whoItsFor}</p>
               </div>
               <div>
-                <h3 className="subtitle mb-1 !text-left !text-black md:mb-2">
+                <h3 className="subtitle mb-1 !text-left  md:mb-2">
                   What you get
                 </h3>
-                <p className="description !text-black">{service.whatYouGet}</p>
+                <p className="description !text-text-primary">{service.whatYouGet}</p>
               </div>
             </div>
           </div>

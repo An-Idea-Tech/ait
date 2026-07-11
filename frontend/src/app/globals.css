@@ -53,8 +53,11 @@ body {
   --color-hww:#335B39;
   --color-service:#D54C45;
 
+  --color-btn-hover:#0EBD4F;
+
   --color-brand: #ef870d;
   --color-brown: #a35a3a;
+  --color-green:#0EBD4F;
   --color-cream: #faf7ef;
   --color-blue: #1a2332;
   --color-gray: #18181a;
@@ -233,7 +236,7 @@ body {
   }
 
   .trust-description {
-    @apply font-manrope-light text-text-third mt-3 text-center text-lg  sm:text-lg md:text-xl md:text-justify;
+    @apply font-manrope-light text-text-third text-lg lg:tracking-tight sm:text-2xl lg:text-[2vw] text-justify;
   }
 }
 

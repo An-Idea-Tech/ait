@@ -14,15 +14,13 @@ export default function ServiceSection() {
   });
 
   return (
-    <section
-      ref={container}
-      className="section pb-48 sm:pb-56 md:pb-48"
-    >
-      <div className="flex-col-center gap-5 w-full">
+    <section ref={container} className="section gap-10">
+      <div className="flex-col-center relative w-full gap-8">
         <h2 className="title">
           What we <span className="text-brand"> actually build</span>.
         </h2>
-        <p className="subtitle">
+
+        <p className="subtitle max-w-lg">
           Three engagement tiers, depending on where your business is. Real
           prices. Real timelines. Pick the one that fits.
         </p>

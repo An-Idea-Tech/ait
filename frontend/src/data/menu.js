@@ -20,19 +20,19 @@ export const NavLinks = [
     url: "contact",
   },
   {
-    title: "How we work",
+    title: "How we work2",
     url: "#how-we-work",
   },
   {
-    title: "Services",
+    title: "Services2",
     url: "#services",
   },
   {
-    title: "About",
+    title: "About2",
     url: "#about",
   },
   {
-    title: "Contact",
+    title: "Contact3",
     url: "#contact",
   },
   {

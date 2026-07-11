@@ -1,6 +1,8 @@
 import React from "react";
 import { trustsection } from "@/data/home";
 import Image from "next/image";
+import Note from "@/components/shared/Note";
+import Button2 from "@/components/ui/Button2";
 
 export default function TrustSection() {
   return (
@@ -32,6 +34,13 @@ export default function TrustSection() {
             </p>
           ))}
         </div>
+
+       <div className="flex-col-center gap-3">
+         <Note text="This is the part most clients tell us they wish their last agency had done."/>
+        
+        <Button2 text="See how we work" link="/contact"/>
+       </div>
+
       </div>
     </section>
   );

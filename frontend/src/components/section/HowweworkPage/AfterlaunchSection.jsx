@@ -4,6 +4,7 @@ import React from "react";
 import LaunchCard from "@/components/howwework/LaunchCard";
 import Button from "@/components/ui/Button";
 import { afterLaunchData } from "@/data/howwework";
+import Button2 from "@/components/ui/Button2";
 
 export default function AfterlaunchSection() {
   if (!afterLaunchData) return null;
@@ -39,10 +40,10 @@ export default function AfterlaunchSection() {
               index === 0 ? "" : ""
             }`}
           >
-            <p className="subtitle text-text-secondary max-w-md">
+            <p className="subtitle  max-w-md">
               {action.label}
             </p>
-            <Button
+            <Button2
               text={action.buttonText}
               link={action.link}
             />
