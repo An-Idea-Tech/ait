@@ -273,3 +273,44 @@ export const confusionData = {
     text: "Free 30-minute call. We'll tell you if we're the right fit.",
   },
 };
+
+export const dayToDayData = {
+  id: "operating-layer",
+  title: "How we run a project, day to day.",
+  subtitle:
+    "The phases are the structure. These are the working habits that show up inside them.",
+  principles: [
+    {
+      id: "source-of-truth",
+      number: "01",
+      title: "One source of truth.",
+      description:
+        "You and we work off the same dashboard. Same tasks, same deadlines, same blockers, same status. We don't send weekly status emails because the dashboard is the status — visible to you any time you want to check. If you log in on a Tuesday and want to know what's happening, the answer is on the screen, not in someone's inbox.",
+      practiceLabel: "What this means in practice:",
+      practiceText:
+        'no "let me check and get back to you" delays. No information lag between us and you. If we\'re stuck on something, you\'ll see it the same day we do.',
+    },
+    {
+      id: "demos-not-promises",
+      number: "02",
+      title: "Demos, not promises.",
+      description:
+        'Every couple of weeks during the build, we show you something working. Not a slide deck. Not a Figma mockup with words like "final design." The actual product, in a browser, that you can click. Then we course-correct based on what you see, not on what you imagined.',
+      practiceLabel: "What this means in practice:",
+      practiceText:
+        "if a feature feels off when you see it live, we change it before it ships. The cost of changing something during build is small. The cost of changing it after launch is large. Demos move that conversation early.",
+    },
+    {
+      id: "reports-that-answer",
+      number: "03",
+      title: "Reports that answer\nthe question before\nyou ask it.",
+      description:
+        "Once a month, you get a written report. What we did, what we didn't, what's coming, what we're worried about. The report is designed so you don't have to ask follow-up questions — if something needs your attention, it says so plainly. If everything is fine, that's stated clearly too.",
+      secondaryDescription:
+        "Meetings happen when there's a real decision to make, not as a default. Your time is more valuable than a status call.",
+    },
+  ],
+  bottomNote:
+    "All three principles have one thing in common: they assume you're busy. Working with us shouldn't require chasing us for information.",
+};
+
