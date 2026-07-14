@@ -198,6 +198,7 @@ export const servicesData = [
 export const projectSection = {
   header: {
     title: "Selected work.",
+    subtitle: "Real outcomes for real businesses. Here are some of our recent projects and systems.",
   },
   projects: [
     {
