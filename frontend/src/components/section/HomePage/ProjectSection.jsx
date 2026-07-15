@@ -91,10 +91,10 @@ export default function ProjectSection() {
                       />
                       <Link
                         href={project.url || "/contact"}
-                        className="bg-text-primary flex h-9 w-9 sm:h-11 sm:w-11 md:h-8 md:w-8 lg:h-10 lg:w-10 xl:h-12 xl:w-12 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:bg-white hover:text-black hover:scale-105 flex-shrink-0"
+                        className="bg-bg-primary flex h-9 w-9 sm:h-11 sm:w-11 md:h-8 md:w-8 lg:h-10 lg:w-10 xl:h-12 xl:w-12 items-center justify-center rounded-full border border-white/20  transition-all duration-300 hover:bg-brand hover:scale-105 flex-shrink-0"
                         aria-label={`View ${project.title}`}
                       >
-                        <FiArrowUpRight className="text-base sm:text-xl md:text-base lg:text-lg xl:text-2xl transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                        <FiArrowUpRight className="title  transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                       </Link>
                     </div>
 

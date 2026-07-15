@@ -53,14 +53,14 @@ body {
   --color-hww:#335B39;
   --color-service:#D54C45;
 
-  --color-btn-hover:#0EBD4F;
+  --color-btn-hover:#1B67E1;
 
   --color-brand: #ef870d;
   --color-brown: #a35a3a;
   --color-green:#0EBD4F;
   --color-cream: #faf7ef;
-  --color-blue: #1a2332;
-  --color-gray: #18181a;
+  --color-blue: #1b67e1;
+  --color-gray: #424242;
   --color-creame: #fad3b0;
   --color-darkbrown: #1a1514;
   --color-shadow: #c5c5c5;
@@ -87,7 +87,7 @@ body {
 }
 
 .dark {
-  --bg: #000000;
+  --bg: #131313;
   --text-primary: #ffffff;
   --text-secondary: #DDDDDD;
   --text-third:#9A9A9A;
@@ -196,7 +196,7 @@ body {
   }
 
   .section {
-    @apply flex min-h-screen w-full flex-col items-center py-5 lg:py-10 sm:px-6 ;
+    @apply flex min-h-auto w-full flex-col items-center py-5 lg:py-10 sm:px-6 ;
   }
 
   .hero-title-second {
@@ -228,7 +228,7 @@ body {
   }
 
   .description {
-    @apply font-manrope-light text-text-third text-sm leading-relaxed sm:text-[18px];
+    @apply font-manrope-light text-text-third text-[16px] tracking-tight leading-relaxed sm:text-[18px];
   }
 
   .card-rounded {
@@ -247,3 +247,14 @@ body {
 .blog-card-hover:hover {
   transform: translateY(-4px);
 }
+
+/* ─── Case Study Ticker Animation ─────────────────────────────── */
+@keyframes cs-ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(var(--ticker-offset, -1424px));
+  }
+}
+

@@ -87,7 +87,6 @@ export default function Comparision() {
             className="group/card relative flex flex-col justify-between overflow-hidden rounded-2xl border border-border-primary bg-gradient-to-b from-[#18181c] to-[#0e0e11] p-6 text-white shadow-2xl shadow-black/80 transition-all duration-300 hover:border-white/20 sm:rounded-3xl sm:p-8 md:p-10"
           >
             {/* Subtle ambient light gradient inside dark card */}
-            <div className="bg-brand/10 pointer-events-none absolute -top-24 -right-24 h-48 w-48 card-rounded opacity-60 blur-3xl transition-opacity duration-500 group-hover/card:opacity-100" />
 
             <div className="relative z-10">
               {/* Card Header Row */}

@@ -65,8 +65,8 @@ export default function StackCard({ service, index, progress, total }) {
         </div>
 
         {/* Bottom bar with Button */}
-        <div className="flex items-center justify-end w-full mt-3 sm:mt-4 pt-2 border-t border-black/10">
-          <Button />
+        <div className="flex items-center justify-end w-full mt-3 sm:mt-4 pt-">
+          <Button text={service.btntext} link={service.btnlink} />
         </div>
       </motion.div>
     </div>

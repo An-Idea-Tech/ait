@@ -169,7 +169,8 @@ export const servicesData = [
     whoItsFor: "Founders validating an idea, or businesses already converting through WhatsApp who need a single page that captures interest properly.",
     whatYouGet: "One landing page, written and designed to convert. WhatsApp Business setup. A simple lead capture flow that routes interest directly to your phone.",
     bgColor: "bg-[#0861D9]",
-    buttonText: "Connect with us"
+    btntext: "Start with a landing page ",
+    btnlink:'/services/landing-pages'
   },
   {
     id: 2,
@@ -180,7 +181,8 @@ export const servicesData = [
     whoItsFor: "Running businesses past the validation stage. You have customers. Now you need a site that brings in more, qualifies them, and reduces the manual follow-up your team is doing.",
     whatYouGet: "A custom website. Built-in lead capture and qualification. Basic CRM integration. Analytics that tell you what's converting and what's not. Trained handover so your team can run it.",
     bgColor: "bg-[#DABC4C]",
-    buttonText: "Connect with us"
+       btntext: "Build a working website ",
+    btnlink:'/services/website-design'
   },
   {
     id: 3,
@@ -191,7 +193,8 @@ export const servicesData = [
     whoItsFor: "Businesses that have outgrown a website. Bookings, orders, inventory, team workflows — you need software that runs your operations, not a site that describes them.",
     whatYouGet: "A custom web platform integrated with your existing tools — Zoho, Tally, payment gateways, WhatsApp Business API, whatever you already use. Built in phases, with a working version in your hands within the first month.",
     bgColor: "bg-[#50C260]",
-    buttonText: "Connect with us"
+        btntext: "Build a custom platform ",
+    btnlink:'/services/web-applications'
   },
 ];
 
@@ -203,29 +206,32 @@ export const projectSection = {
   projects: [
     {
       id: 1,
-      tag: "Wellness practice",
-      title: "Don't just build a website.",
-      description: "A website with therapist profiles, a content blog, and Zoho Bookings integrated end-to-end. The founder came in with strong technical skills, which made integration faster and cut out the usual training overhead. We also set up the Google Business Profile properly and supported the founder's LinkedIn and social presence as the practice grew.",
-      image: "https://i.pinimg.com/1200x/c4/b0/0b/c4b00bb02a800ae028f02cb973cac744.jpg",
-      url: "/contact",
+      slug: "philomena-puc",
+      tag: "Education",
+      title: "Philomena Pre-University College, Puttur",
+      description: "Rebuilt the institution's website to be fully responsive, self-manageable, and reliable during peak traffic — freeing the administration from external dependency while giving students and parents a better experience.",
+      image: "/images/projects/philomena-hero.jpg",
+      url: "/work/philomena-puc",
       tagColor: "bg-[#FFD700] text-black",
     },
     {
       id: 2,
-      tag: "Meet-ups",
+      slug: "meet-and-greet",
+      tag: "Community",
       title: "Meet And Greet",
       description: "Open Conversations About Careers, Coding, Bootcamps, Internships, Real-World Engineering, And The Journey.",
-      image: "https://i.pinimg.com/1200x/c4/b0/0b/c4b00bb02a800ae028f02cb973cac744.jpg",
-      url: "/contact",
+      image: "/images/projects/meetup-hero.jpg",
+      url: "/work/meet-and-greet",
       tagColor: "bg-[#FF6B00] text-white",
     },
     {
       id: 3,
-      tag: "Community",
+      slug: "developer-ecosystem",
+      tag: "Tech Platform",
       title: "Developer Ecosystem",
       description: "Building a tight-knit community of innovators, builders, and creators collaborating on next-generation tech products.",
-      image: "https://i.pinimg.com/1200x/c4/b0/0b/c4b00bb02a800ae028f02cb973cac744.jpg",
-      url: "/contact",
+      image: "/images/projects/deveco-hero.jpg",
+      url: "/work/developer-ecosystem",
       tagColor: "bg-[#007BFF] text-white",
     },
   ],

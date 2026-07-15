@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { motion } from "motion/react";
 import { introSection } from "@/data/home";
 
 export default function IntroSection() {
@@ -28,7 +29,7 @@ export default function IntroSection() {
               {/* Top Row: YouTube & Star Stats Cards */}
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
                 {introSection.statsRow.map((stat, index) => (
-                  <StatCard key={index} {...stat} />
+                  <StatCard key={index} {...stat} index={index} />
                 ))}
               </div>
 
@@ -86,16 +87,115 @@ export default function IntroSection() {
   );
 }
 
-function StatCard({ icon, count, label, description }) {
+function parseCount(countStr) {
+  if (typeof countStr === "number") {
+    return { prefix: "", number: countStr, suffix: "", isNumber: true, hasCommas: false };
+  }
+  const str = String(countStr);
+  const match = str.match(/^([^0-9]*)([0-9,.]+)(.*)$/);
+  if (!match) {
+    return { prefix: "", number: 0, suffix: str, isNumber: false, hasCommas: false };
+  }
+  const prefix = match[1] || "";
+  const hasCommas = match[2].includes(",");
+  const numStr = match[2].replace(/,/g, "");
+  const number = parseFloat(numStr) || 0;
+  const suffix = match[3] || "";
+  return { prefix, number, suffix, isNumber: true, hasCommas };
+}
+
+function AnimatedCounter({ value, delay = 0 }) {
+  const spanRef = React.useRef(null);
+  const hasAnimatedRef = React.useRef(false);
+  const timerRef = React.useRef(null);
+  const rafRef = React.useRef(null);
+
+  React.useEffect(() => {
+    const el = spanRef.current;
+    if (!el || hasAnimatedRef.current) return;
+
+    const { prefix, number, suffix, isNumber, hasCommas } = parseCount(value);
+    if (!isNumber) {
+      el.textContent = value;
+      return;
+    }
+
+    el.textContent = `${prefix}0${suffix}`;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting && !hasAnimatedRef.current) {
+          hasAnimatedRef.current = true;
+          observer.disconnect();
+
+          timerRef.current = setTimeout(() => {
+            const duration = 2000;
+            let startTimestamp = null;
+
+            const step = (timestamp) => {
+              if (!startTimestamp) startTimestamp = timestamp;
+              const elapsed = timestamp - startTimestamp;
+              const progress = Math.min(elapsed / duration, 1);
+              const easeProgress = 1 - Math.pow(1 - progress, 4);
+              const currentValue = Math.floor(easeProgress * number);
+              const formattedValue = hasCommas
+                ? currentValue.toLocaleString()
+                : currentValue;
+
+              if (spanRef.current) {
+                spanRef.current.textContent = `${prefix}${formattedValue}${suffix}`;
+              }
+
+              if (progress < 1) {
+                rafRef.current = requestAnimationFrame(step);
+              } else if (spanRef.current) {
+                const finalValue = hasCommas
+                  ? number.toLocaleString()
+                  : number;
+                spanRef.current.textContent = `${prefix}${finalValue}${suffix}`;
+              }
+            };
+
+            rafRef.current = requestAnimationFrame(step);
+          }, delay);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(el);
+
+    return () => {
+      observer.disconnect();
+      if (timerRef.current) clearTimeout(timerRef.current);
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
+  }, [value, delay]);
+
   return (
-    <div className="text-center sm:text-left md:border-border-primary bg-bg-primary card-rounded p-6 md:shadow-inner transition-transform duration-300 select-none hover:scale-[1.01] sm:p-8 md:border">
+    <span ref={spanRef} className="!text-brand title !text-5xl lg:!text-7xl">
+      {value}
+    </span>
+  );
+}
+
+function StatCard({ icon, count, label, description, index = 0 }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5, delay: index * 0.15, ease: "easeOut" }}
+      className="text-center sm:text-left md:border-border-primary bg-bg-primary card-rounded p-6 md:shadow-inner transition-transform duration-300 select-none hover:scale-[1.01] sm:p-8 md:border"
+    >
       <div>
         <div className="mb-2 ">
-          <span className="!text-brand title">{count}</span>
+          <AnimatedCounter value={count} delay={index * 150} />
         </div>
         <p className="subtitle sm:!text-left">{label}</p>
         <p className="description">{description}</p>
       </div>
-    </div>
+    </motion.div>
   );
 }

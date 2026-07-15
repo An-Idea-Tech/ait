@@ -1,19 +1,24 @@
 "use client";
 
 import React from "react";
-import ServiceCard from "@/components/service/serviceCard";
+import ServiceCard from "@/components/service/ServiceCard";
 import { servicecard, confusionData } from "@/data/service";
 import Heighlight from "@/components/shared/Heighlight";
 import Confusion from "../../shared/Confusion";
+import Button2 from "@/components/ui/Button2";
+import ImportantDesc from "@/components/shared/ImportantDesc";
 
 export default function ServiceSection() {
   return (
     <section className="section mx-auto w-full max-w-[1600px] gap-16 px-4 pb-32 sm:gap-24 sm:px-8 md:px-12 lg:px-16">
-      <div className="mb-4 w-full sm:mb-8">
+      <div className="flex-col-center mb-4 w-full gap-5 sm:mb-8 lg:gap-10">
         <h2 className="huge-text !text-center">
           The work, organized by where your{" "}
           <span className="text-service">business</span> is.
         </h2>
+        <div className="subtitle">
+          Five categories based on what your business needs right now.
+        </div>
       </div>
 
       {/* Tiers Container */}
@@ -50,6 +55,19 @@ export default function ServiceSection() {
           </div>
         ))}
       </div>
+
+      <div className="flex-row-center flex-wrap gap-5">
+        <h2 className="subtitile">Not sure which tier fits?</h2>
+        <Button2 text="Run the decision tree" link="/contact" />
+      </div>
+
+      <ImportantDesc
+        text={{
+          title: "One thing worth knowing before you choose:",
+          description:
+            "We work best with founders who want to move their business from person-oriented to process-oriented — owners ready to stop being the bottleneck, even with a small team. If that sounds like you, almost any tier on this page will fit. If it doesn't, we're probably not your studio.",
+        }}
+      />
 
       <Confusion confusionData={confusionData} />
     </section>

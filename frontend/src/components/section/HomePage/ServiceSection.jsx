@@ -10,7 +10,7 @@ export default function ServiceSection() {
 
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start start", "end end"],
+    offset: ["start end", "end end"],
   });
 
   return (

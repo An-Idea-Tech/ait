@@ -6,7 +6,7 @@ import Heighlight from "@/components/shared/Heighlight";
 
 export default function HeroSection() {
   return (
-    <section className="section gap-10">
+    <section className="section  gap-10">
       
         <Heighlight  className="mb-5" text="What we offer, what your business needs." />
 
@@ -25,8 +25,8 @@ export default function HeroSection() {
         </div>
 
         {/* Right Column: Description Paragraph */}
-        <div className="lg:col-span-3 xl:col-span-3 flex flex-col justify-center lg:justify-end pb-2 sm:pb-4 z-10 mt-2 sm:mt-4 lg:mt-0">
-          <p className="subtitle max-w-sm text-left">
+        <div className=" lg:col-span-3  xl:col-span-3  pb-2 sm:pb-4 z-10 mt-2 sm:mt-4 lg:mt-0">
+          <p className="subtitle text-right ">
             Most agencies list 30 services and let you pick. We organize ours
             into five categories — based on where your business is, not what you
             came here looking for.
