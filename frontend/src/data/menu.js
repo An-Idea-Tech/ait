@@ -4,6 +4,10 @@ export const NavLinks = [
     url: "/how-we-work",
   },
   {
+    title: "Method",
+    url: "method",
+  },
+  {
     title: "Services",
     url: "/services",
   },

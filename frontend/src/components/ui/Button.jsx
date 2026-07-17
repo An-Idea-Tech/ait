@@ -42,9 +42,12 @@ export default function Button({
     } else if (variant === "outline") {
         btnClasses = "bg-transparent text-text-primary border-border-primary hover:bg-border-primary/10 dark:border-white/30 dark:hover:bg-white/10";
         circleClasses = "bg-transparent text-text-primary";
+    } else if (variant === "brand") {
+        btnClasses = "bg-brand text-black border-transparent hover:bg-brand/90";
+        circleClasses = "bg-black text-white dark:bg-white dark:text-black";
     }
 
-    const iconColorClass = variant === "outline" ? "text-text-primary" : "text-black";
+    const iconColorClass = variant === "outline" ? "text-text-primary" : (variant === "brand" ? "text-white dark:text-black" : "text-black");
     const currentIcon = icon || <FiArrowRight className={`w-5 h-5 ${iconColorClass}`} />;
 
     const buttonContent = (
