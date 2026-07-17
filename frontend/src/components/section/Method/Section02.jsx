@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 import { section02 } from "@/data/methoddata";
 
 export default function Section02() {
@@ -17,13 +18,16 @@ export default function Section02() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {section02.cards.map((card) => (
-            <div
+          {section02.cards.map((card, idx) => (
+            <motion.div
               key={card.id}
-              className="bg-zinc-50 dark:bg-zinc-900/40 border border-border-primary/20 p-8 rounded-xl flex flex-col space-y-6 hover:border-brand/40 transition-colors duration-300"
+              whileHover={{ y: -6 }}
+              className="bg-zinc-50 dark:bg-zinc-900/40 border border-border-primary/20 p-8 rounded-2xl flex flex-col space-y-6 hover:border-brand/40 shadow-sm hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] dark:hover:shadow-[0_8px_30px_rgb(239,135,13,0.05)] transition-all duration-300 relative overflow-hidden"
             >
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-brand/10 flex items-center justify-center text-brand flex-shrink-0">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-brand/5 rounded-bl-full pointer-events-none" />
+              
+              <div className="flex items-center gap-4 relative z-10">
+                <div className="w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center text-brand flex-shrink-0 shadow-inner">
                   {card.id === 1 && (
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -44,10 +48,10 @@ export default function Section02() {
                   {card.title}
                 </h3>
               </div>
-              <p className="text-sm sm:text-base text-text-secondary leading-relaxed font-manrope-light">
+              <p className="text-sm sm:text-base text-text-secondary leading-relaxed font-manrope-light relative z-10">
                 {card.text}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

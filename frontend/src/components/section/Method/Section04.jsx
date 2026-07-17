@@ -1,13 +1,14 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 import { section04 } from "@/data/methoddata";
 
 export default function Section04() {
   return (
     <section className="bg-bg-primary flex flex-col w-full py-16">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start w-full max-w-[1400px] mx-auto">
-        <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-24">
+        <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
           <span className="text-4xl font-manrope-bold text-brand">
             {section04.num}
           </span>
@@ -21,12 +22,15 @@ export default function Section04() {
 
         <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
           {section04.grid.map((item, idx) => (
-            <div
+            <motion.div
               key={idx}
-              className="bg-zinc-50 dark:bg-zinc-900/40 border border-border-primary/20 p-6 rounded-xl flex flex-col space-y-4 hover:border-brand/35 transition-colors duration-300"
+              whileHover={{ y: -4 }}
+              className="bg-zinc-50 dark:bg-zinc-900/40 border border-border-primary/20 p-6 rounded-2xl flex flex-col space-y-4 hover:border-brand/40 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden"
             >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-brand/10 flex items-center justify-center text-brand flex-shrink-0">
+              <div className="absolute top-0 right-0 w-16 h-16 bg-brand/5 rounded-bl-full pointer-events-none" />
+
+              <div className="flex items-center gap-3 relative z-10">
+                <div className="w-10 h-10 rounded-xl bg-brand/10 flex items-center justify-center text-brand flex-shrink-0 shadow-inner">
                   {idx === 0 && (
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -62,10 +66,10 @@ export default function Section04() {
                   {item.title}
                 </h3>
               </div>
-              <p className="text-xs sm:text-sm text-text-secondary leading-relaxed font-manrope-light">
+              <p className="text-xs sm:text-sm text-text-secondary leading-relaxed font-manrope-light relative z-10">
                 {item.desc}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -23,13 +23,13 @@ export default function Section03() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
             {section03.pillars.map((pillar) => (
-              <div key={pillar.id} className="flex items-center gap-4">
-                <div className="w-8 h-8 rounded-full bg-brand/15 flex items-center justify-center text-brand flex-shrink-0">
+              <div key={pillar.id} className="flex items-center gap-4 group">
+                <div className="w-8 h-8 rounded-full bg-brand/10 group-hover:bg-brand/20 flex items-center justify-center text-brand flex-shrink-0 transition-colors duration-300">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span className="text-sm sm:text-base font-manrope-medium text-text-primary">
+                <span className="text-sm sm:text-base font-manrope-medium text-text-primary group-hover:text-brand transition-colors duration-300">
                   {pillar.label}
                 </span>
               </div>
@@ -37,12 +37,14 @@ export default function Section03() {
           </div>
         </div>
 
-        <div className="lg:col-span-5 overflow-hidden rounded-xl border border-border-primary/20 bg-zinc-950/40 p-4">
-          <img
-            src={section03.image}
-            alt="Hour glass dial visual"
-            className="w-full h-auto object-cover rounded-lg aspect-square hover:scale-103 transition-transform duration-700"
-          />
+        <div className="lg:col-span-5 overflow-hidden rounded-2xl border border-border-primary/20 bg-zinc-50 dark:bg-zinc-950/40 p-4 shadow-xl group">
+          <div className="overflow-hidden rounded-xl">
+            <img
+              src={section03.image}
+              alt="Hour glass dial visual"
+              className="w-full h-auto object-cover rounded-lg aspect-square group-hover:scale-105 transition-transform duration-1000"
+            />
+          </div>
         </div>
       </div>
     </section>

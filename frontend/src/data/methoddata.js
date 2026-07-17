@@ -1,4 +1,5 @@
 export const methodHero = {
+  pill: "THE METHOD",
   title: "The thinking happens before the code.",
   description: "Great software isn't built with code. It's built with clarity, strategy, and purpose. We solve the right problem, the right way.",
   image1: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800",
