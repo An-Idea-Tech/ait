@@ -1,7 +1,7 @@
 export const NavLinks = [
   {
     title: "How we work",
-    url: "how-we-work",
+    url: "/how-we-work",
   },
   {
     title: "Method",
@@ -9,38 +9,18 @@ export const NavLinks = [
   },
   {
     title: "Services",
-    url: "services",
+    url: "/services",
   },
   {
     title: "About Us",
-    url: "about-us",
+    url: "/about-us",
   },
   {
     title: "Insights",
-    url: "insights",
+    url: "/insights",
   },
   {
     title: "Contact",
-    url: "contact",
-  },
-  {
-    title: "How we work2",
-    url: "#how-we-work",
-  },
-  {
-    title: "Services2",
-    url: "#services",
-  },
-  {
-    title: "About2",
-    url: "#about",
-  },
-  {
-    title: "Contact3",
-    url: "#contact",
-  },
-  {
-    title: "Menu",
-    url: "#menu",
-  },
+    url: "/contact",
+  }
 ];

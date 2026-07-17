@@ -33,7 +33,7 @@ export default function Navbar() {
   }, [isOpen]);
 
   return (
-    <nav className="w-full sticky top-0 bg-bg-primary z-50 px-6 text-text-primary md:px-12 border-b border-border-primary/10 transition-colors duration-300">
+    <nav className="bg-bg-primary text-text-primary  sticky top-0 z-50 w-full px-6 transition-colors duration-300 md:px-12">
       <div className="mx-auto flex w-full max-w-[1920px] items-center justify-between py-1">
         {/* Logo Section */}
         <div className="flex flex-shrink-0 items-center">
@@ -43,13 +43,17 @@ export default function Navbar() {
         </div>
 
         {/* Navigation Links - Center-Right aligned (Visible only on lg and above for first 5 items) */}
-        <div className="hidden items-center gap-8 text-sm tracking-wide lg:flex lg:text-base lg:gap-14">
+        <div className="hidden items-center gap-8 text-sm tracking-wide lg:flex lg:gap-14 lg:text-base">
           {NavLinks.map((menu, index) => {
             if (index < 5) {
+              const href =
+                menu.url?.startsWith("/") || menu.url?.startsWith("http")
+                  ? menu.url
+                  : `/${menu.url || ""}`;
               return (
                 <Link
-                  href={menu.url}
-                  className="hover:text-brand transition-colors duration-200 font-manrope-medium"
+                  href={href}
+                  className="hover:text-brand font-manrope-medium transition-colors duration-200"
                   key={index}
                 >
                   {menu.title}
@@ -66,13 +70,13 @@ export default function Navbar() {
 
           <button
             onClick={() => setIsOpen(true)}
-            className="group flex cursor-pointer items-center gap-3 md:gap-4 p-2 focus:outline-none"
+            className="group flex cursor-pointer items-center gap-3 p-2 focus:outline-none md:gap-4"
             aria-label="Open menu"
           >
             {/* Hamburger Icon */}
             <div className="flex w-10 flex-col gap-1.5">
-              <span className="group-hover:bg-brand h-[1.5px] w-full bg-text-primary transition-colors duration-200"></span>
-              <span className="group-hover:bg-brand h-[1.5px] w-full bg-text-primary transition-colors duration-200"></span>
+              <span className="group-hover:bg-brand bg-text-primary h-[1.5px] w-full transition-colors duration-200"></span>
+              <span className="group-hover:bg-brand bg-text-primary h-[1.5px] w-full transition-colors duration-200"></span>
             </div>
           </button>
         </div>
@@ -89,7 +93,7 @@ export default function Navbar() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.25 }}
               onClick={() => setIsOpen(false)}
-              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50"
+              className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm"
             />
 
             {/* Side Drawer - 3/4 width of the page */}
@@ -98,15 +102,14 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
-              className="fixed top-0 right-0 h-full w-3/4 max-w-md bg-bg-primary text-text-primary shadow-2xl z-50 flex flex-col justify-between p-6 sm:p-8 overflow-y-auto border-l border-border-primary/20 transition-colors duration-300"
+              className="bg-bg-primary text-text-primary border-border-primary/20 fixed top-0 right-0 z-50 flex h-full w-3/4 max-w-md flex-col justify-between overflow-y-auto border-l p-6 shadow-2xl transition-colors duration-300 sm:p-8"
             >
               <div>
                 {/* Drawer Header with Close Icon Above */}
-                <div className="flex items-center justify-end border-b border-border-primary/15 pb-5 mb-6">
-                  
+                <div className="border-border-primary/15 mb-6 flex items-center justify-end border-b pb-5">
                   <button
                     onClick={() => setIsOpen(false)}
-                    className="flex items-center justify-center h-10 w-10 sm:h-11 sm:w-11 rounded-full border border-border-primary/30 bg-bg-primary text-text-primary hover:text-brand hover:border-brand transition-all duration-200 cursor-pointer shadow-sm"
+                    className="border-border-primary/30 bg-bg-primary text-text-primary hover:text-brand hover:border-brand flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border shadow-sm transition-all duration-200 sm:h-11 sm:w-11"
                     aria-label="Close menu"
                   >
                     <IoClose className="text-2xl sm:text-3xl" />
@@ -114,20 +117,25 @@ export default function Navbar() {
                 </div>
 
                 {/* Navigation Links inside Hamburger Menu */}
-                <div className="flex flex-col gap-1 my-2">
+                <div className="my-2 flex flex-col gap-1">
                   {NavLinks.map((menu, index) => {
                     /*
                      * Below lg screen: show all menu links (block)
                      * On lg and above: first 5 links are in navbar so hide them in drawer (lg:hidden),
                      * and display only the remaining links (index >= 5)
                      */
-                    const visibilityClass = index < 5 ? "block lg:hidden" : "block";
+                    const visibilityClass =
+                      index < 5 ? "block lg:hidden" : "block";
+                    const href =
+                      menu.url?.startsWith("/") || menu.url?.startsWith("http")
+                        ? menu.url
+                        : `/${menu.url || ""}`;
                     return (
                       <Link
                         key={index}
-                        href={menu.url}
+                        href={href}
                         onClick={() => setIsOpen(false)}
-                        className={`${visibilityClass} py-3 sm:py-3.5 px-3 m text-lg sm:text-xl tracking-wide  hover:bg-gray-300/40  hover:translate-x-1.5 transition-all duration-200`}
+                        className={`${visibilityClass} m px-3 py-3 text-lg tracking-wide transition-all duration-200 hover:translate-x-1.5 hover:bg-gray-300/40 sm:py-3.5 sm:text-xl`}
                       >
                         {menu.title}
                       </Link>
@@ -137,12 +145,13 @@ export default function Navbar() {
               </div>
 
               {/* Drawer Footer */}
-              <div className="mt-8 pt-6 border-t border-border-primary/15 flex flex-col gap-4">
+              <div className="border-border-primary/15 mt-8 flex flex-col gap-4 border-t pt-6">
                 <div className="flex items-center justify-end">
                   <ThemeToggle />
                 </div>
-                <p className="text-xs text-text-third font-manrope-light text-center mt-2">
-                  © {new Date().getFullYear()} An Idea Tech. All rights reserved.
+                <p className="text-text-third font-manrope-light mt-2 text-center text-xs">
+                  © {new Date().getFullYear()} An Idea Tech. All rights
+                  reserved.
                 </p>
               </div>
             </motion.div>
@@ -152,4 +161,3 @@ export default function Navbar() {
     </nav>
   );
 }
-

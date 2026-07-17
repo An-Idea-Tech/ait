@@ -101,7 +101,7 @@ export default function Footer() {
           ))}
 
           {/* Contact Column */}
-          <div className="text-text-secondary flex flex-col gap-4 text-sm md:gap-6 md:text-base">
+          <div className="text-text-secondary zflex flex-col gap-4 text-sm md:gap-6 md:text-base">
             <h4 className="font-manrope-bold text-text-primary text-xs tracking-wider uppercase md:text-sm">
               {footerContact.title}
             </h4>

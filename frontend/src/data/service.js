@@ -11,7 +11,7 @@ export const servicecard = [
         description:
           "Logo, brand guidelines, and marketing collateral designed by our senior in-house designer before any website work begins. Most projects start here—even if you didn't think they needed to.",
         cta: "See Branding →",
-        link: "/contact",
+        link: "/services/branding",
         imageUrl: "/svgs/cube.svg",
       },
       {
@@ -20,7 +20,7 @@ export const servicecard = [
         description:
           "Domain registration and managed hosting, available standalone or bundled with builds. Hosted on dedicated infrastructure through Globo.tech with our own management layer on top.",
         cta: "See Domains & Hosting →",
-        link: "/contact",
+        link: "/services/domains-hosting",
         imageUrl: "/svgs/cube.svg",
       },
     ],
@@ -38,7 +38,7 @@ export const servicecard = [
         description:
           "A focused landing page built to capture interest and drive visitors directly to WhatsApp or your phone. Designed to convert, not just look good.",
         cta: "See Landing Pages →",
-        link: "/contact",
+        link: "/services/landing-pages",
         imageUrl: "/svgs/cube.svg",
       },
       {
@@ -47,7 +47,7 @@ export const servicecard = [
         description:
           "For Mangaluru and Karnataka businesses that want to be found by nearby customers. Includes GBP setup, optimization, review management, and local SEO fundamentals.",
         cta: "See GBP & Local SEO →",
-        link: "/contact",
+        link: "/services/gbp-local-seo",
         imageUrl: "/svgs/cube.svg",
       },
     ],
@@ -65,7 +65,7 @@ export const servicecard = [
         description:
           "A custom website with lead capture, CRM integration, and analytics built in. Not a brochure—a business system that turns visitors into conversations.",
         cta: "See Website Design →",
-        link: "/contact",
+        link: "/services/website-design",
         imageUrl: "/svgs/cube.svg",
       },
       {
@@ -74,7 +74,7 @@ export const servicecard = [
         description:
           "For SMEs with a working business that need clarity on what to improve next. We help optimize positioning, conversions, customer retention, and sales processes.",
         cta: "See Growth Consulting →",
-        link: "/contact",
+        link: "/services/growth-consulting",
         imageUrl: "/svgs/cube.svg",
       },
     ],
@@ -92,7 +92,7 @@ export const servicecard = [
         description:
           "Custom web platforms for businesses that have outgrown spreadsheets and generic tools. Build booking systems, dashboards, inventory management, internal portals, and workflow software.",
         cta: "See Web Applications →",
-        link: "/contact",
+        link: "/services/web-applications",
         imageUrl: "/svgs/cube.svg",
       },
       {
@@ -101,7 +101,7 @@ export const servicecard = [
         description:
           "Launch a working product in 4–8 weeks. Build only what's needed to validate your idea with real users before investing further.",
         cta: "See MVP Development →",
-        link: "/contact",
+        link: "/services/mvp-development",
         imageUrl: "/svgs/cube.svg",
       },
       {
@@ -110,7 +110,7 @@ export const servicecard = [
         description:
           "Cross-platform mobile applications using React Native or Flutter. Native development partnerships are available when project requirements justify it.",
         cta: "See Mobile Apps →",
-        link: "/contact",
+        link: "/services/mobile-apps",
         imageUrl: "/svgs/cube.svg",
       },
     ],
@@ -118,16 +118,16 @@ export const servicecard = [
   {
     id: 5,
     tier: "Standalone",
-    title: "Strategy",
-    tagline: "Thinking work before any building begins.",
+    title: "Thinking work",
+    tagline: "For thinking work, before any building begins.",
     services: [
       {
         id: "5-1",
-        title: "Product Requirements Document (PRD)",
+        title: "PRD as a Standalone Deliverable",
         description:
           "Pay us to think with you before writing code. Leave with a structured Product Requirements Document you can build with us—or hand to another team. Most agencies won't separate thinking from implementation. We do.",
         cta: "See PRD Engagements →",
-        link: "/contact",
+        link: "/services/prd",
         imageUrl: "/svgs/cube.svg",
       },
     ],
