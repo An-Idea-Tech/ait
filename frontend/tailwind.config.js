@@ -4,15 +4,12 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx}",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-
   theme: {
     extend: {
-      colors: {
-        brand: "#ec840c",
-      },
-
-      spacing: {
-        128: "32rem",
+      fontFamily: {
+        'manrope-light': ['var(--font-manrope-light)', 'sans-serif'],
+        'manrope-medium': ['var(--font-manrope-medium)', 'sans-serif'],
+        'manrope-bold': ['var(--font-manrope-bold)', 'sans-serif'],
       },
     },
   },
