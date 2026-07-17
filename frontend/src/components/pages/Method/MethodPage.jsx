@@ -13,7 +13,7 @@ import Section08 from "@/components/section/Method/Section08";
 
 export default function MethodPage() {
   return (
-    <main className="page flex flex-col gap-16 md:gap-24 select-none">
+    <main className="page select-none">
       <HeroSection />
       <Section01 />
       <Section02 />

@@ -6,7 +6,7 @@ import { section01 } from "@/data/methoddata";
 
 export default function Section01() {
   return (
-    <section className="bg-bg-primary flex flex-col w-full py-16 relative overflow-hidden">
+    <section className="section bg-bg-primary relative overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start w-full max-w-[1400px] mx-auto relative z-10">
         <div className="lg:col-span-6 space-y-6">
           <span className="text-4xl font-manrope-bold text-brand">

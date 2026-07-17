@@ -6,7 +6,7 @@ import { section08 } from "@/data/methoddata";
 
 export default function Section08() {
   return (
-    <section className="bg-bg-primary flex flex-col w-full py-16 items-center text-center">
+    <section className="section bg-bg-primary items-center text-center">
       <div className="w-full max-w-[1000px] mx-auto space-y-8 flex flex-col items-center">
         <span className="text-4xl font-manrope-bold text-brand">
           {section08.num}

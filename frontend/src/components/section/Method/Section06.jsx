@@ -6,7 +6,7 @@ import { section06 } from "@/data/methoddata";
 
 export default function Section06() {
   return (
-    <section className="bg-bg-primary flex flex-col w-full py-16">
+    <section className="section bg-bg-primary">
       <div className="w-full max-w-[1400px] mx-auto space-y-12">
         <div className="max-w-3xl space-y-4">
           <span className="text-4xl font-manrope-bold text-brand">

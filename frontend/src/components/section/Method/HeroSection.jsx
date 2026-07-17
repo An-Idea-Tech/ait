@@ -6,7 +6,7 @@ import Heighlight from "@/components/shared/Heighlight";
 
 export default function HeroSection() {
   return (
-    <section className="bg-bg-primary flex flex-col items-center relative py-12 overflow-hidden">
+    <section className="section bg-bg-primary relative overflow-hidden">
       <div className="pointer-events-none absolute top-1/3 left-1/2 z-0 h-[250px] w-[250px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[80px] sm:h-[450px] sm:w-[450px] sm:blur-[110px] md:h-[600px] md:w-[600px] bg-brand opacity-[0.15] dark:opacity-[0.25]" />
 
       <div className="w-full max-w-[1400px] mx-auto flex flex-col items-center text-center relative z-10">

@@ -13,7 +13,7 @@ export default function Section07() {
   };
 
   return (
-    <section className="bg-bg-primary flex flex-col w-full py-16">
+    <section className="section bg-bg-primary">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start w-full max-w-[1400px] mx-auto">
         <div className="lg:col-span-7 space-y-8">
           <div className="space-y-4">
