@@ -75,12 +75,12 @@ export default function BookingSection() {
 
   return (
     <>
-      <section className="bg-bg-primary flex flex-col items-center w-full">
+      <section className="section bg-bg-primary">
         <div className="w-full max-w-[1000px] mx-auto flex flex-col items-center text-center space-y-4">
           <h2 className="title">{bookingSection.title}</h2>
           <p className="description max-w-xl mx-auto">{bookingSection.description}</p>
 
-          <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 border border-border-primary bg-zinc-50 dark:bg-zinc-950/40 p-6 md:p-8 mt-12 text-left">
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 border border-border-primary/20 bg-zinc-50 dark:bg-zinc-900/40 p-6 md:p-8 mt-12 text-left rounded-2xl shadow-xl">
             <div className="flex flex-col space-y-4">
               <div className="flex items-center justify-between border-b border-border-primary pb-4">
                 <span className="font-manrope-bold text-base text-text-primary">
@@ -89,13 +89,13 @@ export default function BookingSection() {
                 <div className="flex items-center gap-2">
                   <button
                     onClick={handlePrevMonth}
-                    className="p-2 border border-border-primary hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors text-text-primary cursor-pointer"
+                    className="p-2 border border-border-primary hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors text-text-primary cursor-pointer rounded-lg"
                   >
                     <FiChevronLeft className="w-4 h-4" />
                   </button>
                   <button
                     onClick={handleNextMonth}
-                    className="p-2 border border-border-primary hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors text-text-primary cursor-pointer"
+                    className="p-2 border border-border-primary hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors text-text-primary cursor-pointer rounded-lg"
                   >
                     <FiChevronRight className="w-4 h-4" />
                   </button>
@@ -120,9 +120,9 @@ export default function BookingSection() {
                     <button
                       key={`day-${day}`}
                       onClick={() => handleDaySelect(day)}
-                      className={`py-2 text-sm font-manrope-medium transition-all cursor-pointer ${
+                      className={`py-2 text-sm font-manrope-medium transition-all cursor-pointer rounded-lg ${
                         isSelected
-                          ? "bg-brand text-black font-manrope-bold"
+                          ? "bg-brand text-black font-manrope-bold shadow-md"
                           : "text-text-primary hover:bg-zinc-100 dark:hover:bg-zinc-900"
                       }`}
                     >
@@ -147,9 +147,9 @@ export default function BookingSection() {
                     <button
                       key={slot}
                       onClick={() => setSelectedTimeSlot(slot)}
-                      className={`py-3 px-4 border text-center text-xs tracking-wider transition-all cursor-pointer ${
+                      className={`py-3 px-4 border text-center text-xs tracking-wider transition-all cursor-pointer rounded-lg ${
                         selectedTimeSlot === slot
-                          ? "bg-brand border-brand text-black font-manrope-bold"
+                          ? "bg-brand border-brand text-black font-manrope-bold shadow-sm"
                           : "border-border-primary text-text-secondary hover:text-text-primary hover:border-text-primary"
                       }`}
                     >
@@ -162,7 +162,7 @@ export default function BookingSection() {
               <div className="pt-6 space-y-4">
                 <button
                   onClick={() => setIsModalOpen(true)}
-                  className="w-full bg-[#10B981] hover:bg-[#059669] text-black font-manrope-bold text-xs uppercase tracking-widest py-4 transition-colors cursor-pointer"
+                  className="w-full bg-[#10B981] hover:bg-[#059669] text-black font-manrope-bold text-xs uppercase tracking-widest py-4 transition-colors cursor-pointer rounded-lg shadow-md"
                 >
                   {bookingSection.buttonText}
                 </button>
@@ -177,7 +177,7 @@ export default function BookingSection() {
 
       {isModalOpen && (
         <div className="fixed inset-0 bg-black/80 flex items-center justify-center p-6 z-50 backdrop-blur-md">
-          <div className="bg-bg-primary border border-border-primary w-full max-w-lg p-8 relative flex flex-col">
+          <div className="bg-bg-primary border border-border-primary/20 w-full max-w-lg p-8 relative flex flex-col rounded-2xl shadow-2xl">
             <button
               onClick={handleCloseModal}
               className="absolute right-6 top-6 text-text-secondary hover:text-text-primary transition-colors cursor-pointer"
@@ -207,7 +207,7 @@ export default function BookingSection() {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="Jane Doe"
-                      className="w-full bg-transparent border border-border-primary p-3.5 text-sm outline-none text-text-primary focus:border-brand transition-colors"
+                      className="w-full bg-transparent border border-border-primary p-3.5 text-sm outline-none text-text-primary focus:border-brand transition-colors rounded-lg"
                     />
                   </div>
 
@@ -221,7 +221,7 @@ export default function BookingSection() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="jane@company.com"
-                      className="w-full bg-transparent border border-border-primary p-3.5 text-sm outline-none text-text-primary focus:border-brand transition-colors"
+                      className="w-full bg-transparent border border-border-primary p-3.5 text-sm outline-none text-text-primary focus:border-brand transition-colors rounded-lg"
                     />
                   </div>
 
@@ -235,14 +235,14 @@ export default function BookingSection() {
                       value={formData.details}
                       onChange={(e) => setFormData({ ...formData, details: e.target.value })}
                       placeholder="Give us a brief description of the product idea..."
-                      className="w-full bg-transparent border border-border-primary p-3.5 text-sm outline-none text-text-primary focus:border-brand transition-colors resize-none"
+                      className="w-full bg-transparent border border-border-primary p-3.5 text-sm outline-none text-text-primary focus:border-brand transition-colors resize-none rounded-lg"
                     />
                   </div>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-[#10B981] hover:bg-[#059669] text-black font-manrope-bold text-xs uppercase tracking-widest py-4 transition-colors cursor-pointer"
+                  className="w-full bg-[#10B981] hover:bg-[#059669] text-black font-manrope-bold text-xs uppercase tracking-widest py-4 transition-colors cursor-pointer rounded-lg shadow-md"
                 >
                   Confirm Booking
                 </button>
@@ -263,7 +263,7 @@ export default function BookingSection() {
                 </div>
                 <button
                   onClick={handleCloseModal}
-                  className="w-full bg-zinc-100 dark:bg-zinc-900 border border-border-primary hover:bg-zinc-200 dark:hover:bg-zinc-800 text-text-primary font-manrope-bold text-xs uppercase tracking-widest py-3 transition-colors cursor-pointer"
+                  className="w-full bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-900 dark:hover:bg-zinc-800 text-text-primary font-manrope-bold text-xs uppercase tracking-widest py-3 transition-colors cursor-pointer rounded-lg shadow-sm border border-border-primary/20"
                 >
                   Dismiss
                 </button>

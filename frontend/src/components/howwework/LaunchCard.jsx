@@ -8,7 +8,7 @@ export default function LaunchCard({ data }) {
   return (
     <div className="w-full flex flex-col md:flex-row bg-bg-primary text-text-primary border-b border-border-primary transition-colors duration-300">
       {/* Left Column: Title */}
-      <div className="w-full md:w-80 lg:w-[420px] shrink-0 p-8 sm:p-10 md:p-12 md:border-r border-border-primary flex items-start justify-start">
+      <div className={`w-full md:w-80 lg:w-[420px] shrink-0 p-8 sm:p-10 md:p-12 md:border-r border-border-primary flex items-start justify-start bg-hww `} >
         <h3 className="font-manrope-bold text-text-primary text-2xl sm:text-3xl md:text-4xl tracking-tight leading-snug whitespace-pre-line">
           {data.title}
         </h3>

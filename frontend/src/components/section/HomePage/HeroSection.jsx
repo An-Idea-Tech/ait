@@ -3,13 +3,15 @@ import Button from "@/components/ui/Button";
 import { heroSection } from "@/data/home";
 import Heighlight from "@/components/shared/Heighlight";
 import Image from "next/image";
+import Button2 from "@/components/ui/Button2";
+import Note from "@/components/shared/Note";
 
 export default function HeroSection() {
   return (
     <section className="section gap-10">
       <Heighlight
-        text="A Mangaluru studio that says no a lot"
-        className="relative top-[-20] md:top-[-60]"
+        text="A Mangaluru studio that says no a lot."
+        className="mb-5"
       />
       <div className="flex-col-center relative w-full gap-8">
         <div
@@ -38,9 +40,12 @@ export default function HeroSection() {
           </p>
 
           {/* Pill CTA Button */}
-          <div className="pt-2">
-            <Button text={heroSection.cta.text} link={heroSection.cta.url} />
+          <div className="flex items-center gap-5 flex-wrap justify-center">
+            <Button text={heroSection.cta1.text} link={heroSection.cta1.url} />
+            <Button2 text={heroSection.cta2.text} link={heroSection.cta2.url} />
           </div>
+
+          <Note text="We are currently full-time and unable to accept new projects, but we’d love to keep in touch!" /> 
 
          
         </div>

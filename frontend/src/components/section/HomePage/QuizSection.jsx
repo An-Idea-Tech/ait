@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { quizSection } from "@/data/home";
 import Heighlight from "@/components/shared/Heighlight";
 import Button from "@/components/ui/Button";
+import Note from "@/components/shared/Note";
 
 export default function QuizSection() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -135,6 +136,8 @@ export default function QuizSection() {
           )}
         </AnimatePresence>
       </div>
+
+      <Note text="Got a verdict you didn't expect? That's the point. We'd rather tell you the truth now than waste your money later."/>
     </section>
   );
 }

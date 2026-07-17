@@ -12,6 +12,10 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+.blended-text {
+  mix-blend-mode: difference;
+}
+
 html,
 body {
   -ms-overflow-style: none;
@@ -45,11 +49,18 @@ body {
 }
 
 @theme {
+
+  --color-hww:#335B39;
+  --color-service:#D54C45;
+
+  --color-btn-hover:#1B67E1;
+
   --color-brand: #ef870d;
   --color-brown: #a35a3a;
+  --color-green:#0EBD4F;
   --color-cream: #faf7ef;
-  --color-blue: #1a2332;
-  --color-gray: #18181a;
+  --color-blue: #1b67e1;
+  --color-gray: #424242;
   --color-creame: #fad3b0;
   --color-darkbrown: #1a1514;
   --color-shadow: #c5c5c5;
@@ -71,11 +82,12 @@ body {
   --bg: #ffffff;
   --text-primary: #000000;
   --text-secondary: #1a1514;
+  --text-third: #555555;
   --line: #1a1514;
 }
 
 .dark {
-  --bg: #000000;
+  --bg: #131313;
   --text-primary: #ffffff;
   --text-secondary: #DDDDDD;
   --text-third:#9A9A9A;
@@ -128,6 +140,41 @@ body {
     );
   }
 
+  .liquid-glass {
+    @apply relative overflow-hidden p-6 sm:p-8 backdrop-blur-2xl ;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    );
+    backdrop-filter: blur(32px) saturate(150%);
+    -webkit-backdrop-filter: blur(32px) saturate(150%);
+  }
+  .dark .liquid-glass {
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.35) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    );
+  }
+  .liquid-glass::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.3) 0%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    pointer-events: none;
+    opacity: 0.8;
+    transition: opacity 0.5s ease;
+  }
+  .liquid-glass:hover::before {
+    opacity: 1;
+  }
+
   .button {
     @apply font-manrope-medium bg-brand inline-block cursor-pointer rounded-full px-3 py-2 text-center text-sm text-black transition-colors hover:bg-[#ff8c00];
   }
@@ -149,7 +196,7 @@ body {
   }
 
   .section {
-    @apply flex min-h-screen w-full flex-col items-center py-10 sm:px-6 md:py-28;
+    @apply flex min-h-auto w-full flex-col items-center py-5 lg:py-10 sm:px-6 ;
   }
 
   .hero-title-second {
@@ -162,6 +209,10 @@ body {
 
   .huge-text {
     @apply font-manrope-bold relative w-full text-[13vw] leading-[0.88] tracking-tight md:text-[10vw];
+  }
+
+  .note{
+    @apply text-text-secondary text-xs sm:text-sm font-manrope-light;
   }
 
   .title {
@@ -177,7 +228,7 @@ body {
   }
 
   .description {
-    @apply font-manrope-light text-text-third text-sm leading-relaxed sm:text-[18px];
+    @apply font-manrope-light text-text-third text-[16px] tracking-tight leading-relaxed sm:text-[18px];
   }
 
   .card-rounded {
@@ -185,7 +236,7 @@ body {
   }
 
   .trust-description {
-    @apply font-manrope-light text-text-third mt-3 text-center text-lg  sm:text-lg md:text-xl md:text-justify;
+    @apply font-manrope-light text-text-third text-lg lg:tracking-tight sm:text-2xl lg:text-[2vw] text-justify;
   }
 }
 
@@ -196,3 +247,14 @@ body {
 .blog-card-hover:hover {
   transform: translateY(-4px);
 }
+
+/* ─── Case Study Ticker Animation ─────────────────────────────── */
+@keyframes cs-ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(var(--ticker-offset, -1424px));
+  }
+}
+

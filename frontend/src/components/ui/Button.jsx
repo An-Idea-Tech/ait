@@ -42,9 +42,12 @@ export default function Button({
     } else if (variant === "outline") {
         btnClasses = "bg-transparent text-text-primary border-border-primary hover:bg-border-primary/10 dark:border-white/30 dark:hover:bg-white/10";
         circleClasses = "bg-transparent text-text-primary";
+    } else if (variant === "brand") {
+        btnClasses = "bg-brand text-black border-transparent hover:bg-brand/90";
+        circleClasses = "bg-black text-white dark:bg-white dark:text-black";
     }
 
-    const iconColorClass = variant === "outline" ? "text-text-primary" : "text-black";
+    const iconColorClass = variant === "outline" ? "text-text-primary" : (variant === "brand" ? "text-white dark:text-black" : "text-black");
     const currentIcon = icon || <FiArrowRight className={`w-5 h-5 ${iconColorClass}`} />;
 
     const buttonContent = (
@@ -57,9 +60,9 @@ export default function Button({
                 tap: { scale: 0.95 }
             }}
             {...props}
-            className={`group flex w-max items-center justify-between rounded-full border-2 py-1.5 pl-6 pr-2 cursor-pointer transition-colors duration-300 ${btnClasses}`}
+            className={`group flex w-max items-center justify-between rounded-full border border-border-primary py-1.5 pl-4 pr-2 cursor-pointer transition-colors duration-300 ${btnClasses}`}
         >
-            <span className="mr-4 font-semibold text-sm tracking-wide select-none">{text}</span>
+            <span className="mr-4 font-manrope-medium text-sm md:text-base tracking-wide select-none">{text}</span>
 
             {/* Overflow hidden ensures the arrows disappear outside the circle */}
             <span

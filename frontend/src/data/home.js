@@ -15,7 +15,11 @@ export const heroSection = {
     ],
     text: "Served more than 20+ Clients",
   },
-  cta: {
+  cta1:{
+    text:"See how we decide ",
+    url:"/contact"
+  },
+  cta2: {
     text: "Book a Strategy Call",
     url: "/contact",
   },
@@ -160,65 +164,105 @@ export const servicesData = [
     id: 1,
     tag: "START",
     title: "Landing Page + WhatsApp Flow",
+    heighlight:"Validate",
     image: "/svgs/cube.svg",
     whoItsFor: "Founders validating an idea, or businesses already converting through WhatsApp who need a single page that captures interest properly.",
     whatYouGet: "One landing page, written and designed to convert. WhatsApp Business setup. A simple lead capture flow that routes interest directly to your phone.",
     bgColor: "bg-[#0861D9]",
-    buttonText: "Connect with us"
+    btntext: "Start with a landing page ",
+    btnlink:'/services/landing-pages'
   },
   {
     id: 2,
     tag: "GROW",
     title: "Website + Lead System",
+    heighlight:"Convert",
     image: "/svgs/cube.svg",
     whoItsFor: "Running businesses past the validation stage. You have customers. Now you need a site that brings in more, qualifies them, and reduces the manual follow-up your team is doing.",
     whatYouGet: "A custom website. Built-in lead capture and qualification. Basic CRM integration. Analytics that tell you what's converting and what's not. Trained handover so your team can run it.",
     bgColor: "bg-[#DABC4C]",
-    buttonText: "Connect with us"
+       btntext: "Build a working website ",
+    btnlink:'/services/website-design'
   },
   {
     id: 3,
     tag: "OPERATE",
     title: "Custom Platform",
     image: "/svgs/cube.svg",
+    heighlight:'Operate',
     whoItsFor: "Businesses that have outgrown a website. Bookings, orders, inventory, team workflows — you need software that runs your operations, not a site that describes them.",
     whatYouGet: "A custom web platform integrated with your existing tools — Zoho, Tally, payment gateways, WhatsApp Business API, whatever you already use. Built in phases, with a working version in your hands within the first month.",
     bgColor: "bg-[#50C260]",
-    buttonText: "Connect with us"
+        btntext: "Build a custom platform ",
+    btnlink:'/services/web-applications'
   },
 ];
 
 export const projectSection = {
   header: {
     title: "Selected work.",
+    subtitle: "Real outcomes for real businesses. Here are some of our recent projects and systems.",
   },
   projects: [
     {
       id: 1,
-      tag: "Workshops",
-      title: "Tech & Career Bootcamp",
-      description: "Empowering students and professionals with hands-on coding skills, modern frameworks, and real-world engineering practices.",
-      image: "https://thewebshowcase.withgoogle.com/assets/images/card_titles/1_titlecard.png",
-      url: "/contact",
+      slug: "philomena-puc",
+      tag: "Education",
+      title: "Philomena Pre-University College, Puttur",
+      description: "Rebuilt the institution's website to be fully responsive, self-manageable, and reliable during peak traffic — freeing the administration from external dependency while giving students and parents a better experience.",
+      image: "/images/projects/philomena-hero.jpg",
+      url: "/work/philomena-puc",
       tagColor: "bg-[#FFD700] text-black",
     },
     {
       id: 2,
-      tag: "Meet-ups",
+      slug: "meet-and-greet",
+      tag: "Community",
       title: "Meet And Greet",
       description: "Open Conversations About Careers, Coding, Bootcamps, Internships, Real-World Engineering, And The Journey.",
-      image: "https://thewebshowcase.withgoogle.com/assets/images/card_titles/1_titlecard.png",
-      url: "/contact",
+      image: "/images/projects/meetup-hero.jpg",
+      url: "/work/meet-and-greet",
       tagColor: "bg-[#FF6B00] text-white",
     },
     {
       id: 3,
-      tag: "Community",
+      slug: "developer-ecosystem",
+      tag: "Tech Platform",
       title: "Developer Ecosystem",
       description: "Building a tight-knit community of innovators, builders, and creators collaborating on next-generation tech products.",
-      image: "https://thewebshowcase.withgoogle.com/assets/images/card_titles/1_titlecard.png",
-      url: "/contact",
+      image: "/images/projects/deveco-hero.jpg",
+      url: "/work/developer-ecosystem",
       tagColor: "bg-[#007BFF] text-white",
     },
   ],
 };
+
+export const comparisonSection = {
+  header: {
+    titlePrefix: "Who we’re for.",
+    titleSuffix: " Who we’re not.",
+    subtitle: "We've worked with founders for ten years. These patterns hold up.",
+  },
+  workWith: {
+    title: "work with",
+    items: [
+      "Founders ready to move their business from person-driven to process-driven, even with a small team.",
+      "Founders running real businesses who want a system that grows, not a website that sits.",
+      "Owners who've outgrown manual operations and need software that catches up to where the business already is.",
+      "First-time founders willing to be told their idea isn't ready yet.",
+    ],
+  },
+  workNotWith: {
+    title: "work not with",
+    items: [
+      "Anyone who walks in with a competitor's website and says \"build me this.\"",
+      "Founders who refuse to talk to real customers but want to launch anyway.",
+      "Clients looking for a cheap one-time job and a full disappearance after handover.",
+      "Anyone who treats their tech partner like a vendor, not a partner.",
+    ],
+  },
+  footerNote: "If you read the right column and felt called out — that's the point. Better to find out now than three months in",
+};
+
+export const comparisionSection = comparisonSection;
+

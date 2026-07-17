@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Hand-drawn style branding doodle: Spark, lightbulb, and organic geometric shapes -->
+  <path d="M120 280 C110 220, 140 160, 200 150 C260 140, 310 190, 290 260 C280 290, 240 310, 200 310 Z" stroke-dasharray="8 6" />
+  <path d="M200 80 L200 120 M110 110 L140 140 M290 110 L260 140 M70 200 L110 200 M330 200 L290 200" />
+  <path d="M170 310 L170 340 C170 350, 180 360, 200 360 C220 360, 230 350, 230 340 L230 310 Z" />
+  <!-- Scribble star / brand icon -->
+  <path d="M260 220 L280 230 L270 250 L250 240 Z" />
+  <path d="M150 230 C170 210, 210 210, 230 230" />
+  <circle cx="180" cy="200" r="8" fill="currentColor" />
+  <circle cx="220" cy="200" r="8" fill="currentColor" />
+</svg>

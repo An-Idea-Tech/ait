@@ -11,7 +11,7 @@ import LocationSection from "@/components/section/Contact/LocationSection";
 
 export default function ContactPage() {
   return (
-    <main className="page flex flex-col gap-16 md:gap-24 select-none">
+    <main className="page select-none">
       <HeroSection />
       <BookingSection />
       <StepsSection />

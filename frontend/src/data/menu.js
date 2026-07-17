@@ -1,42 +1,26 @@
 export const NavLinks = [
   {
     title: "How we work",
-    url: "how-we-work",
+    url: "/how-we-work",
   },
   {
-    title: "Insights",
-    url: "insights",
-  },
-  {
-    title: "About",
-    url: "#about",
-  },
-  {
-    title: "Contact",
-    url: "#contact",
-  },
-  {
-    title: "Menu",
-    url: "#menu",
-  },
-  {
-    title: "How we work",
-    url: "#how-we-work",
+    title: "Method",
+    url: "method",
   },
   {
     title: "Services",
-    url: "#services",
+    url: "/services",
   },
   {
-    title: "About",
-    url: "#about",
+    title: "About Us",
+    url: "/about-us",
+  },
+  {
+    title: "Insights",
+    url: "/insights",
   },
   {
     title: "Contact",
-    url: "#contact",
-  },
-  {
-    title: "Menu",
-    url: "#menu",
-  },
+    url: "/contact",
+  }
 ];

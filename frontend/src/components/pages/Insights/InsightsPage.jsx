@@ -1,11 +1,11 @@
 "use client";
 
 import React from "react";
-import HeroSection from "@/components/section/Insights/HeroSection";
-import BlogSection from "@/components/section/Insights/BlogSection";
-import SubscribeSection from "@/components/section/Insights/SubscribeSection";
-import AuthorSection from "@/components/section/Insights/AuthorSection";
-import ContactSection from "@/components/section/Insights/ContactSection";
+import HeroSection from "@/components/section/insightsPage/HeroSection";
+import BlogSection from "@/components/section/insightsPage/BlogSection";
+import SubscribeSection from "@/components/section/insightsPage/SubscribeSection";
+import AuthorSection from "@/components/section/insightsPage/AuthorSection";
+import ContactSection from "@/components/section/insightsPage/ContactSection";
 
 export default function InsightsPage() {
   return (
