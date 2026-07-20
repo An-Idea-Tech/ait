@@ -11,17 +11,17 @@ export default function ContentSection({ section }) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="mx-auto  max-w-4xl rounded-3xl border border-brand bg-bg-primary/80 p-6  backdrop-blur-md sm:p-10 md:p-14"
+        className="mx-auto  max-w-4xl  p-6  backdrop-blur-md sm:p-10 md:p-14"
       >
         {/* Section Heading */}
         {section.title && (
-          <h2 className="title mb-6 sm:mb-8 md:mb-10">
+          <h2 className="title2 mb-6 sm:mb-8 md:mb-10">
             <span>{section.title}</span>
           </h2>
         )}
 
         {/* Paragraphs */}
-        <div className="space-y-6 description">
+        <div className="space-y-6 description ">
           {section.paragraphs &&
             section.paragraphs.map((paragraph, index) => (
               <motion.p

@@ -36,7 +36,7 @@ export default function NavigationSection({ section }) {
 
   return (
     <section id={section.id || "navigation"} className="section py-10 md:py-16">
-      <div className="mx-auto max-w-5xl border-t border-border-primary pt-10">
+      <div className="mx-auto max-w-5xl pt-10">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
           {/* Previous Service Card */}
           {prevInfo ? (
@@ -49,10 +49,10 @@ export default function NavigationSection({ section }) {
                   <FiArrowLeft className="h-5 w-5 transition-transform duration-300 group-hover:-translate-x-1" />
                 </div>
                 <div>
-                  <p className="text-xs font-semibold tracking-wider text-text-secondary uppercase">
+                  <p className="note uppercase">
                     Previous Service
                   </p>
-                  <p className="mt-1 font-manrope-bold text-lg text-text-primary sm:text-xl">
+                  <p className="mt-1 subtitle">
                     {prevInfo.title}
                   </p>
                 </div>
@@ -70,10 +70,10 @@ export default function NavigationSection({ section }) {
             >
               <div className="flex w-full items-center justify-end gap-4">
                 <div className="order-1 sm:order-1">
-                  <p className="text-xs font-semibold tracking-wider text-text-secondary uppercase">
+                  <p className="note uppercase">
                     Next Service
                   </p>
-                  <p className="mt-1 font-manrope-bold text-lg text-text-primary sm:text-xl">
+                  <p className="mt-1 subtitle">
                     {nextInfo.title}
                   </p>
                 </div>

@@ -32,6 +32,9 @@ export default function CaseStudyPage({ slug }) {
           tag={project.tag}
         />
 
+        {/* 4. Challenge — numbered list */}
+        <CaseStudyChallenge challenge={project.challenge} />
+
         {/* 2. About — 2-col: description + services/industry */}
         <CaseStudyAbout
           about={project.about}
@@ -44,14 +47,9 @@ export default function CaseStudyPage({ slug }) {
           <CaseStudyGallery images={project.galleryImages} title={project.title} />
         )}
 
-        {/* 4. Challenge — numbered list */}
-        <CaseStudyChallenge challenge={project.challenge} />
+        
 
-        {/* 5. Ticker — infinite horizontal image scroll */}
-        {project.tickerImages?.length > 0 && (
-          <CaseStudyTicker images={project.tickerImages} title={project.title} />
-        )}
-
+       
         {/* 6. Our Approach — paragraphs */}
         {project.approach && (
           <CaseStudyTextSection
@@ -90,6 +88,12 @@ export default function CaseStudyPage({ slug }) {
             colorPalette={project.impact.colorPalette}
           />
         )}
+
+         {/* 5. Ticker — infinite horizontal image scroll */}
+        {project.tickerImages?.length > 0 && (
+          <CaseStudyTicker images={project.tickerImages} title={project.title} />
+        )}
+
 
         {/* 9. Client Testimonial */}
         {project.testimonial && (

@@ -11,16 +11,16 @@ export default function CaseStudyHero({ title, tagline, heroImage, tag }) {
     <section className="section !items-start">
 
       {/* Title block */}
-      <div className="max-w-5xl  pb-8 md:pb-12">
+      <div className="max-w-6xl  pb-8 md:pb-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col gap-3"
         >
-          <Heighlight text={tag} />
+          <Heighlight text={tag}  className="mb-5"/>
 
-          <h1 className="title !text-left">
+          <h1 className="hero-title-main !text-left md:mb-6">
             {title}
           </h1>
           <p className="subtitle !text-left">

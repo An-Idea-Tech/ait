@@ -15,7 +15,7 @@ export default function HeroSection() {
         {/* Center Column: The Featured Image (Starts at column 3 on desktop to leave left space for Title) */}
         <div className="lg:col-start-3 lg:col-span-7 xl:col-start-3 xl:col-span-7 relative w-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-[5/4] max-h-[650px] shadow-2xl">
           <Image
-            src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.pexels.com/photos/30018097/pexels-photo-30018097.jpeg"
             alt="We sell decisions"
             fill
             className="object-cover object-center"

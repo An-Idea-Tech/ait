@@ -6,7 +6,7 @@ import Button from "@/components/ui/Button";
 
 export default function PricingSection({ section }) {
   return (
-    <section id={section.id} className="section py-14 md:py-20">
+    <section id={section.id} className="section">
       <div className="mx-auto max-w-6xl">
         {/* Section Heading */}
         {section.title && (
@@ -17,7 +17,7 @@ export default function PricingSection({ section }) {
             transition={{ duration: 0.6 }}
             className="mb-12 text-center sm:mb-16"
           >
-            <h2 className="title !text-3xl sm:!text-4xl md:!text-5xl">
+            <h2 className="title">
               <span>{section.title}</span>
             </h2>
             <p className="description mx-auto mt-4 max-w-2xl text-base text-text-secondary sm:text-lg">
