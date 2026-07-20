@@ -7,7 +7,7 @@ import { FiCheck } from "react-icons/fi";
 export default function ListSection({ section }) {
   return (
     <section id={section.id} className="section">
-      <div className="mx-auto max-w-5xl ">
+      <div className="mx-auto max-w-5xl">
         {/* Section Heading */}
         {section.title && (
           <motion.div
@@ -24,7 +24,7 @@ export default function ListSection({ section }) {
         )}
 
         {/* List Items Grid / Stack */}
-        <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-2">
           {section.items &&
             section.items.map((item, index) => (
               <motion.div
@@ -33,15 +33,15 @@ export default function ListSection({ section }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className=" group flex items-start gap-4 card-rounded p-6  transition-all duration-300 select-none sm:p-7"
+                className="group card-rounded flex items-start gap-4 p-4 transition-all duration-300 select-none "
               >
                 {/* Glowing Checkmark Badge */}
-                <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-green duration-300 ">
+                <div className="bg-green mt-0.5 flex h-6 lg:h-8 lg:w-8 w-6  shrink-0 items-center justify-center rounded-full duration-300">
                   <FiCheck className="h-4 w-4 stroke-[2.5]" />
                 </div>
 
                 {/* Item Text */}
-                <p className="text-base font-medium leading-relaxed text-text-primary sm:text-lg">
+                <p className="description">
                   {item}
                 </p>
               </motion.div>

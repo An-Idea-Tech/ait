@@ -15,7 +15,7 @@ export default {
       description:
         "Logo, brand guidelines, marketing collateral — designed by our senior in-house designer before any website work begins. Most projects start here, even if you didn't think they needed to.",
       buttons: [
-        { text: "Start with branding →", link: "/contact" },
+        { text: "Start with branding ", link: "/contact" },
         { text: "See it bundled with a website", link: "/services/website-design" },
       ],
     },

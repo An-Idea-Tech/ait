@@ -15,10 +15,10 @@ const fadeUp = {
 export default function CaseStudyAbout({ about, services, industry }) {
   return (
     <section className="section">
-      <div className="flex flex-col gap-12 md:flex-row flex-wrap md:gap-16 lg:gap-24">
+      <div className="flex gap-12 flex-col flex-wrap w-full md:gap-16 lg:gap-24">
         {/* Left: About text */}
         <motion.div
-          className="min-w-0 flex-2"
+          className="min-w-0 flex-2 flex-col-center"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
@@ -26,9 +26,9 @@ export default function CaseStudyAbout({ about, services, industry }) {
         >
           <h2 className="subtitle !text-left uppercase">About</h2>
           <div className="bg-border-primary mt-4 mb-8 h-[2px] w-[25%]" />
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 ">
             {about.paragraphs.map((para, i) => (
-              <p key={i} className="description !text-justify">
+              <p key={i} className="font-manrope-light text-xl text-center md:text-2xl xl:text-4xl md:max-w-[800px] lg:max-w-[900px] text-center">
                 {para}
               </p>
             ))}
@@ -37,7 +37,7 @@ export default function CaseStudyAbout({ about, services, industry }) {
 
         {/* Right: Services + Industry tags */}
         <motion.div
-          className="flex flex-1 flex-shrink-0 flex-col gap-10 md:w-[220px] lg:w-[260px]"
+          className="flex flex-1 flex-shrink-0 flex-col gap-10"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
@@ -52,10 +52,10 @@ export default function CaseStudyAbout({ about, services, industry }) {
           {/* Services */}
           <div>
             <h2 className="subtitle !text-left uppercase">Service</h2>
-            <div className="bg-border-primary mt-4 mb-8 h-[2px] w-[25%]" />
+            <div className="bg-border-primary mt-4 mb-4 h-[2px] w-[25%]" />
             <div className="flex flex-col gap-3">
               {services.map((service, i) => (
-                <p key={i} className="subtitle !text-left">
+                <p key={i} className="text-xl sm:text-[4vw] lg:text-[3vw] font-manrope-bold !text-left">
                   {service}
                 </p>
               ))}
@@ -64,7 +64,7 @@ export default function CaseStudyAbout({ about, services, industry }) {
         </motion.div>
 
       <motion.div
-          className="flex flex-0 flex-shrink-0 flex-col gap-10 md:w-[220px] lg:w-[260px]"
+          className=" "
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
@@ -79,8 +79,8 @@ export default function CaseStudyAbout({ about, services, industry }) {
           {/* Industry */}
           <div>
             <h2 className="subtitle !text-left uppercase">Industry</h2>
-            <div className="bg-border-primary mt-4 mb-8 h-[2px] w-[25%]" />
-            <p className="subtitle !text-left">
+            <div className="bg-border-primary mt-4 mb-4 h-[2px] w-[25%]" />
+            <p className="text-xl sm:text-[4vw] lg:text-[3vw] font-manrope-bold !text-left">
               {industry}
             </p>
           </div>
