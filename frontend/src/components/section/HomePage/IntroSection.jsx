@@ -22,10 +22,10 @@ export default function IntroSection() {
         </div>
 
         {/* Outer Bento Grid Container */}
-        <div className="lg:border-brown card-rounded md:bg-gray mx-auto max-w-6xl bg-none p-4 sm:p-6 md:p-8 md:shadow-2xl lg:border">
+        <div className=" card-rounded md:bg-gray mx-auto max-w-6xl bg-none p-4 sm:p-6 md:p-8">
           <div className="grid grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-12">
             {/* Left Column (Spans 7 columns on large desktop) */}
-            <div className="flex-col flex gap-4 sm:gap-6 lg:col-span-7">
+            <div className="flex flex-col gap-4 sm:gap-6 lg:col-span-7">
               {/* Top Row: YouTube & Star Stats Cards */}
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
                 {introSection.statsRow.map((stat, index) => (
@@ -47,10 +47,10 @@ export default function IntroSection() {
                       >
                         <Image
                           src={url}
-                          alt="Student Avatar"
                           fill
+                          sizes="64px"
+                          alt="client-avatar"
                           className="object-cover"
-                          unoptimized
                         />
                       </div>
                     ))}
@@ -67,18 +67,17 @@ export default function IntroSection() {
             </div>
 
             {/* Right Column (Spans 5 columns on large desktop) - Tall Feature Card */}
-            <div className="group card-rounded relative flex max-h-[380px] flex-col justify-between overflow-hidden shadow-inner select-none sm:min-h-[500px] lg:col-span-5">
-              {/* Background Image Preview */}
+            <div className="group relative flex max-h-[380px] flex-col justify-between overflow-hidden rounded-2xl shadow-inner sm:min-h-[500px] lg:col-span-5">
               <video
                 src={introSection.featureCard.video.src}
+                poster="https://ik.imagekit.io/anideatech/ait/hero-image.webp"
                 autoPlay
                 loop
                 muted
-                className="w-full"
-              ></video>
-
-              {/* Soft Gradient Overlay for Readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#18181a] via-black/30 to-bg-primary"></div>
+                playsInline
+                preload="metadata"
+                className="h-full w-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -89,12 +88,24 @@ export default function IntroSection() {
 
 function parseCount(countStr) {
   if (typeof countStr === "number") {
-    return { prefix: "", number: countStr, suffix: "", isNumber: true, hasCommas: false };
+    return {
+      prefix: "",
+      number: countStr,
+      suffix: "",
+      isNumber: true,
+      hasCommas: false,
+    };
   }
   const str = String(countStr);
   const match = str.match(/^([^0-9]*)([0-9,.]+)(.*)$/);
   if (!match) {
-    return { prefix: "", number: 0, suffix: str, isNumber: false, hasCommas: false };
+    return {
+      prefix: "",
+      number: 0,
+      suffix: str,
+      isNumber: false,
+      hasCommas: false,
+    };
   }
   const prefix = match[1] || "";
   const hasCommas = match[2].includes(",");
@@ -150,9 +161,7 @@ function AnimatedCounter({ value, delay = 0 }) {
               if (progress < 1) {
                 rafRef.current = requestAnimationFrame(step);
               } else if (spanRef.current) {
-                const finalValue = hasCommas
-                  ? number.toLocaleString()
-                  : number;
+                const finalValue = hasCommas ? number.toLocaleString() : number;
                 spanRef.current.textContent = `${prefix}${finalValue}${suffix}`;
               }
             };
@@ -161,7 +170,7 @@ function AnimatedCounter({ value, delay = 0 }) {
           }, delay);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     observer.observe(el);
@@ -187,10 +196,10 @@ function StatCard({ icon, count, label, description, index = 0 }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.5, delay: index * 0.15, ease: "easeOut" }}
-      className="text-center sm:text-left md:border-border-primary bg-bg-primary card-rounded p-6 md:shadow-inner transition-transform duration-300 select-none hover:scale-[1.01] sm:p-8 md:border"
+      className="md:border-border-primary bg-bg-primary card-rounded p-6 text-center transition-transform duration-300 select-none hover:scale-[1.01] sm:p-8 sm:text-left md:border md:shadow-inner"
     >
       <div>
-        <div className="mb-2 ">
+        <div className="mb-2">
           <AnimatedCounter value={count} delay={index * 150} />
         </div>
         <p className="subtitle sm:!text-left">{label}</p>

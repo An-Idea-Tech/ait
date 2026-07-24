@@ -9,7 +9,7 @@ export default function PhaseSection() {
   return (
     <div className="section gap-10">
 
-      <h2 className="title">The four phases.</h2>
+      <h2 className="title">The <span className="text-brand">four</span> phases.</h2>
       <p className="subtitle max-w-2xl">Each phase has a clear start, a clear end, and a deliverable you can hold in your hand. You always know which phase you're in and what's coming next.</p>
 
       <div className="flex-col-center gap-12 sm:gap-16">

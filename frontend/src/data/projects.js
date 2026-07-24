@@ -14,7 +14,7 @@ export const projects = [
     title: "Philomena Pre-University College, Puttur",
     tagline: "Rebuilding A Website That Supports The Institution Behind It",
     // Hero image — replace with real project image
-    heroImage: "https://i.ytimg.com/vi/6aso3qjPQxo/maxresdefault.jpg",
+    heroImage: "https://ik.imagekit.io/anideatech/ait/hero-image.webp",
 
     about: {
       paragraphs: [
@@ -27,7 +27,7 @@ export const projects = [
     services: [
       "Website Strategy",
       "UI/UX Design",
-      "Data Migration and Normalisation",
+      "Data Migration",
       "Performance Optimisation",
       "On-page SEO",
       "Content Management System",
@@ -67,7 +67,7 @@ export const projects = [
         "Performance optimisation shaped the project from the beginning. The website was engineered to deliver faster access across a range of network conditions and optimised to meet Core Web Vitals recommendations. This ensured students and parents could access information and examination results more reliably, even during periods of peak traffic. Responsive layouts created a consistent experience across desktops, tablets, and mobile devices.",
         "On-page SEO formed another key part of the rebuild. Beyond improving search visibility, we established the institution's Google Business Profile to strengthen its digital presence, making it easier for prospective students and parents to discover the institution, understand its courses, and move directly into the admissions journey.",
       ],
-           image: "https://cdn.prod.website-files.com/69a6887f2e147a486fb9ff50/69a6887f2e147a486fba01e0_Wedesh%203.webp",
+           image: "https://ik.imagekit.io/anideatech/ait/hero-image.webp",
 
     },
 
@@ -77,7 +77,8 @@ export const projects = [
         "Every section of the website was redesigned around the way people actually use it. Prospective students can explore admissions with greater clarity, parents can quickly access important information from any device, and existing students can find examination results without unnecessary effort.",
         "Behind the scenes, the administration continues working with familiar tools, now supported by a website that requires less day-to-day assistance to keep information current.",
       ],
-      image: "https://cdn.prod.website-files.com/69a6887f2e147a486fb9ff50/69a6887f2e147a486fba01e0_Wedesh%203.webp",
+      image: "https://ik.imagekit.io/anideatech/ait/hero-image.webp",
+
     },
 
     impact: {
@@ -89,7 +90,8 @@ export const projects = [
         "The institution also strengthened its online presence through on-page SEO and a Google Business Profile integrated with the admissions journey, making it easier for prospective students and parents to discover the institution and take the next step.",
         "The rebuild also introduced a website that better represents the institution while supporting the way it operates every day.",
       ],
-      image: "https://cdn.prod.website-files.com/69a6887f2e147a486fb9ff50/69a6887f2e147a486fba01ed_Wedesh%204.webp",
+      image: "https://ik.imagekit.io/anideatech/ait/hero-image.webp",
+
     },
 
     testimonial: {
@@ -101,16 +103,16 @@ export const projects = [
 
     // Gallery images — replace with actual project screenshots
     galleryImages: [
-      "https://cdn.prod.website-files.com/69a6887f2e147a486fb9ff50/69a6887f2e147a486fba01e0_Wedesh%203.webp",
-      "https://cdn.prod.website-files.com/69a6887f2e147a486fb9ff50/69a6887f2e147a486fba01ed_Wedesh%204.webp",
-      "https://cdn.prod.website-files.com/69a6887f2e147a486fb9ff50/69a6887f2e147a486fba01ee_Wedesh%202.webp",
+"https://ik.imagekit.io/anideatech/ait/hero-image.webp",
+"https://ik.imagekit.io/anideatech/ait/hero-image.webp",
+"https://ik.imagekit.io/anideatech/ait/hero-image.webp",
     ],
 
     // Ticker strip images — horizontal scrolling showcase
     tickerImages: [
-      "https://cdn.prod.website-files.com/69a6887f2e147a486fb9ff50/69a6887f2e147a486fba01e1_Wedesh%207.webp",
-      "https://cdn.prod.website-files.com/69a6887f2e147a486fb9ff50/69a6887f2e147a486fba01ef_Wedesh%206.webp",
-      "https://cdn.prod.website-files.com/69a6887f2e147a486fb9ff50/69a6887f2e147a486fba01f2_Wedesh%205.webp",
+"https://ik.imagekit.io/anideatech/ait/hero-image.webp",
+"https://ik.imagekit.io/anideatech/ait/hero-image.webp",
+"https://ik.imagekit.io/anideatech/ait/hero-image.webp",
     ],
 
     nextProject: {
@@ -126,7 +128,7 @@ export const projects = [
     title: "Meet And Greet",
     tagline:
       "Open Conversations About Careers, Coding, and Real-World Engineering",
-    heroImage: "/images/projects/meetup-hero.jpg",
+    heroImage: "https://ik.imagekit.io/anideatech/ait/hero-image.webp",
 
     about: {
       paragraphs: [
@@ -201,16 +203,16 @@ export const projects = [
     },
 
     galleryImages: [
-      "/images/projects/meetup-g1.jpg",
-      "/images/projects/meetup-g2.jpg",
-      "/images/projects/meetup-g3.jpg",
+"https://ik.imagekit.io/anideatech/ait/hero-image.webp",
+"https://ik.imagekit.io/anideatech/ait/hero-image.webp",
+"https://ik.imagekit.io/anideatech/ait/hero-image.webp",
     ],
 
     tickerImages: [
-      "/images/projects/meetup-t1.jpg",
-      "/images/projects/meetup-t2.jpg",
-      "/images/projects/meetup-t3.jpg",
-      "/images/projects/meetup-t4.jpg",
+"https://ik.imagekit.io/anideatech/ait/hero-image.webp",
+"https://ik.imagekit.io/anideatech/ait/hero-image.webp",
+"https://ik.imagekit.io/anideatech/ait/hero-image.webp",
+"https://ik.imagekit.io/anideatech/ait/hero-image.webp",
     ],
 
     nextProject: {
@@ -226,7 +228,7 @@ export const projects = [
     title: "Developer Ecosystem",
     tagline:
       "Building a Tight-Knit Community of Innovators, Builders, and Creators",
-    heroImage: "/images/projects/deveco-hero.jpg",
+    heroImage: "https://ik.imagekit.io/anideatech/ait/hero-image.webp",
 
     about: {
       paragraphs: [
@@ -302,16 +304,16 @@ export const projects = [
     },
 
     galleryImages: [
-      "/images/projects/deveco-g1.jpg",
-      "/images/projects/deveco-g2.jpg",
-      "/images/projects/deveco-g3.jpg",
+"https://ik.imagekit.io/anideatech/ait/hero-image.webp",
+"https://ik.imagekit.io/anideatech/ait/hero-image.webp",
+"https://ik.imagekit.io/anideatech/ait/hero-image.webp",
     ],
 
     tickerImages: [
-      "/images/projects/deveco-t1.jpg",
-      "/images/projects/deveco-t2.jpg",
-      "/images/projects/deveco-t3.jpg",
-      "/images/projects/deveco-t4.jpg",
+"https://ik.imagekit.io/anideatech/ait/hero-image.webp",
+"https://ik.imagekit.io/anideatech/ait/hero-image.webp",
+"https://ik.imagekit.io/anideatech/ait/hero-image.webp",
+"https://ik.imagekit.io/anideatech/ait/hero-image.webp",
     ],
 
     nextProject: {

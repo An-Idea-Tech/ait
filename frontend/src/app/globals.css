@@ -50,7 +50,7 @@ body {
 
 @theme {
 
-  --color-hww:#335B39;
+  --color-hww:#F7CC32;
   --color-service:#D54C45;
 
   --color-btn-hover:#1B67E1;
@@ -87,7 +87,7 @@ body {
 }
 
 .dark {
-  --bg: #131313;
+  --bg: #000000;
   --text-primary: #ffffff;
   --text-secondary: #DDDDDD;
   --text-third:#9A9A9A;

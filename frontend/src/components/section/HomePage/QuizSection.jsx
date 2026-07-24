@@ -32,7 +32,7 @@ export default function QuizSection() {
       {/* Huge Display Typography*/}
       <div className="huge-text text-center">
         <div>DOES YOUR</div>
-        <div className="image-text bg-[url('/images/liquid-bg.jpg')]">
+        <div className="image-text bg-[url('https://ik.imagekit.io/anideatech/ait/liquid-orange.avif')]">
           BUSINESS
         </div>
         <div>NEED A WEBSITE?</div>

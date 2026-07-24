@@ -2,6 +2,8 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { FiPlus } from "react-icons/fi";
+import Heighlight from "@/components/shared/Heighlight";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -14,77 +16,83 @@ const fadeUp = {
 
 export default function CaseStudyAbout({ about, services, industry }) {
   return (
-    <section className="section">
-      <div className="flex gap-12 flex-col flex-wrap w-full md:gap-16 lg:gap-24">
-        {/* Left: About text */}
+    <section className="section py-12 md:py-20 lg:py-24">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 w-full max-w-[1400px] mx-auto">
+        
+        {/* Left: About Text - Spans 8 columns on desktop */}
         <motion.div
-          className="min-w-0 flex-2 flex-col-center"
+          className="lg:col-span-8 flex flex-col justify-between border border-border-primary/40 card-rounded p-8 bg-bg-primary/40 backdrop-blur-md shadow-sm hover:shadow-md transition-shadow duration-500 relative overflow-hidden group"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={fadeUp}
         >
-          <h2 className="subtitle !text-left uppercase">About</h2>
-          <div className="bg-border-primary mt-4 mb-8 h-[2px] w-[25%]" />
-          <div className="flex flex-col gap-5 ">
-            {about.paragraphs.map((para, i) => (
-              <p key={i} className="font-manrope-light text-xl text-center md:text-2xl xl:text-4xl md:max-w-[800px] lg:max-w-[900px] text-center">
-                {para}
-              </p>
-            ))}
-          </div>
-        </motion.div>
+          {/* Decorative ambient glow */}
+          <div className="absolute top-0 right-0 w-72 h-72 card-rouded blur-3xl -translate-y-1/2 translate-x-1/3  transition-colors duration-700 pointer-events-none" />
 
-        {/* Right: Services + Industry tags */}
-        <motion.div
-          className="flex flex-1 flex-shrink-0 flex-col gap-10"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={{
-            ...fadeUp,
-            visible: {
-              ...fadeUp.visible,
-              transition: { ...fadeUp.visible.transition, delay: 0.1 },
-            },
-          }}
-        >
-          {/* Services */}
-          <div>
-            <h2 className="subtitle !text-left uppercase">Service</h2>
-            <div className="bg-border-primary mt-4 mb-4 h-[2px] w-[25%]" />
-            <div className="flex flex-col gap-3">
-              {services.map((service, i) => (
-                <p key={i} className="text-xl sm:text-[4vw] lg:text-[3vw] font-manrope-bold !text-left">
-                  {service}
+          <div className="relative z-10 h-full flex flex-col gap-3">
+            <div className="flex items-center gap-3 mb-5 ">
+              <h2 className="title2">ABOUT</h2>
+            </div>
+            
+            <div className="flex flex-col gap-6 md:gap-8">
+              {about.paragraphs.map((para, i) => (
+                <p 
+                  key={i} 
+                  className="subtitle !text-justify !tracking-tight md:!text-left"
+                >
+                  {para}
                 </p>
               ))}
             </div>
           </div>
         </motion.div>
 
-      <motion.div
-          className=" "
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={{
-            ...fadeUp,
-            visible: {
-              ...fadeUp.visible,
-              transition: { ...fadeUp.visible.transition, delay: 0.1 },
-            },
-          }}
-        >
-          {/* Industry */}
-          <div>
-            <h2 className="subtitle !text-left uppercase">Industry</h2>
-            <div className="bg-border-primary mt-4 mb-4 h-[2px] w-[25%]" />
-            <p className="text-xl sm:text-[4vw] lg:text-[3vw] font-manrope-bold !text-left">
-              {industry}
-            </p>
-          </div>
-        </motion.div>
+        {/* Right Column: Industry & Services - Spans 4 columns */}
+        <div className="lg:col-span-4 flex flex-col gap-6 md:gap-8">
+          
+          {/* Industry Box */}
+          <motion.div
+            className="flex-1 flex flex-col justify-center border border-border-primary/20 card-rounded p-8 sm:p-10 relative overflow-hidden group shadow-sm hover:shadow-md transition-all duration-500"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={{ ...fadeUp, visible: { ...fadeUp.visible, transition: { ...fadeUp.visible.transition, delay: 0.1 } } }}
+          >
+            {/* Subtle overlay on hover */}
+            <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+            
+            <div className="relative z-10">
+              <h2 className="subtitle">Industry</h2>
+              <Heighlight text= {industry}/>
+            </div>
+          </motion.div>
+
+          {/* Services Box */}
+          <motion.div
+            className="flex-[1.5] flex flex-col justify-between border border-border-primary/40 card-rounded p-8 sm:p-10 bg-bg-primary/40 backdrop-blur-md shadow-sm hover:shadow-md transition-shadow duration-500"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={{ ...fadeUp, visible: { ...fadeUp.visible, transition: { ...fadeUp.visible.transition, delay: 0.2 } } }}
+          >
+            <h2 className="subtitle uppercase mb-8">SERVICES</h2>
+            <div className="flex flex-wrap gap-2.5">
+              {services.map((service, i) => (
+                <div 
+                  key={i} 
+                  className="flex items-center gap-2 px-4 py-2 rounded-full border border-border-primary/50 bg-white/[0.02] hover:bg-white/[0.08] hover:border-border-primary transition-all duration-300 group cursor-default"
+                >
+                  <span className="font-manrope-medium text-sm text-text-primary group-hover:text-brand transition-colors duration-300">
+                    {service}
+                  </span>
+                  <FiPlus className="text-text-secondary text-sm group-hover:rotate-90 group-hover:text-brand transition-all duration-300" />
+                </div>
+              ))}
+            </div>
+          </motion.div>
+          
+        </div>
       </div>
     </section>
   );

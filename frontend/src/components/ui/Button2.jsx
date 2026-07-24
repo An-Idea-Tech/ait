@@ -33,9 +33,9 @@ export default function Button2({
       whileHover="hover"
       whileTap="tap"
       variants={{
-        rest: { scale: 1 },
-        hover: { scale: 1.03 },
-        tap: { scale: 0.96 },
+        rest: { scale: 1, boxShadow: "0px 0px 0px rgba(255, 69, 0, 0)" },
+        hover: { scale: 1.03, boxShadow: "0px 0px 20px 0px #FF4500" },
+        tap: { scale: 0.96, boxShadow: "0px 0px 10px 0px #FF4500" },
       }}
       transition={{
         type: "spring",
@@ -43,7 +43,7 @@ export default function Button2({
         damping: 25,
       }}
       {...props}
-      className={`group border-border-primary text-text-primary font-manrope-medium hover:bg-btn-hover inline-flex w-max cursor-pointer items-center justify-center rounded-full border bg-transparent px-8 py-2.5 text-sm md:text-base tracking-wide transition-colors duration-300 select-none  lg:px-8 lg:py-3 ${className}`}
+      className={`group border-border-primary text-text-primary font-manrope-medium hover:bg-brand inline-flex w-max cursor-pointer items-center justify-center rounded-full border bg-transparent px-8 py-2.5 text-sm md:text-base tracking-wide transition-colors duration-300 select-none  lg:px-8 lg:py-3 ${className}`}
     >
       <span>{text || children}</span>
     </motion.button>
