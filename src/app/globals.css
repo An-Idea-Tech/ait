@@ -1,0 +1,260 @@
+@import "tailwindcss";
+@config "../../tailwind.config.js";
+@custom-variant dark (&:where(.dark, .dark *));
+
+#section-nav::-webkit-scrollbar:horizontal {
+  display: none;
+}
+
+/* Hide native browser scrollbar for seamless Lenis smooth scrolling */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.blended-text {
+  mix-blend-mode: difference;
+}
+
+html,
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.image-text {
+  background-size: cover;
+  background-position: center;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+  color: transparent;
+}
+
+@font-face {
+  font-family: "Manrope-light";
+  src: url("/fonts/Manrope-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Manrope-medium";
+  src: url("/fonts/Manrope-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Manrope-bold";
+  src: url("/fonts/Manrope-Bold.ttf") format("truetype");
+}
+
+@theme {
+
+  --color-hww:#F7CC32;
+  --color-service:#D54C45;
+
+  --color-btn-hover:#1B67E1;
+
+  --color-brand: #ef870d;
+  --color-brown: #a35a3a;
+  --color-green:#0EBD4F;
+  --color-cream: #faf7ef;
+  --color-blue: #1b67e1;
+  --color-gray: #424242;
+  --color-creame: #fad3b0;
+  --color-darkbrown: #1a1514;
+  --color-shadow: #c5c5c5;
+  --color-gray-100: #252323;
+
+  --color-bg-primary: var(--bg);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-third:var(--text-third);
+  --color-border-primary: var(--line);
+  --color-border-secondary: #626262;
+
+  --font-manrope-light: "Manrope-light", sans-serif;
+  --font-manrope-medium: "Manrope-medium", sans-serif;
+  --font-manrope-bold: "Manrope-bold", sans-serif;
+}
+
+:root {
+  --bg: #ffffff;
+  --text-primary: #000000;
+  --text-secondary: #1a1514;
+  --text-third: #555555;
+  --line: #1a1514;
+}
+
+.dark {
+  --bg: #000000;
+  --text-primary: #ffffff;
+  --text-secondary: #DDDDDD;
+  --text-third:#9A9A9A;
+  --line: #626262;
+}
+
+@layer base {
+  html,
+  body {
+    @apply bg-bg-primary text-text-primary font-manrope-medium m-0 box-border p-0;
+  }
+}
+
+@layer components {
+  .glass-pill {
+    @apply relative inline-flex w-fit items-center justify-center overflow-hidden rounded-full border border-solid border-[rgba(255,255,255,0.15)] px-6 py-2.5 shadow-[0_8px_32px_rgba(0,0,0,0.25),inset_0_1px_0_rgba(255,255,255,0.4),inset_0_-1px_0_rgba(255,255,255,0.1)] backdrop-blur-[20px] transition-all duration-300 before:absolute before:inset-x-0 before:top-0 before:h-px before:content-[''] hover:border-[rgba(255,255,255,0.25)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.6)];
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.02) 100%
+    );
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  .glass-pill::before {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.6),
+      transparent
+    );
+  }
+
+  .glass-card {
+    @apply relative overflow-hidden rounded-3xl border border-solid border-[rgba(255,255,255,0.15)] p-6 shadow-[0_8px_32px_rgba(0,0,0,0.25),inset_0_1px_0_rgba(255,255,255,0.4),inset_0_-1px_0_rgba(255,255,255,0.1)] backdrop-blur-[20px] transition-all duration-300 before:absolute before:inset-x-0 before:top-0 before:h-px before:content-[''];
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.02) 100%
+    );
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  .glass-card::before {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.6),
+      transparent
+    );
+  }
+
+  .liquid-glass {
+    @apply relative overflow-hidden p-6 sm:p-8 backdrop-blur-2xl ;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    );
+    backdrop-filter: blur(32px) saturate(150%);
+    -webkit-backdrop-filter: blur(32px) saturate(150%);
+  }
+  .dark .liquid-glass {
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.35) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    );
+  }
+  .liquid-glass::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.3) 0%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    pointer-events: none;
+    opacity: 0.8;
+    transition: opacity 0.5s ease;
+  }
+  .liquid-glass:hover::before {
+    opacity: 1;
+  }
+
+  .button {
+    @apply font-manrope-medium bg-brand inline-block cursor-pointer rounded-full px-3 py-2 text-center text-sm text-black transition-colors hover:bg-[#ff8c00];
+  }
+}
+
+/* mx-auto max-w-[1920px] px-6 md:px-12 pt-8 pb-16 md:pt-12 md:pb-24 */
+
+@layer utilities {
+  .flex-row-center {
+    @apply flex flex-row items-center justify-center;
+  }
+
+  .flex-col-center {
+    @apply flex flex-col items-center justify-center;
+  }
+
+  .page {
+    @apply mx-auto min-h-screen w-full max-w-[1920px] px-6 pb-16 md:px-20 md:pb-24;
+  }
+
+  .section {
+    @apply flex min-h-auto w-full flex-col items-center py-5 lg:py-10 sm:px-6 ;
+  }
+
+  .hero-title-second {
+    @apply text-text-primary font-manrope-bold text-base tracking-wide sm:text-xl md:text-2xl;
+  }
+
+  .hero-title-main {
+    @apply font-manrope-bold text-text-primary text-4xl leading-[1.1] tracking-tight sm:text-[6vw]  lg:text-[5vw];
+  }
+
+  .huge-text {
+    @apply font-manrope-bold relative w-full text-[13vw] leading-[0.88] tracking-tight md:text-[10vw];
+  }
+
+  .note{
+    @apply text-text-secondary text-xs sm:text-sm font-manrope-light;
+  }
+
+  .title {
+    @apply font-manrope-bold text-text-primary text-center text-4xl tracking-tight sm:text-5xl md:text-6xl;
+  }
+
+  .title2 {
+    @apply font-manrope-bold text-text-primary text-center text-3xl tracking-tight sm:text-4xl md:text-5xl;
+  }
+
+  .subtitle {
+    @apply font-manrope-bold text-text-secondary text-center text-base leading-relaxed sm:text-lg md:text-xl;
+  }
+
+  .description {
+    @apply font-manrope-light text-text-third text-[16px] tracking-tight leading-relaxed sm:text-[18px];
+  }
+
+  .card-rounded {
+    @apply rounded-3xl;
+  }
+
+  .trust-description {
+    @apply font-manrope-light text-text-third text-lg lg:tracking-tight sm:text-2xl lg:text-[2vw] text-justify;
+  }
+}
+
+.blog-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.blog-card-hover:hover {
+  transform: translateY(-4px);
+}
+
+/* ─── Case Study Ticker Animation ─────────────────────────────── */
+@keyframes cs-ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(var(--ticker-offset, -1424px));
+  }
+}
+
