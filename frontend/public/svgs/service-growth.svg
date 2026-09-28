@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Hand-drawn style growth & WhatsApp flow doodle -->
+  <path d="M60 320 L340 320" />
+  <!-- Growth arrow/chart -->
+  <path d="M80 280 L160 200 L220 240 L320 120" />
+  <path d="M280 120 L320 120 L320 160" />
+  <!-- Chat / WhatsApp bubble sketch -->
+  <path d="M120 140 C120 100, 180 80, 240 100 C300 120, 310 180, 260 210 C240 220, 220 220, 200 240 L190 260 L180 230 C140 220, 120 180, 120 140 Z" stroke-dasharray="10 8" />
+  <!-- Rocket / speed lines -->
+  <path d="M80 160 L100 140 M70 190 L90 180" />
+  <circle cx="220" cy="150" r="6" fill="currentColor" />
+  <circle cx="250" cy="150" r="6" fill="currentColor" />
+  <circle cx="190" cy="150" r="6" fill="currentColor" />
+</svg>
