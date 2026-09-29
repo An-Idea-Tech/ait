@@ -32,23 +32,23 @@ export default function PhaseCard({ data }) {
     >
 
       {/* Top Header Row */}
-      <div className="flex flex-col lg:flex-row border-b border-border-primary bg-hww ">
+      <div className="flex flex-col lg:flex-row border-b border-border-primary bg-hww  ">
         {/* Phase Label Column */}
-        <div className="w-full lg:w-44 lg:w-52  grow-0 py-5 px-6  lg:border-r border-border-primary flex-row-center">
+        <div className="w-full !text-black lg:w-44 lg:w-52  grow-0 py-5 px-6  lg:border-r border-border-primary flex-row-center">
           <Heighlight text={data.phaseLabel} />
         </div>
 
         {/* Phase Title Column */}
         <div className="w-full lg:w-72 lg:w-80 grow-1 py-5 px-6 lg:border-r border-border-primary flex-row-center gap-3 xl:gap-4">
          
-          <h2 className="title2">
+          <h2 className="title2 !text-black">
             {data.title}
           </h2>
         </div>
 
         {/* Phase Subtitle Column */}
         <div className="flex-1 py-5 px-6 flex-row-center grow-4 lg:grow-1">
-          <p className="subtitle">
+          <p className="subtitle !text-black">
             {data.subtitle}
           </p>
         </div>

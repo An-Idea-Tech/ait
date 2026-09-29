@@ -7,7 +7,7 @@ export default function CaseStudyTestimonial({ testimonial }) {
   const { quote, name, designation } = testimonial;
 
   return (
-    <section className="section bg-blue-500 ">
+    <section className="section bg-[#A5CF83] card-rounded ">
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}

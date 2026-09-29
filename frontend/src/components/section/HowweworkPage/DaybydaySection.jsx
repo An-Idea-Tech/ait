@@ -53,11 +53,11 @@ export default function DaybydaySection() {
             {/* Left Column: Title */}
             <div className="w-full md:w-80 lg:w-[420px] shrink-0 pb-6 md:pb-0 md:pr-8 lg:pr-12 flex flex-col justify-start items-start">
               {principle.number && (
-                <span className="font-manrope-medium text-xs sm:text-sm text-text-third group-hover:text-brand transition-colors duration-300 mb-2 block tracking-widest uppercase">
-                  {principle.number} /
+                <span className="title !text-hww">
+                  {principle.number} 
                 </span>
               )}
-              <h3 className="font-manrope-bold text-text-primary text-2xl sm:text-3xl md:text-[32px] tracking-tight leading-[1.25] whitespace-pre-line group-hover:text-brand transition-colors duration-300">
+              <h3 className="title2 !text-left">
                 {principle.title}
               </h3>
             </div>
@@ -72,7 +72,7 @@ export default function DaybydaySection() {
 
               {/* Practice Box Callout */}
               {principle.practiceText && (
-                <div className="mt-1 sm:mt-2 relative overflow-hidden rounded-r-2xl border border-border-primary/20 dark:border-border-primary/40 border-l-4 border-l-brown dark:border-l-brand bg-cream/60 dark:bg-white/[0.04] p-5 sm:p-6 backdrop-blur-md transition-all duration-300 group-hover:bg-cream dark:group-hover:bg-white/[0.07] shadow-sm">
+                <div className="mt-1 sm:mt-2 relative overflow-hidden rounded-r-2xl border border-border-primary/20 dark:border-border-primary/40 border-l-4 border-l-brown dark:border-l-hww bg-cream/60 dark:bg-white/[0.04] p-5 sm:p-6 backdrop-blur-md transition-all duration-300 group-hover:bg-cream dark:group-hover:bg-white/[0.07] shadow-sm">
                   <p className="font-manrope-light text-sm sm:text-base text-text-secondary leading-relaxed">
                     {principle.practiceLabel && (
                       <span className="font-manrope-bold text-text-primary mr-1.5 block sm:inline">

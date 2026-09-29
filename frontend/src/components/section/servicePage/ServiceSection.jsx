@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import ServiceCard from "@/components/service/ServiceCard";
 import { servicecard, confusionData } from "@/data/service";
 import Heighlight from "@/components/shared/Heighlight";
 import Confusion from "../../shared/Confusion";
 import Button2 from "@/components/ui/Button2";
 import ImportantDesc from "@/components/shared/ImportantDesc";
+import ServiceCard from "@/components/service/serviceCard";
 
 export default function ServiceSection() {
   return (

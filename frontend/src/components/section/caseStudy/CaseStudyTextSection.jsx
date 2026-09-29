@@ -49,7 +49,7 @@ export default function CaseStudyTextSection({
           variants={{ ...fadeUp, visible: { ...fadeUp.visible, transition: { ...fadeUp.visible.transition, delay: 0.1 } } }}
         >
           {paragraphs?.map((para, i) => (
-            <p key={i} className="description text-justify">
+            <p key={i} className="description !text-justify ">
               {para}
             </p>
           ))}

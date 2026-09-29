@@ -21,7 +21,7 @@ export default function TrustSection() {
 
         {/* Big Quote Headline */}
         <div className="w-full">
-          <h2 className="title mx-auto max-w-7xl xl:!text-[4vw]">
+          <h2 className="title !text-left lg:!text-center mx-auto max-w-7xl xl:!text-[4vw]">
             {trustsection.quote}
           </h2>
         </div>
@@ -29,7 +29,7 @@ export default function TrustSection() {
         {/* Description Text */}
         <div className="mx-auto md:max-w-4xl">
           {trustsection.description.split("\n").map((paragraph, index) => (
-            <p key={index} className="trust-description">
+            <p key={index} className={`trust-description tracking-tight ${index!=0? "mt-5 lg:mt-10":""}`} >
               {paragraph.trim()}
             </p>
           ))}

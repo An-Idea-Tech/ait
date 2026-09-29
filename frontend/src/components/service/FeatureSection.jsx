@@ -16,7 +16,7 @@ export default function FeatureSection({ section }) {
             transition={{ duration: 0.6 }}
             className="mb-10 text-center sm:mb-14"
           >
-            <h2 className="title !text-3xl sm:!text-4xl md:!text-5xl">
+            <h2 className="title">
               <span>{section.title}</span>
             </h2>
           </motion.div>
@@ -32,18 +32,11 @@ export default function FeatureSection({ section }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.5, delay: index * 0.15 }}
-                className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-border-primary bg-bg-primary p-7 shadow-inner transition-all duration-300 select-none hover:border-brand/40 hover:scale-[1.01] sm:p-9"
+                className="group relative flex flex-col justify-between overflow-hidden card-rounded glass-pill  p-7  transition-all duration-300 select-none  sm:p-9"
               >
-                {/* Number Badge */}
-                <div className="mb-6 flex items-center justify-between">
-                  <span className="font-manrope-bold text-xs tracking-widest text-brand uppercase">
-                    Feature 0{index + 1}
-                  </span>
-                  <div className="h-1.5 w-12 rounded-full bg-border-primary transition-all duration-300 group-hover:bg-brand group-hover:w-20" />
-                </div>
 
                 {/* Feature Title */}
-                <h3 className="mb-3 font-manrope-bold text-xl leading-snug tracking-tight text-text-primary sm:text-2xl">
+                <h3 className="mb-3 title2 !text-left">
                   {item.title}
                 </h3>
 

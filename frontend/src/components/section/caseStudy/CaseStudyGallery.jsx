@@ -2,14 +2,13 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function CaseStudyGallery({ images, title }) {
   return (
     <section className="section">
-
       {/* Grid: 2-col on md+, with last image full-width */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
-
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5">
         {images.map((src, i) => (
           <motion.div
             key={i}
@@ -21,16 +20,19 @@ export default function CaseStudyGallery({ images, title }) {
               ease: [0.16, 1, 0.3, 1],
               delay: i * 0.1,
             }}
-            className={`overflow-hidden rounded-xl bg-gray/10 ${
+            className={`bg-gray/10 overflow-hidden rounded-xl ${
               i === images.length - 1 && images.length % 2 !== 0
                 ? "md:col-span-2"
                 : "md:col-span-1"
             }`}
           >
-            <img
+            <Image
               src={src}
               alt={`${title} project image ${i + 1}`}
-              className="w-full max-h-[500px] object-cover aspect-[4/3] "
+              width={1200}
+              height={900}
+              sizes="(max-width: 768px) 100vw, 1200px"
+              className="aspect-[4/3] max-h-[500px] w-full object-cover"
             />
           </motion.div>
         ))}

@@ -24,18 +24,18 @@ export default function HeroSection({ section, tier }) {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-           <Heighlight text= {badgeText}/>
+           <Heighlight text= {badgeText}  className="mb-5"/>
           </motion.div>
         )}
 
         {/* Title */}
-        <h1 className="huge-text !text-center">
+        <h1 className="hero-title-main !text-center">
           <span>{section.title}</span>
         </h1>
 
         {/* Heading / Subtitle */}
         {section.heading && (
-          <p className="title2 !text-black bg-yellow-300 p-1">
+          <p className="subtitle !text-black bg-yellow-300 p-1">
             {section.heading}
           </p>
         )}
@@ -59,7 +59,7 @@ export default function HeroSection({ section, tier }) {
               index === 0 ? (
                 <Button key={index} text={btn.text} link={btn.link} />
               ) : (
-                <Button2 key={index} text={btn.text} link={btn.link} />
+                <Button2 key={index} text="connect" link={btn.link} />
               )
             )}
           </motion.div>
