@@ -5,7 +5,7 @@ export const NavLinks = [
   },
   {
     title: "Method",
-    url: "method",
+    url: "/method",
   },
   {
     title: "Services",
@@ -15,10 +15,10 @@ export const NavLinks = [
     title: "About Us",
     url: "/about-us",
   },
-  {
-    title: "Insights",
-    url: "/insights",
-  },
+  // {
+  //   title: "Insights",
+  //   url: "/insights",
+  // },
   {
     title: "Contact",
     url: "/contact",

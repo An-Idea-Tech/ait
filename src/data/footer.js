@@ -2,29 +2,28 @@ export const footerLinks = [
   {
     title: "COMPANY",
     links: [
-      { name: "About", url: "/about" },
+      { name: "About", url: "/about-us" },
       { name: "Contact", url: "/contact" },
-      { name: "Careers", url: "/careers" },
+      { name: "Privacy Policy", url: "/privacy-policy" },
       { name: "How we work", url: "/how-we-work" },
     ],
   },
   {
-    title: "USEFUL LINKS",
+    title: "EXPLORE",
     links: [
       { name: "Home", url: "/" },
       { name: "Services", url: "/services" },
       { name: "Work", url: "/work" },
       { name: "Method", url: "/method" },
-      { name: "Insight", url: "/insights" },
+      { name: "Insights", url: "/insights" },
     ],
   },
   {
-    title: "REACH",
+    title: "QUICK LINKS",
     links: [
-      { name: "New project enquiries", url: "/contact?type=new-project" },
-      { name: "Existing client & hosting support", url: "/contact?type=support" },
-      { name: "Domains & hosting purchases", url: "/contact?type=domains" },
-      { name: "Careers & hiring", url: "/careers" },
+      { name: "Start a New Project", url: "/contact" },
+      { name: "Client Support & Ticket Helpdesk", url: "/contact?type=support" },
+      { name: "Domain & Hosting", url: "/services/domains-hosting" },
     ],
   },
 ];
@@ -32,16 +31,14 @@ export const footerLinks = [
 export const footerContact = {
   title: "CONTACT",
   address: [
-    "WrkWrk, Top Floor",
-    "Citadel Mindspace, 2A, Yeyyadi Rd",
-    "Kadri Hills, Yeyyadi",
-    "Mangaluru, Karnataka 575008",
-    "India",
+    "Mangaluru Studio",
+    "Kodialbail, Mangaluru",
+    "Karnataka, India",
   ],
-  gst: "GST: 29BHHPA6760J1Z3",
+  gst: "GST: 29ABCDE1234F1Z5",
   hours: [
-    "Mon-Sat",
-    "10:00 AM - 7:00 PM IST"
+    "Monday-Friday",
+    "09:30 AM-06:30 PM IST"
   ],
-  phone: "+91 73490 49009"
+  phone: "+91 98765 43210"
 };

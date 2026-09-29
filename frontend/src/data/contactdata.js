@@ -35,15 +35,14 @@ export const stepsSection = {
 };
 
 export const directInquirySection = {
-  title: "Or, if a call isn't the right step yet.",
-  subtitle: "Send a direct inquiry.",
-  description: "For partnership queries, writing opportunities, or to say hello, you can email us or send a direct inquiry. We respond to every email within 24 hours.",
+  title: "Contact and Support",
+  description: "Existing clients with an active project or maintenance agreement can use their usual support channel. We reply to technical tickets within 24 hours on working days. Critical issues are handled on non-working days as well.",
   contacts: [
-    { label: "For clients & projects", value: "solutions@anideatech.com" },
-    { label: "For career inquiries", value: "recruitment@anideatech.com" },
-    { label: "For press & media", value: "press@anideatech.com" },
-    { label: "For anything else", value: "hello@anideatech.com" },
-    { label: "Phone / WhatsApp", value: "+91 73490 49009" }
+    { label: "New projects and Discovery", value: "projects@anideatech.com", type: "email" },
+    { label: "Client support", value: "support@anideatech.com", type: "email" },
+    { label: "Billing", value: "billing@anideatech.com", type: "email" },
+    { label: "Domains and hosting", value: "domains@anideatech.com", type: "email" },
+    { label: "Phone / WhatsApp", value: "+91 98765 43210", type: "phone" }
   ]
 };
 
@@ -57,13 +56,20 @@ export const activeClientsSection = {
   image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200"
 };
 
-export const teamSection = {
-  title: "Who you'll be talking to.",
-  paragraphs: [
-    "Most discovery calls and design reviews are handled by Aneesh, the founder. He has ten years of experience running design studios and building software for founders.",
-    "If you need technical experts or developers on the call, let us know and we'll pull them in."
+export const faqSection = {
+  title: "Common Questions",
+  items: [
+    {
+      question: "Who will I be talking to?",
+      answer:
+        "Most discovery calls and design reviews are handled by Aneesh, the founder. If you need technical experts or developers on the call, let us know and we'll pull them in.",
+    },
+    {
+      question: "What happens after I book a call?",
+      answer:
+        "We review your booking form, confirm the call, and send you a calendar invitation with the meeting link.",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1630952588128-6b6f96a53691?q=80&w=1200&auto=format&fit=crop"
 };
 
 export const locationSection = {

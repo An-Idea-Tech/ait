@@ -10,7 +10,7 @@ export default function Footer() {
     "https://images.unsplash.com/photo-1699119710104-9cf4f77019b6?q=80&w=1207&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
   return (
-    <footer className="border-border-primary  !bg-red-500 bg-bg-primary text-text-primary w-full border-t mt-auto px-4 pt-20 pb-4 md:px-12">
+    <footer className="border-border-primary bg-bg-primary text-text-primary w-full border-t mt-auto px-4 pt-20 pb-4 md:px-12">
       <div className="mx-auto w-full max-w-[1920px]">
         {/* Top Section */}
         <div className="">

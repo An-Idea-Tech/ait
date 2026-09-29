@@ -1,5 +1,36 @@
 import React from "react";
 
+export const aboutHeroData = {
+  title: "When the Tools Around a Business No Longer Fit",
+  description: "As a business changes, its website and day-to-day tools can stop reflecting the way it now operates. That is why we start with what needs fixing, rather than recommending a service upfront.",
+};
+
+export const whatWeSectionData = {
+  title: "How We Arrived Here",
+  updatedOn: "UPDATED: 29 AUG 2026",
+  introduction:
+    "An Idea Tech has operated since 2016. Our early work included hardware, ERP, training, and website services.",
+  quote:
+    "Over ten years in the industry, I saw businesses add a website, another tool, or a manual step to solve an immediate problem. Over time, those workarounds became part of the workload.",
+  paragraphs: [
+    "We saw websites leave customers with basic questions about a business. Enquiries often became difficult to follow once they reached the team. Routine work depended on messages, spreadsheets, and someone remembering what came next.",
+    "In 2022, we began building websites and applications in-house. We could then work on the website and what happens after someone enquires: where the enquiry goes, who follows it up, and whether the existing tools still support the team.",
+  ],
+  conclusion:
+    "Today, we focus on company websites, Custom Web Apps, standalone software, and integrations.",
+};
+
+export const aboutStoryData = {
+  title: "How We Arrived Here",
+  paragraphs: [
+    "An Idea Tech has operated since 2016. Our early work included hardware, ERP, training, and website services.",
+    "Over ten years in the industry, I saw businesses add a website, another tool, or a manual step to solve an immediate problem. Over time, those workarounds became part of the workload.",
+    "We saw websites leave customers with basic questions about a business. Enquiries often became difficult to follow once they reached the team. Routine work depended on messages, spreadsheets, and someone remembering what came next.",
+    "In 2022, we began building websites and applications in-house. We could then work on the website and what happens after someone enquires: where the enquiry goes, who follows it up, and whether the existing tools still support the team.",
+    "From Mangaluru, we work with businesses across India and internationally.",
+  ],
+};
+
 export const confusionData = {
   id: "want-to-know-fit",
   title: "Want to know if we'd be a fit?",
@@ -26,7 +57,37 @@ export const confusionData = {
   ],
 };
 
-export const whatWeNotData = {
+export const whatWeDoData = {
+  title: "What We Do",
+  points: [
+    {
+      id: 1,
+      title: "Company websites",
+      description:
+        "Websites that explain what the business offers, why it matters, and how the right customer can take the next step.",
+    },
+    {
+      id: 2,
+      title: "Custom Web Apps",
+      description:
+        "Browser-based dashboards and internal tools for recurring workflows that existing tools no longer support well.",
+    },
+    {
+      id: 3,
+      title: "Standalone Custom Software",
+      description:
+        "Applications installed on the computers where the work happens, when that is the more suitable fit.",
+    },
+    {
+      id: 4,
+      title: "Integrations",
+      description:
+        "Connections between agreed systems that reduce the need to enter the same information in different places.",
+    },
+  ],
+};
+
+export const whatWeAreNotData = {
   titlePrefix: "What we're",
   highlightWord: "not",
   titleSuffix: ".",
@@ -73,4 +134,41 @@ export const howWeGotData = {
   ],
 };
 
+export const howWeMakeRecommendationsData = {
+  title: "How We Make Recommendations",
+  updatedOn: "UPDATED: 31 AUG 2026",
+  introduction:
+    "Before recommending a website, system, or integration, we look at what customers need to understand and how the team handles the work. If the current setup supports the job, it stays. If a request will not address the issue, we explain why.",
+  highlight:
+    "Sometimes the first request points to a wider problem. We look at what the business needs now, what may change as it grows, and how the team will use the website, software, or integration day to day.",
+};
 
+export const howWeStayInvolvedData = {
+  title: "How We Stay Involved",
+  addedOn: "ADDED: 31 AUG 2026",
+  items: [
+    {
+      title: "Project Communication",
+      description:
+        "The people responsible for the project stay involved in the conversation. The client portal shows progress and what needs your input. If the plan changes, we explain what has changed and why.",
+    },
+    {
+      title: "Implementation and Team Support",
+      description:
+        "We implement the agreed website, software, or integration, then guide the team through handover and day-to-day use. It should become part of the team’s day-to-day process, not another layer to manage.",
+      highlight:
+        "An Annual Maintenance Contract (AMC) can provide the ongoing care agreed after launch.",
+    },
+  ],
+  closing:
+    "From Mangaluru, we work with businesses across India and internationally.",
+};
+
+export const aboutCtaData = {
+  title: "Tell Us About Your Business",
+  updatedOn: "UPDATED: 29 AUG 2026",
+  description:
+    "Share what is no longer working as it should. We can use the Discovery Call to understand the situation together.",
+  buttonText: "Tell Us About Your Business",
+  buttonLink: "/contact",
+};

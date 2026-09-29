@@ -13,48 +13,48 @@ export const heroSection = {
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=150&auto=format&fit=crop",
     ],
-    text: "Served more than 20+ Clients",
+    text: "Trusted by 50+ businesses.",
   },
   cta1:{
-    text:"See how we decide ",
+    text:"Explore Our Services",
     url:"/contact"
   },
   cta2: {
-    text: "Book a Strategy Call",
+    text: "Book a Discovery Call",
     url: "/contact",
   },
 };
 
 export const introSection = {
   heading: {
-    title: "Think Bigger",
-    subtitlePrefix: "and ",
-    subtitleHighlight: "Creatively",
+    title: "How We Decide",
+    subtitlePrefix: "Where to",
+    subtitleHighlight: "Start",
   },
   statsRow: [
     {
       icon: "client",
-      count: "30+",
-      label: "Projects Completed",
-      description: "Make your project grow bigger.",
+      count: "01",
+      label: "Customers and enquiries",
+      description: "We look at how customers find the business and what they need before getting in touch.",
     },
     {
       icon: "star",
-      count: "100+",
-      label: "Career-Driven Learners",
-      description: "Join a large and growing community of coders.",
+      count: "02",
+      label: "The work after contact",
+      description: "We trace how the team handles an enquiry after it arrives.",
     },
   ],
   bannerCard: {
-    line1Prefix: "EVERYDAY ",
+    line1Prefix: "DISCOVERY ",
     avatars: [
       "https://ik.imagekit.io/anideatech/ait/hero-image.webp",
       "https://ik.imagekit.io/anideatech/ait/hero-image.webp",
       "https://ik.imagekit.io/anideatech/ait/hero-image.webp",
       "https://ik.imagekit.io/anideatech/ait/hero-image.webp",
     ],
-    line1Suffix: " IS",
-    headline: "NEW OPPORTUNITY\n to learn something valuable.",
+    line1Suffix: " CALL",
+    headline: "IDENTIFY WHAT\nNEEDS TO CHANGE FIRST.",
     ctaUrl: "/contact",
   },
   featureCard: {
@@ -204,67 +204,36 @@ export const servicesData = [
 export const projectSection = {
   header: {
     title: "Selected work.",
-    subtitle: "Real outcomes for real businesses. Here are some of our recent projects and systems.",
+    subtitle: "Client-approved case studies and verified outcomes will be added here.",
   },
-  projects: [
-    {
-      id: 1,
-      slug: "philomena-puc",
-      tag: "Education",
-      title: "Philomena Pre-University College, Puttur",
-      description: "Rebuilt the institution's website to be fully responsive, self-manageable, and reliable during peak traffic — freeing the administration from external dependency while giving students and parents a better experience.",
-      image: "https://ik.imagekit.io/anideatech/ait/hero-image.webp",
-      url: "/work/philomena-puc",
-      tagColor: "bg-[#FFD700] text-black",
-    },
-    {
-      id: 2,
-      slug: "meet-and-greet",
-      tag: "Community",
-      title: "Meet And Greet",
-      description: "Open Conversations About Careers, Coding, Bootcamps, Internships, Real-World Engineering, And The Journey.",
-      image: "https://ik.imagekit.io/anideatech/ait/hero-image.webp",
-      url: "/work/meet-and-greet",
-      tagColor: "bg-[#FF6B00] text-white",
-    },
-    {
-      id: 3,
-      slug: "developer-ecosystem",
-      tag: "Tech Platform",
-      title: "Developer Ecosystem",
-      description: "Building a tight-knit community of innovators, builders, and creators collaborating on next-generation tech products.",
-      image: "https://ik.imagekit.io/anideatech/ait/hero-image.webp",
-      url: "/work/developer-ecosystem",
-      tagColor: "bg-[#007BFF] text-white",
-    },
-  ],
+  projects: [],
 };
 
 export const comparisonSection = {
   header: {
-    titlePrefix: "Who we’re for.",
-    titleSuffix: " Who we’re not.",
-    subtitle: "We've worked with founders for ten years. These patterns hold up.",
+    titlePrefix: "Start With",
+    titleSuffix: " a Discovery Call.",
+    subtitle: "A short outline of what is not working is enough for a first conversation.",
   },
   workWith: {
-    title: "work with",
+    title: "What we look at",
     items: [
-      "Founders ready to move their business from person-driven to process-driven, even with a small team.",
-      "Founders running real businesses who want a system that grows, not a website that sits.",
-      "Owners who've outgrown manual operations and need software that catches up to where the business already is.",
-      "First-time founders willing to be told their idea isn't ready yet.",
+      "How customers find the business and what they need before getting in touch.",
+      "How enquiries move through the team after they arrive.",
+      "Where information, responsibility, or follow-up gets lost.",
+      "Whether the tools already in use support the job.",
     ],
   },
   workNotWith: {
-    title: "work not with",
+    title: "What we may recommend",
     items: [
-      "Anyone who walks in with a competitor's website and says \"build me this.\"",
-      "Founders who refuse to talk to real customers but want to launch anyway.",
-      "Clients looking for a cheap one-time job and a full disappearance after handover.",
-      "Anyone who treats their tech partner like a vendor, not a partner.",
+      "A simpler adjustment or a process change.",
+      "A clearer website or an integration.",
+      "A Custom Web App or Custom Software when the process needs it.",
+      "The existing tool, when it already supports the work.",
     ],
   },
-  footerNote: "If you read the right column and felt called out — that's the point. Better to find out now than three months in",
+  footerNote: "You do not need to arrive with a chosen service. The Discovery Call helps clarify the problem before one is recommended.",
 };
 
 export const comparisionSection = comparisonSection;

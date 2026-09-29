@@ -6,7 +6,7 @@ import BookingSection from "@/components/section/Contact/BookingSection";
 import StepsSection from "@/components/section/Contact/StepsSection";
 import DirectInquirySection from "@/components/section/Contact/DirectInquirySection";
 import ActiveClientsSection from "@/components/section/Contact/ActiveClientsSection";
-import TeamSection from "@/components/section/Contact/TeamSection";
+import FAQSection from "@/components/section/Contact/FAQSection";
 import LocationSection from "@/components/section/Contact/LocationSection";
 
 export default function ContactPage() {
@@ -17,7 +17,7 @@ export default function ContactPage() {
       <StepsSection />
       <DirectInquirySection />
       <ActiveClientsSection />
-      <TeamSection />
+      <FAQSection />
       <LocationSection />
     </main>
   );

@@ -1,0 +1,10 @@
+# Pending source-of-truth content
+
+| Pending section | Why it is not published in the current layout | Input required |
+| --- | --- | --- |
+| Selected Work / Case Studies | The source requires client-approved situations, visuals, testimonials, and verified outcomes. No approved proof was supplied, so the existing project cards were cleared rather than populated with unsupported claims. | Approved case-study copy, assets, testimonials, and verified outcomes. |
+| Domain & Hosting action destinations | The source requires approved domain-search and hosting-support URLs. The current buttons have no approved destinations. | Final URLs for domain search and the hosting support portal. |
+| Privacy Policy details | The source intentionally leaves collection fields, providers, purposes, retention, legal basis, effective date, and privacy contact as placeholders. A policy route is implemented, but those substantive sections cannot be published safely. | Approved privacy-policy information for each placeholder. |
+| Insights articles | The source allows only approved published articles and their applicable metadata. No articles or metadata were supplied. | Approved article title, excerpt, date, reading time, author, and routes. |
+| Temporary contact details | The frozen source labels the studio address, GST, phone/WhatsApp, and contact routes as temporary. They are represented exactly as provided, but should not be treated as publication-ready. | Approved permanent contact, support, WhatsApp, domain-support, and Maps details. |
+| Service-detail pages not yet represented in the current service data | Discovery Call, Solutions Consulting, Process Building, Ecommerce Solutions, Custom Software Solutions, and the source revisions for existing service details need a separate content pass because the current service templates contain long, older service-specific copy and price/package claims. | Confirmation to replace each existing service-detail data module and add the five new service routes from the frozen source. |

@@ -1,90 +1,93 @@
 export const contactHero = {
-  pill: "WORK WITH AN IDEA TECH",
-  title: "Tell us what you're trying to build. We'll tell you if we can help.",
-  description: "Most client agreements start within two weeks. We don't write proposals, do unpaid pitches, or send sales decks. We just look at the product you're trying to build, and tell you if we can help.",
-  image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200"
+  title: "Start With the Problem",
+  description: "Book a Discovery Call to discuss the situation, the people affected by it, and the result you want to achieve. You do not need a finished website brief before getting in touch.",
+  image: "https://ik.imagekit.io/anideatech/ait/ait/contact-hero-section.png"
 };
 
 export const bookingSection = {
-  title: "Book a 30-minute call.",
-  description: "Pick a date and time to talk with Aneesh, the founder. If you're not ready for a call, you can send an inquiry below instead.",
-  timeSlots: ["09:00 AM", "10:00 AM", "11:00 AM", "01:00 PM", "02:00 PM", "03:00 PM"],
-  buttonText: "BOOK 30-MIN CALL",
-  disclaimer: "We'll send you an invitation and link. No follow-ups if you don't book."
+  title:'What to Bring',
+  description:'A short description of the current problem, what is getting in the way, and what you would like to change is enough to begin.After the call, you should know whether the issue calls for a website, a process change, or software',
+  formtitle: "Book a Discovery Call",
+  note: "For a new project, tell us what is not working and what you want the website or system to improve.",
 };
 
 export const stepsSection = {
-  title: "What happens after you book.",
+  title: "What Happens Next",
   steps: [
     {
       id: "01",
-      title: "We review your booking form.",
-      text: "You will detail what you want to build. We read it before the call to make sure we're the right fit and avoid wasting your time."
+      title: "We discuss the business situation.",
+      text: "We discuss the situation and what the project needs to achieve."
     },
     {
       id: "02",
-      title: "We confirm your booking.",
-      text: "We send you a calendar invite. We confirm the call is on or email you with next steps. No spam, ever."
+      title: "We prepare a proposal if we can help.",
+      text: "The proposal sets out the deliverables, timing, and what the project includes."
     },
     {
       id: "03",
-      title: "We schedule your booking call.",
-      text: "A 30-minute video call. You'll talk directly to the founder to discuss your product and see if we can help."
+      title: "The project begins after approval.",
+      text: "Project progress and items requiring your input are visible in the dedicated client portal."
     }
   ]
 };
 
 export const directInquirySection = {
-  title: "Or, if a call isn't the right step yet.",
-  subtitle: "Send a direct inquiry.",
-  description: "For partnership queries, writing opportunities, or to say hello, you can email us or send a direct inquiry. We respond to every email within 24 hours.",
+  title: "Contact and Support",
+  description: "Existing clients with an active project or maintenance agreement can use their usual support channel. We reply to technical tickets within 24 hours on working days. Critical issues are handled on non-working days as well.",
   contacts: [
-    { label: "For clients & projects", value: "solutions@anideatech.com" },
-    { label: "For career inquiries", value: "recruitment@anideatech.com" },
-    { label: "For press & media", value: "press@anideatech.com" },
-    { label: "For anything else", value: "hello@anideatech.com" },
-    { label: "Phone / WhatsApp", value: "+91 73490 49009" }
+    { label: "New projects and Discovery", value: "projects@anideatech.com", type: "email" },
+    { label: "Client support", value: "support@anideatech.com", type: "email" },
+    { label: "Billing", value: "billing@anideatech.com", type: "email" },
+    { label: "Domains and hosting", value: "domains@anideatech.com", type: "email" },
+    { label: "Phone / WhatsApp", value: "+91 98765 43210", type: "phone" }
   ]
 };
 
 export const activeClientsSection = {
   title: "Already working with us?",
   paragraphs: [
-    "If you're an active client, you already have our personal numbers, but you can also email us at support@anideatech.com for help.",
-    "For billing or invoicing inquiries, email billing@anideatech.com. We usually respond within 4 hours during business days.",
-    "For urgent escalations, please contact your project manager or call our support line."
+    "Existing clients with an active project or maintenance agreement can use their usual support channel.",
+    "We reply to technical tickets within 24 hours on working days. Critical issues are handled on non-working days as well."
   ],
   image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200"
 };
 
-export const teamSection = {
-  title: "Who you'll be talking to.",
-  paragraphs: [
-    "Most discovery calls and design reviews are handled by Aneesh, the founder. He has ten years of experience running design studios and building software for founders.",
-    "If you need technical experts or developers on the call, let us know and we'll pull them in."
+export const faqSection = {
+  title: "Common Questions",
+  items: [
+    {
+      question: "What happens if requirements change?",
+      answer:
+        "We discuss the change, agree what it involves, and provide a quote before proceeding.",
+    },
+    {
+      question: "What does AMC cover?",
+      answer:
+        "It covers agreed maintenance, such as monitoring, security updates, backups, and fixes to existing functionality. New features are quoted separately.",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1630952588128-6b6f96a53691?q=80&w=1200&auto=format&fit=crop"
 };
 
 export const locationSection = {
-  title: "Where we are. When we're available.",
+  title: "Where We Are",
   image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1200",
   cards: [
     {
       title: "Address",
-      value: "An Idea Tech, 4th Floor, 142/1, 2nd Main Rd, Phase 2, Industrial Area, Bangalore, Karnataka 560076"
+      value: "Mangaluru Studio: Kodialbail, Mangaluru, Karnataka, India"
     },
     {
       title: "Business hours",
-      value: "Monday to Friday: 10:00 AM to 6:00 PM IST. We are closed on weekends and public holidays."
+      value: "Monday-Friday, 09:30 AM-06:30 PM IST"
     },
     {
       title: "WhatsApp support",
-      value: "+91 73490 49009. Feel free to text us. We respond within a couple of hours."
+      value: "+91 98765 43210"
     },
     {
       title: "Response times",
-      value: "For emails, we reply within 24 hours. For WhatsApp, we reply within a few hours. For urgent clients, we have a 4-hour SLA."
+      value: "Technical tickets receive a response within 24 hours on working days. Critical issues are handled on non-working days as well."
     }
   ]
 };

@@ -73,4 +73,34 @@ export const howWeGotData = {
   ],
 };
 
+export const howWeMakeRecommendationsData = {
+  title: "How We Make Recommendations",
+  updatedOn: "UPDATED: 31 AUG 2026",
+  introduction:
+    "Before recommending a website, system, or integration, we look at what customers need to understand and how the team handles the work. If the current setup supports the job, it stays. If a request will not address the issue, we explain why.",
+  highlight:
+    "Sometimes the first request points to a wider problem. We look at what the business needs now, what may change as it grows, and how the team will use the website, software, or integration day to day.",
+};
+
+export const howWeStayInvolvedData = {
+  title: "How We Stay Involved",
+  addedOn: "ADDED: 31 AUG 2026",
+  items: [
+    {
+      title: "Project Communication",
+      description:
+        "The people responsible for the project stay involved in the conversation. The client portal shows progress and what needs your input. If the plan changes, we explain what has changed and why.",
+    },
+    {
+      title: "Implementation and Team Support",
+      description:
+        "We implement the agreed website, software, or integration, then guide the team through handover and day-to-day use. It should become part of the team’s day-to-day process, not another layer to manage.",
+      highlight:
+        "An Annual Maintenance Contract (AMC) can provide the ongoing care agreed after launch.",
+    },
+  ],
+  closing:
+    "From Mangaluru, we work with businesses across India and internationally.",
+};
+
 

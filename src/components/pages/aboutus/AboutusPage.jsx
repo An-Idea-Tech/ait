@@ -2,6 +2,7 @@ import HeroSection from '@/components/section/aboutus/HeroSection'
 import Howwegot from '@/components/section/aboutus/Howwegot'
 import WhatweSection from '@/components/section/aboutus/WhatweSection'
 import WhatwenotSection from '@/components/section/aboutus/WhatwenotSection'
+import HowWeStayInvolved from '@/components/section/aboutus/HowWeStayInvolved'
 import ConfusionSection from '@/components/section/aboutus/ConfusionSection'
 import React from 'react'
 
@@ -12,8 +13,8 @@ export default function AboutusPage() {
         <WhatweSection/>
         <Howwegot/>
         <WhatwenotSection/>
+        <HowWeStayInvolved/>
         <ConfusionSection/>
     </div>
   )
 }
-
