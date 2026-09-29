@@ -15,10 +15,10 @@ export const NavLinks = [
     title: "About Us",
     url: "/about-us",
   },
-  // {
-  //   title: "Insights",
-  //   url: "/insights",
-  // },
+  {
+    title: "Insights",
+    url: "/insights",
+  },
   {
     title: "Contact",
     url: "/contact",
