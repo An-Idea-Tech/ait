@@ -1,38 +1,24 @@
-import React from "react";
-import Heighlight from "@/components/shared/Heighlight";
-import ImageCard from "@/components/shared/ImageCard";
-import { heroSectionData } from "@/data/howwework";
-import Note from "@/components/shared/Note";
 import Button from "@/components/ui/Button";
 
 export default function HeroSection() {
   return (
-    <section className="section gap-10 sm:gap-2 md:gap-1">
-      {/* Top Highlight Badge */}
-      <div className="mb-5">
-        <Heighlight text={heroSectionData.badgeText} />
-      </div>
-
-    
-      {/* Main Heading */}
-      <div className="max-w-5xl px-2 text-center sm:mb-8 sm:px-4">
+    <section className="section gap-8 py-12 sm:gap-10 sm:py-16 lg:py-24">
+      <div className="max-w-5xl px-2 text-center sm:px-4">
         <h1 className="hero-title-main !text-text-primary">
-          <span className="mb-2 block sm:mb-3">
-            {heroSectionData.headingLine1}
-          </span>
-          <span className="huge-text !text-hww">
-            {heroSectionData.headingLine2Highlight}
-          </span>
-          <span>{heroSectionData.headingLine2Suffix}</span>
+          What Working Together Looks Like
         </h1>
       </div>
 
-      <Button text="Contact Us" />
 
-      {/* Subcaption above Image Cards */}
-      <div className="mb-8 px-4 text-center sm:mb-10">
-        <Note text={heroSectionData.subCaption + ""} />
+      <div className="max-w-3xl px-4 text-center">
+        <p className="subtitle text-center">
+          Every project follows a clear sequence, from understanding the issue
+          to getting the agreed website or application into day-to-day use. The
+          detail changes from project to project, but progress and items needing
+          your input stay visible in the client portal.
+        </p>
       </div>
+      <Button text="Contact Us" />
     </section>
   );
 }

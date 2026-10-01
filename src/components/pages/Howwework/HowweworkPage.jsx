@@ -11,9 +11,9 @@ export default function HowweworkPage() {
     <div className="page flex flex-col gap-12 sm:gap-16">
       <HeroSection />
       <PhaseSection />
-      <DaybydaySection />
-      <AfterlaunchSection />
-      <Confusion confusionData={confusionData} />
+      {/* <DaybydaySection /> */}
+      {/* <AfterlaunchSection /> */}
+      {/* <Confusion confusionData={confusionData} /> */}
     </div>
   );
 }

@@ -196,7 +196,7 @@ body {
   }
 
   .section {
-    @apply flex min-h-auto w-full flex-col items-center py-5 lg:py-10 sm:px-6 ;
+    @apply flex min-h-screen w-full flex-col justify-center items-center py-5 lg:py-10 sm:px-6 ;
   }
 
   .hero-title-second {

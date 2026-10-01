@@ -12,12 +12,12 @@ export default function ServiceSection() {
   return (
     <section className="section mx-auto w-full max-w-[1600px] gap-16 px-4 pb-32 sm:gap-24 sm:px-8 md:px-12 lg:px-16">
       <div className="flex-col-center mb-4 w-full gap-5 sm:mb-8 lg:gap-10">
-        <h2 className="huge-text !text-center">
-          The work, organized by where your{" "}
-          <span className="text-service">business</span> is.
+        <h2 className="huge-text max-w-full !text-center leading-[0.95]">
+          foundation.<wbr />validate.<wbr />convert.<wbr />operate{" "}
+          <span className="text-service">Standalone</span>: PRD.
         </h2>
         <div className="subtitle">
-          Five categories based on what your business needs right now.
+          Four categories based on what your business needs right now.
         </div>
       </div>
 

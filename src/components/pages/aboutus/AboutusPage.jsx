@@ -9,7 +9,7 @@ export default function AboutusPage() {
   return (
     <div className='page flex flex-col gap-12 sm:gap-16'>
         <HeroSection/>
-        <WhatweSection/>
+        <WhatwenotSection/>
         <Howwegot/>
         <WhatwenotSection/>
         <HowWeStayInvolved/>

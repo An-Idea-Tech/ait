@@ -29,7 +29,7 @@ export default function ServiceCard({
               width={100}
               height={100}
               alt={title || "Service illustration"}
-              className=" w-[75%] h-[75%] object-contain opacity-6  transition-all duration-700 ease-out"
+              className=" w-[75%] h-[75%] object-contain opacity-4  transition-all duration-700 ease-out"
             />
           </div>
         )}

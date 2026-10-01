@@ -76,111 +76,103 @@ export const scopePrdData = {
 };
 
 export const howWeWorkPhases = [
-  scopePrdData,
   {
-    id: "build-beta",
-    phaseLabel: "Phase 2",
-    title: "Build & Beta",
-    image: "https://i.pinimg.com/736x/f0/81/a2/f081a2cef55349e1b57b1b312ec9fef2.jpg",
-    phaseIcon: "/images/liquid-bg.jpg",
-    subtitle: "Rapid, iterative engineering where you see functional progress every week.",
+    id: "discovery",
+    phaseLabel: "Phase 1",
+    title: "Discovery",
+    image: "https://ik.imagekit.io/anideatech/ait/ait/discovery'.png",
     accordions: [
       {
-        id: "bb-what-happens",
-        title: "What happens",
+        id: "discovery-understanding",
         content:
-          "Our engineering team executes weekly sprints to build out your core architecture, frontend components, backend APIs, and third-party integrations. Every Friday, we deploy a live staging environment with the latest updates for you to test.",
-        defaultOpen: true,
+          "Discovery is where we understand the situation before deciding what to build. We discuss the issue, the people affected, and what needs to change.",
       },
       {
-        id: "bb-what-you-experience",
-        title: "What you experience",
+        id: "discovery-approach",
         content:
-          "Continuous visibility. No multi-month black boxes where you wonder what developers are doing. You test real, clickable software every week and provide a direct feedback loop.",
-        defaultOpen: false,
-      },
-      {
-        id: "bb-quality-assurance",
-        title: "Quality assurance & testing",
-        content:
-          "Automated end-to-end testing, security scanning, and cross-browser validation ensure every feature is rock-solid before user beta access.",
-        defaultOpen: false,
+          "It gives you a clearer view of how to approach the problem and what may need to be built.",
       },
     ],
-    durationLabel: "Typical duration : ",
-    durationValue: "6-16 weeks",
-    deliverableLabel: "Deliverable : ",
-    deliverableValue: "Production-ready staging build. Fully functional beta.",
   },
   {
-    id: "stabilize-grow",
-    phaseLabel: "Phase 3",
-    title: "Stabilize & Grow",
-    image: "https://i.pinimg.com/1200x/af/3f/99/af3f99736a406d324274c0fceb9c6a2a.jpg",
-    phaseIcon: "/images/no-bg.png",
-    subtitle: "Hardening the application for real-world traffic, performance, and scale.",
+    id: "scope-prd",
+    phaseLabel: "Phase 2",
+    title: "Scope & PRD",
+    image: "https://ik.imagekit.io/anideatech/ait/ait/PRD.png",
     accordions: [
       {
-        id: "sg-what-happens",
-        title: "What happens",
+        id: "scope-definition",
         content:
-          "We run intensive load testing, optimize database queries, set up monitoring alerts, and execute comprehensive security audits. Once verified, we launch publicly to your domain.",
-        defaultOpen: true,
+          "Once we agree the direction, we define what is included, the key requirements, the people involved, review points, and the expected deliverables.",
       },
       {
-        id: "sg-what-you-experience",
-        title: "What you experience",
+        id: "scope-prd-use",
         content:
-          "A stress-free launch day. We handle server infrastructure, DNS configuration, SSL certificates, and zero-downtime deployment pipelines.",
-        defaultOpen: false,
-      },
-      {
-        id: "sg-post-launch",
-        title: "Post-launch support",
-        content:
-          "Dedicated active monitoring during the critical first weeks of live user onboarding to instantly catch and resolve any edge cases.",
-        defaultOpen: false,
+          "We use a Product Requirement Document internally to guide the build.",
       },
     ],
-    durationLabel: "Typical duration : ",
-    durationValue: "2-4 weeks",
-    deliverableLabel: "Deliverable : ",
-    deliverableValue: "Live public application. Scalable infrastructure.",
+  },
+  {
+    id: "build-beta",
+    phaseLabel: "Phase 3",
+    title: "Build & Beta",
+    image: "https://ik.imagekit.io/anideatech/ait/ait/build%20and%20beta.png",
+    accordions: [
+      {
+        id: "build-stages",
+        content:
+          "We develop the agreed website or application in stages and share working versions for review. The client portal shows progress and anything that needs your input. We consider your feedback before moving to the next stage.",
+      },
+      {
+        id: "build-project-types",
+        content:
+          "For application projects, this may be a beta. For website projects, it is the working site for review.",
+      },
+    ],
+  },
+  {
+    id: "review-revise",
+    phaseLabel: "Phase 4",
+    title: "Review & Revise",
+    image: "https://ik.imagekit.io/anideatech/ait/ait/review%20and%20revise.png",
+    accordions: [
+      {
+        id: "review-changes",
+        content:
+          "We review the working version with you and make the agreed changes. If a new requirement comes up, we discuss it and quote it before adding it to the project. Once the revisions are complete, the project moves to final checks before launch.",
+      },
+    ],
+  },
+  {
+    id: "launch-handover",
+    phaseLabel: "Phase 5",
+    title: "Launch & Handover",
+    image: "https://ik.imagekit.io/anideatech/ait/ait/launch%20and%20handover.png",
+    accordions: [
+      {
+        id: "launch-testing",
+        content:
+          "Before launch, we test the website or application in the setting where the team will use it, whether that is a browser, a mobile device, or a team computer.",
+      },
+      {
+        id: "handover-support",
+        content:
+          "After the final checks, we launch it and give the team the walkthroughs and documentation agreed for the project. We provide the agreed support as they begin using it.",
+      },
+    ],
   },
   {
     id: "maintain-evolve",
-    phaseLabel: "Phase 4",
+    phaseLabel: "Phase 6",
     title: "Maintain & Evolve",
-    image: "https://i.pinimg.com/1200x/7f/f1/79/7ff1790a8ee1baa01f236eaf11ff7c56.jpg",
-    phaseIcon: "/images/ChatGPT Image Jul 3, 2026, 05_23_36 PM.png",
-    subtitle: "Long-term partnership to iterate on user feedback and add powerful new features.",
+    image: "https://ik.imagekit.io/anideatech/ait/ait/Maintain%20&%20Evolve.png",
     accordions: [
       {
-        id: "me-what-happens",
-        title: "What happens",
+        id: "maintain-care",
         content:
-          "We analyze real user analytics and product telemetry to guide product improvements. We maintain your dependencies, keep security patches updated, and build roadmap enhancements.",
-        defaultOpen: true,
-      },
-      {
-        id: "me-what-you-experience",
-        title: "What you experience",
-        content:
-          "An elite on-demand engineering team that scales with your growth without the overhead of recruiting and managing full-time hires.",
-        defaultOpen: false,
-      },
-      {
-        id: "me-continuous-optimization",
-        title: "Continuous optimization",
-        content:
-          "Regular performance audits and UX refinements to keep your product fast, modern, and ahead of competitors.",
-        defaultOpen: false,
+          "An AMC can cover the ongoing care agreed for a website or application. The contract sets out the support and maintenance included.",
       },
     ],
-    durationLabel: "Typical duration : ",
-    durationValue: "Ongoing partnership",
-    deliverableLabel: "Deliverable : ",
-    deliverableValue: "Continuous feature releases & SLA uptime.",
   },
 ];
 
@@ -313,4 +305,3 @@ export const dayToDayData = {
   bottomNote:
     "All three principles have one thing in common: they assume you're busy. Working with us shouldn't require chasing us for information.",
 };
-
