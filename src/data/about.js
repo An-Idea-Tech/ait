@@ -164,11 +164,16 @@ export const howWeStayInvolvedData = {
     "From Mangaluru, we work with businesses across India and internationally.",
 };
 
-export const aboutCtaData = {
+export const businessCtaData = {
   title: "Tell Us About Your Business",
-  updatedOn: "UPDATED: 29 AUG 2026",
   description:
     "Share what is no longer working as it should. We can use the Discovery Call to understand the situation together.",
-  buttonText: "Tell Us About Your Business",
-  buttonLink: "/contact",
+  buttons: [
+    {
+      text: "Tell Us About Your Business",
+      link: "/contact",
+    },
+  ],
 };
+
+export const aboutCtaData = businessCtaData;

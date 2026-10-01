@@ -2,7 +2,6 @@ import React from "react";
 import Button from "@/components/ui/Button";
 import { heroSection } from "@/data/home";
 import Heighlight from "@/components/shared/Heighlight";
-import Image from "next/image";
 import Button2 from "@/components/ui/Button2";
 import Note from "@/components/shared/Note";
 
@@ -42,19 +41,23 @@ export default function HeroSection() {
             <Button2 text={heroSection.cta2.text} link={heroSection.cta2.url} />
           </div>
 
-          <Note text="We are currently full-time and unable to accept new projects, but we’d love to keep in touch!" />
+          <Note text="Proof: Trusted by 50+ businesses." />
         </div>
       </div>
 
-      <Image
-        src="https://ik.imagekit.io/anideatech/ait/ait/hero%20section.png"
-        width={1600}
-        height={900}
-        alt="ait-hero-banner"
-        priority
-        sizes="100vw"
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="metadata"
         className="card-rounded h-auto w-full"
-      />
+      >
+        <source
+          src="https://ik.imagekit.io/anideatech/ait/ait/ait-hero.mp4"
+          type="video/mp4"
+        />
+      </video>
     </section>
   );
 }

@@ -1,40 +1,32 @@
-"use client";
-
-import React from "react";
 import Button from "@/components/ui/Button";
-import Note from "./Note";
-import Button2 from "../ui/Button2";
 
 export default function Confusion({ confusionData }) {
-  if (!confusionData) return null;
+  if (!confusionData?.title || !confusionData?.description) return null;
 
   return (
-    <div
-      id={confusionData.id}
-      className="section !min-h-[50vh] justify-center !p-0"
-    >
-      {/* Title */}
-      <h2 className="title mb-6 sm:mb-8">{confusionData.title}</h2>
+    <section className="section  px-4 py-10 sm:px-6 sm:py-14">
+      <div className="mx-auto flex min-h-105 w-full max-w-5xl flex-col items-center justify-center rounded-2xl border border-white/15 bg-[#000000] px-6 py-16 text-center sm:min-h-121.25 sm:px-12 sm:py-20">
+        <h2 className="max-w-2xl font-manrope-bold text-4xl leading-[1.12] tracking-tight text-white sm:text-5xl md:text-6xl">
+          {confusionData.title}
+        </h2>
 
-      {/* Description */}
-      <p className="description sm:tracking-tight lg:tracking-normal mx-auto mb-10 max-w-3xl px-4 text-justify sm:mb-12">
-        {confusionData.description}
-      </p>
+        <p className="mt-8 max-w-3xl text-lg leading-relaxed tracking-tight text-white/70 sm:mt-9 sm:text-xl">
+          {confusionData.description}
+        </p>
 
-      {/* Buttons Row */}
-      {confusionData.buttons && confusionData.buttons.length > 0 && (
-        <div className="mb-8 flex flex-col items-center justify-center gap-4 sm:mb-10 sm:flex-row sm:gap-6">
-          <Button text="Run the decision tree" link="/" />
-          <Button2 text="just talk to us" link="/contact" />
-        </div>
-      )}
-
-      {/* Note / Callout */}
-      {confusionData.note && (
-        <div className="flex-row-center note">
-          <Note text={confusionData.note.text} />
-        </div>
-      )}
-    </div>
+        {confusionData.buttons?.length > 0 && (
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            {confusionData.buttons.map((button) => (
+              <Button
+                key={button.id || button.text}
+                text={button.text}
+                link={button.link}
+                variant="light"
+              />
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
   );
 }

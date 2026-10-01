@@ -1,4 +1,4 @@
-import HowweworkPage from "@/components/pages/howwework/HowweworkPage";
+import HowweworkPage from "@/components/pages/Howwework/HowweworkPage";
 import React from "react";
 
 export const metadata = {
@@ -12,4 +12,3 @@ export default function HowWeWork() {
     <HowweworkPage/>
   );
 }
-

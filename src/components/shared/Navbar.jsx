@@ -33,7 +33,7 @@ export default function Navbar() {
   }, [isOpen]);
 
   return (
-    <nav className="bg-bg-primary text-text-primary  sticky top-0 z-50 w-full px-6 transition-colors duration-300 md:px-12">
+    <nav className="bg-bg-primary/10 text-text-primary sticky top-0 z-50 w-full px-6  backdrop-blur-xl transition-colors duration-300 md:px-12">
       <div className="mx-auto flex w-full max-w-[1920px] items-center justify-between py-1">
         {/* Logo Section */}
         <div className="flex flex-shrink-0 items-center">
@@ -102,14 +102,14 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
-              className="bg-bg-primary text-text-primary border-border-primary/20 fixed top-0 right-0 z-50 flex h-full w-3/4 max-w-md flex-col justify-between overflow-y-auto border-l p-6 shadow-2xl transition-colors duration-300 sm:p-8"
+              className="fixed top-0 right-0 z-[60] flex h-[100dvh] w-3/4 max-w-md flex-col justify-between overflow-y-auto border-l border-black/10 bg-white p-6 text-black shadow-2xl sm:p-8"
             >
               <div>
                 {/* Drawer Header with Close Icon Above */}
-                <div className="border-border-primary/15 mb-6 flex items-center justify-end border-b pb-5">
+                <div className="mb-6 flex items-center justify-end border-b border-black/10 pb-5">
                   <button
                     onClick={() => setIsOpen(false)}
-                    className="border-border-primary/30 bg-bg-primary text-text-primary hover:text-brand hover:border-brand flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border shadow-sm transition-all duration-200 sm:h-11 sm:w-11"
+                    className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-black/20 bg-white text-black shadow-sm transition-all duration-200 hover:border-brand hover:text-brand sm:h-11 sm:w-11"
                     aria-label="Close menu"
                   >
                     <IoClose className="text-2xl sm:text-3xl" />
@@ -145,11 +145,11 @@ export default function Navbar() {
               </div>
 
               {/* Drawer Footer */}
-              <div className="border-border-primary/15 mt-8 flex flex-col gap-4 border-t pt-6">
+              <div className="mt-8 flex flex-col gap-4 border-t border-black/10 pt-6">
                 <div className="flex items-center justify-end">
                   <ThemeToggle />
                 </div>
-                <p className="text-text-third font-manrope-light mt-2 text-center text-xs">
+                <p className="font-manrope-light mt-2 text-center text-xs text-gray-600">
                   © {new Date().getFullYear()} An Idea Tech. All rights
                   reserved.
                 </p>

@@ -1,8 +1,8 @@
-import HeroSection from "@/components/section/howweworkPage/HeroSection";
+import HeroSection from "@/components/section/HowweworkPage/HeroSection";
 import React from "react";
-import PhaseSection from "@/components/section/howweworkPage/PhaseSection";
-import DaybydaySection from "@/components/section/howweworkPage/DaybydaySection";
-import AfterlaunchSection from "@/components/section/howweworkPage/AfterlaunchSection";
+import PhaseSection from "@/components/section/HowweworkPage/PhaseSection";
+import DaybydaySection from "@/components/section/HowweworkPage/DaybydaySection";
+import AfterlaunchSection from "@/components/section/HowweworkPage/AfterlaunchSection";
 import Confusion from "@/components/shared/Confusion";
 import { confusionData } from "@/data/howwework";
 

@@ -38,7 +38,7 @@ export default function StackCard({ service, index, progress, total }) {
         {/* Main Content Area */}
         <div className="flex w-full flex-col gap-2">
           <div className="flex w-full flex-col justify-between gap-2 sm:flex-row sm:items-center">
-            <h2 className="title2 !text-left !text-black">{service.title}</h2>
+            <h2 className="text-3xl font-bold !text-left !text-black">{service.title}</h2>
             <div className="w-fit">
               <Heighlight
                 text={service.heighlight}
@@ -66,14 +66,14 @@ export default function StackCard({ service, index, progress, total }) {
                 </p>
               </div>
               <div>
-                <h3 className="subtitle mb-1 !text-left !text-black">
+                <h3 className="subtitle mb-1 text-left! text-black!">
                   What you get
                 </h3>
-                <p className={`description !text-black ${service.isCallout ? "bg-brand/20 p-4 shadow-[0_0_20px_rgba(239,135,13,0.25)]" : ""}`}>
+                <p className={`description text-black!`}>
                   {service.whatYouGet}
                 </p>
                 {service.guidance && (
-                  <p className="description mt-4 !text-black/70 text-sm">
+                  <p className="description mt-4 text-black/70! text-sm">
                     {service.guidance}
                   </p>
                 )}

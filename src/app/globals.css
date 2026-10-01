@@ -232,7 +232,7 @@ body {
   }
 
   .card-rounded {
-    @apply rounded-3xl;
+    @apply rounded-2xl;
   }
 
   .trust-description {
